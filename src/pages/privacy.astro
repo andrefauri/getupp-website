@@ -1,0 +1,188 @@
+---
+import LegalLayout from '../layouts/LegalLayout.astro';
+---
+
+<LegalLayout
+  title="Privacy Policy — Getupp"
+  description="Getupp privacy policy. How we handle your data, your photos, and your email."
+>
+  <h1>Privacy Policy</h1>
+  <p class="mt-1 text-sm text-neutral-500">Effective date: 9 July 2026</p>
+
+  <p class="mt-6 text-sm text-neutral-600">
+    We're two founders who are also users of this app. We built Getupp
+    because we wanted it, not to build an ad network. This policy is written
+    to be readable by humans, not only lawyers. If something is unclear,
+    email us: <a href="mailto:hello@getupp.co">hello@getupp.co</a>.
+  </p>
+
+  <hr />
+
+  <section aria-labelledby="pp-what">
+    <h2 id="pp-what">1. What Getupp does</h2>
+    <p>
+      Getupp is an iOS app that uses Apple's Screen Time and Family Controls
+      technology to temporarily block the apps you choose during a morning
+      window you define. Each morning, those apps remain blocked until you
+      take a live photo confirming you are out of bed. Once the photo is
+      verified, your apps are unlocked for the day.
+    </p>
+    <p>
+      The app is a digital wellbeing tool. It is not a parental-control
+      product; it is designed for adults who want to change their own
+      morning habits. You are always in control of which apps are blocked
+      and during which time window.
+    </p>
+  </section>
+
+  <hr />
+
+  <section aria-labelledby="pp-screentime">
+    <h2 id="pp-screentime">2. Screen Time &amp; app-blocking data</h2>
+    <p>
+      Getupp uses Apple's Family Controls framework to apply and remove app
+      restrictions. All Screen Time data — including which apps are blocked
+      and for how long — is processed entirely on your device. This data
+      never leaves your phone and is never sent to our servers.
+    </p>
+    <p>
+      We do not collect, store, sell, or share any Screen Time or
+      app-usage information. Apple's framework enforces this at the OS
+      level.
+    </p>
+    <ul>
+      <li>We cannot see which apps you block.</li>
+      <li>We cannot see your app-usage history.</li>
+      <li>
+        We cannot access Screen Time data outside the scope of your session
+        on your device.
+      </li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section aria-labelledby="pp-photos">
+    <h2 id="pp-photos">3. Your verification photo</h2>
+    <p>
+      Each morning, Getupp asks you to take a live photo to confirm you are
+      out of bed. Here is exactly what happens to that photo:
+    </p>
+    <ul>
+      <li>
+        Your photo is sent over an encrypted connection (HTTPS/TLS) to our
+        AI verification service, which is powered by Anthropic's API.
+      </li>
+      <li>
+        The AI analyzes the photo solely to determine whether you appear to
+        be out of bed.
+      </li>
+      <li>The photo is deleted immediately after analysis. We never store it.</li>
+      <li>No human at Getupp ever sees your photo.</li>
+      <li>
+        We keep only the result (pass or fail), the timestamp, and your
+        streak count.
+      </li>
+    </ul>
+
+    <div class="mt-4 rounded-lg border border-neutral-200 bg-neutral-50 p-4 text-sm">
+      <strong class="font-semibold text-neutral-900">About Anthropic</strong>
+      <p class="mt-2">
+        Anthropic acts as a data processor on our behalf for photo
+        verification. Anthropic does not use data sent via their API to
+        train their models. For Anthropic's current API data usage policy,
+        visit
+        <!-- TODO: founder to re-verify Anthropic's current API data policy URL and confirm this statement before publishing -->
+        <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener noreferrer"
+          >anthropic.com/privacy</a
+        >.
+      </p>
+      <!-- TODO: founder to re-verify Anthropic's current API data policy before publishing. -->
+    </div>
+  </section>
+
+  <hr />
+
+  <section aria-labelledby="pp-account">
+    <h2 id="pp-account">4. Account &amp; email</h2>
+    <p>
+      If you join our waitlist, we collect your email address. We use it
+      only to notify you when Getupp is available on the App Store and to
+      send occasional pre-launch updates. We do not sell your email
+      address. We do not share it with third parties for marketing
+      purposes.
+    </p>
+    <!-- TODO: Confirm unsubscribe mechanism before launch (link in email, or in-app) -->
+    <p>
+      You can unsubscribe from waitlist emails at any time using the
+      unsubscribe link in any email we send. After launch, account deletion
+      will remove your email and all associated data from our servers.
+    </p>
+    <p>
+      We use Supabase to store waitlist emails. Supabase is a US-based
+      cloud infrastructure provider. For more information, see
+      <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer"
+        >supabase.com/privacy</a
+      >.
+    </p>
+  </section>
+
+  <hr />
+
+  <section aria-labelledby="pp-dont">
+    <h2 id="pp-dont">5. Data we do not collect</h2>
+    <ul>
+      <li>We do not sell your data. Ever.</li>
+      <li>We do not serve ads.</li>
+      <li>
+        We do not share personal data with third parties except as
+        described above (Anthropic for photo verification; Supabase for
+        email storage).
+      </li>
+      <li>We do not use tracking pixels or third-party analytics SDKs in the app.</li>
+      <li>
+        We do not access your contacts, location, microphone, or camera
+        roll — only the live photo you explicitly take within the app.
+      </li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section aria-labelledby="pp-children">
+    <h2 id="pp-children">6. Children</h2>
+    <p>
+      Getupp is intended for users aged 17 and over and is not directed at
+      children under 13. We do not knowingly collect personal information
+      from anyone under 13. If you believe a child has submitted
+      information to us, please contact us and we will delete it promptly.
+    </p>
+  </section>
+
+  <hr />
+
+  <section aria-labelledby="pp-changes">
+    <h2 id="pp-changes">7. Changes to this policy</h2>
+    <p>
+      If we make material changes to this policy, we will notify waitlist
+      subscribers by email and update the effective date above. Continued
+      use of the app after changes constitutes acceptance of the updated
+      policy.
+    </p>
+  </section>
+
+  <hr />
+
+  <section aria-labelledby="pp-contact">
+    <h2 id="pp-contact">8. Contact</h2>
+    <p>
+      Questions, requests, or concerns about your data:<br />
+      <a href="mailto:hello@getupp.co">hello@getupp.co</a>
+    </p>
+    <p>
+      <strong class="font-semibold text-neutral-900">Mailing address:</strong><br />
+      Getupp<br />
+      hello@getupp.co
+    </p>
+  </section>
+</LegalLayout>

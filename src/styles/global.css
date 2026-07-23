@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------- */
+/* Brand fonts                                                             */
+/* ---------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "PP Right Grotesk Wide";
+  src: url("/fonts/Right Grotesk/PPRightGrotesk-WideMedium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Right Grotesk Wide";
+  src: url("/fonts/Right Grotesk/PPRightGrotesk-WideBlack.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("/fonts/Neue Montreal/PPNeueMontreal-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("/fonts/Neue Montreal/PPNeueMontreal-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("/fonts/Neue Montreal/PPNeueMontreal-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal Mono";
+  src: url("/fonts/Neue Montreal Mono/PPNeueMontrealMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal Mono";
+  src: url("/fonts/Neue Montreal Mono/PPNeueMontrealMono-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal Mono";
+  src: url("/fonts/Neue Montreal Mono/PPNeueMontrealMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Design tokens                                                           */
+/* ---------------------------------------------------------------------- */
+
+@theme {
+  --color-cream: #f4e8cf;
+  --color-cream-light: #f8f1e0;
+  --color-brown: #3a2418;
+  --color-orange: #db5b1e;
+  --color-amber: #e8a33d;
+
+  --font-display: "PP Right Grotesk Wide", "Arial Black", sans-serif;
+  --font-sans: "PP Neue Montreal", system-ui, sans-serif;
+  --font-mono: "PP Neue Montreal Mono", ui-monospace, monospace;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Responsive foundations                                                  */
+/* ---------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Fluid base size; scales gently between small and large viewports. */
+  font-size: clamp(15px, 0.9vw + 12px, 18px);
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100svh;
+  overflow-x: hidden;
+}
+
+img,
+picture,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Reduced-motion foundations                                              */
+/* ---------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

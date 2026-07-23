@@ -1,0 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../assets/illustrations/logo.svg';
+
+export interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<Image src={logo} alt="GETUPP" class={`h-10 w-auto ${className}`} />

@@ -1,0 +1,37 @@
+---
+import { LAUNCH_DATE, formatRemaining } from '../../lib/launch';
+
+export interface Props {
+  /** Text shown before the timer, e.g. "SOON ON IPHONE". */
+  label?: string;
+  class?: string;
+}
+
+const { label = 'SOON ON IPHONE', class: className = '' } = Astro.props;
+
+// Server-rendered starting value so the timer is never blank before JS runs.
+const initial = formatRemaining(LAUNCH_DATE);
+---
+
+<p class={`font-mono text-sm font-medium tracking-[0.2em] text-brown ${className}`}>
+  {label}{' '}
+  <span data-countdown data-launch={LAUNCH_DATE.toISOString()} class="text-orange">
+    {initial}
+  </span>
+</p>
+
+<script>
+  import { formatRemaining } from '../../lib/launch';
+
+  const timers = document.querySelectorAll<HTMLElement>('[data-countdown]');
+
+  const tick = () => {
+    const now = new Date();
+    for (const el of timers) {
+      el.textContent = formatRemaining(new Date(el.dataset.launch!), now);
+    }
+  };
+
+  tick();
+  window.setInterval(tick, 1000);
+</script>

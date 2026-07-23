@@ -1,0 +1,65 @@
+---
+import Footer from '../components/layout/Footer.astro';
+import '../styles/global.css';
+
+export interface Props {
+  /** Page title. Rendered as-is; include the site name if desired. */
+  title: string;
+  /** Page description, used for <meta name="description"> and Open Graph/Twitter. */
+  description: string;
+  /** BCP-47 language tag for <html lang>. Defaults to "en"; lets pages opt into
+   * a locale ahead of any future localized routes without a layout rewrite. */
+  lang?: string;
+  /** Absolute or root-relative path to an Open Graph / Twitter share image. */
+  ogImage?: string;
+  /** Overrides the canonical URL derived from Astro.url. */
+  canonical?: string;
+  /** Set true to exclude the page from search engine indexing. */
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  lang = 'en',
+  ogImage,
+  canonical = Astro.url.href,
+  noindex = false,
+} = Astro.props;
+
+const resolvedOgImage = ogImage ? new URL(ogImage, Astro.url).href : undefined;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    {resolvedOgImage && <meta property="og:image" content={resolvedOgImage} />}
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {resolvedOgImage && <meta name="twitter:image" content={resolvedOgImage} />}
+
+    <meta name="theme-color" content="#f4e8cf" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body class="flex min-h-svh flex-col bg-cream font-sans text-brown antialiased">
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

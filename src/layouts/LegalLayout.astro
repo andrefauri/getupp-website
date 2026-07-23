@@ -1,0 +1,20 @@
+---
+import BaseLayout, { type Props as BaseLayoutProps } from './BaseLayout.astro';
+
+export interface Props extends BaseLayoutProps {}
+
+const { ...baseProps } = Astro.props;
+---
+
+<BaseLayout {...baseProps}>
+  <article
+    class="mx-auto max-w-2xl px-4 py-12 leading-relaxed text-neutral-800 sm:px-6 sm:py-16
+      [&_a]:text-neutral-900 [&_a]:underline [&_a]:underline-offset-4
+      [&_h1]:text-3xl [&_h1]:font-semibold [&_h1]:tracking-tight [&_h1]:text-neutral-900
+      [&_h2]:mt-10 [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:text-neutral-900
+      [&_hr]:my-8 [&_hr]:border-neutral-200
+      [&_p]:mt-3 [&_ul]:mt-3 [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mt-1"
+  >
+    <slot />
+  </article>
+</BaseLayout>

@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+import brain from '../../assets/illustrations/brain.png';
+---
+
+<section class="bg-brown py-16 lg:py-24">
+  <div
+    class="mx-auto grid max-w-6xl items-center gap-10 px-5 sm:px-8 lg:grid-cols-[3fr_2fr] lg:gap-16"
+  >
+    <div>
+      <h2
+        class="font-display text-4xl font-black uppercase leading-tight text-cream-light sm:text-5xl"
+      >
+        The Cognitive Hijack
+      </h2>
+
+      <p class="mt-6 max-w-lg text-lg text-cream-light">
+        By opening your phone right when waking up, you are handing the keys to
+        your focus to algorithms designed to trigger stress, not productivity.
+      </p>
+
+      <p class="mt-8 text-amber">
+        → Over 84% of people check their phone within 10 minutes of waking up.
+      </p>
+      <p class="mt-2 text-sm text-amber/80">
+        2026 Cell Phone Usage Stats, Reviews.org
+      </p>
+    </div>
+
+    <Image
+      src={brain}
+      alt="Illustration of a bandaged brain leaning on crutches"
+      class="mx-auto w-40 max-lg:order-first"
+    />
+  </div>
+</section>

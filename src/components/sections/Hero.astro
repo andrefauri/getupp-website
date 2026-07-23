@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+import Logo from '../ui/Logo.astro';
+import Countdown from '../ui/Countdown.astro';
+import SignupForm from '../ui/SignupForm.astro';
+import polaroid from '../../assets/illustrations/polaroid.png';
+---
+
+<section class="mx-auto max-w-6xl px-5 pt-8 pb-16 sm:px-8 lg:flex lg:min-h-screen lg:flex-col lg:justify-center lg:py-16">
+  <div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+    <div>
+      <Logo class="mb-8 lg:mb-14" />
+
+      <h1 class="font-display font-black uppercase leading-[0.95]">
+        <span class="block text-5xl text-brown sm:text-6xl">Get out of bed.</span>
+        <span class="mt-3 block text-5xl text-orange sm:text-6xl">
+          Or keep scrolling forever.
+        </span>
+        <span class="mt-3 block text-3xl text-brown sm:text-4xl">Your call.</span>
+      </h1>
+
+      <p class="mt-8 max-w-md text-lg text-brown">
+        Getupp is an iPhone app that blocks your distracting apps every morning
+        until you take a selfie proving you're out of bed.
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <Image
+        src={polaroid}
+        alt="Illustrated polaroid photo of a smiling person taking a selfie beside their bed"
+        class="w-44 rotate-1 drop-shadow-[0_4px_12px_rgba(58,36,24,0.2)] lg:w-[264px]"
+      />
+
+      <div
+        class="z-10 -mt-6 flex w-full max-w-md flex-col items-center gap-4 rounded-3xl bg-cream px-5 py-6 max-lg:mt-4 lg:border-[1.5px] lg:border-brown"
+      >
+        <Countdown />
+        <SignupForm />
+        <p class="font-mono text-sm font-medium tracking-[0.25em] text-brown">
+          ALL SLEEPERS WELCOME
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

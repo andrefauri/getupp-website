@@ -1,0 +1,37 @@
+---
+export interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+{/* Visual only for now — submission is a no-op until the backend pass. */}
+<form
+  data-signup-form
+  class={`flex w-full max-w-sm rounded-2xl border-[1.5px] border-brown bg-cream-light shadow-[0_2px_0_rgba(58,36,24,0.25)] ${className}`}
+>
+  <input
+    type="email"
+    name="email"
+    required
+    autocomplete="email"
+    aria-label="Email address"
+    placeholder="name@email.com"
+    class="min-w-0 flex-1 bg-transparent px-5 py-4 text-brown placeholder:text-brown/40 focus:outline-none"
+  />
+  <button
+    type="submit"
+    class="-m-[1.5px] shrink-0 cursor-pointer rounded-2xl bg-brown px-6 font-display text-lg font-black tracking-wide text-cream-light transition-colors hover:bg-orange"
+  >
+    SIGN UP
+  </button>
+</form>
+
+<script>
+  for (const form of document.querySelectorAll<HTMLFormElement>('[data-signup-form]')) {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+    });
+  }
+</script>
