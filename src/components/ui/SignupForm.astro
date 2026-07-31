@@ -34,6 +34,8 @@ const { class: className = '', source = 'landing' } = Astro.props;
 </div>
 
 <script>
+  import { trackLead } from '../../lib/tracking';
+
   const SUPABASE_URL = import.meta.env.PUBLIC_SUPABASE_URL;
   const SUPABASE_ANON_KEY = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
 
@@ -82,6 +84,11 @@ const { class: className = '', source = 'landing' } = Astro.props;
 
         // 201 = inserted. 409 = unique violation (already on the list) — treat as success too.
         if (response.ok || response.status === 409) {
+          // Fire the Lead conversion only now that the insert has actually
+          // resolved (not on click) — covers both a fresh signup and a
+          // repeat submit, matching the "you're on the list" message shown.
+          trackLead({ source });
+
           form.classList.add('hidden');
           if (message) {
             showMessage(

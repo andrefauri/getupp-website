@@ -1,5 +1,7 @@
 ---
 import Footer from '../components/layout/Footer.astro';
+import MetaPixel from '../components/analytics/MetaPixel.astro';
+import { variantFromPathname } from '../lib/analytics';
 import '../styles/global.css';
 
 export interface Props {
@@ -16,6 +18,11 @@ export interface Props {
   canonical?: string;
   /** Set true to exclude the page from search engine indexing. */
   noindex?: boolean;
+  /** Landing-page variant label for A/B analytics (Meta Pixel `content_name`
+   * on the Lead event). Defaults to a slug derived from the route, so a new
+   * page needs no wiring unless you want a specific label — set this to
+   * override, e.g. variant="lp-morning-v2". */
+  variant?: string;
 }
 
 const {
@@ -25,6 +32,7 @@ const {
   ogImage,
   canonical = Astro.url.href,
   noindex = false,
+  variant = variantFromPathname(Astro.url.pathname),
 } = Astro.props;
 
 const resolvedOgImage = ogImage ? new URL(ogImage, Astro.url).href : undefined;
@@ -55,6 +63,10 @@ const resolvedOgImage = ogImage ? new URL(ogImage, Astro.url).href : undefined;
 
     <meta name="theme-color" content="#f4e8cf" />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Read by src/lib/tracking.ts to tag the Lead event with the landing-page variant. -->
+    <meta name="page-variant" content={variant} />
+    <MetaPixel />
   </head>
   <body class="flex min-h-svh flex-col bg-cream font-sans text-brown antialiased">
     <main class="flex-1">

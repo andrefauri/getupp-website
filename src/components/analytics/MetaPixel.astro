@@ -1,0 +1,56 @@
+---
+/**
+ * Meta Pixel base install. Rendered exactly once, from BaseLayout's <head>,
+ * so it loads on every page automatically. Do not paste this snippet (or a
+ * second pixel ID) into individual pages — add new landing pages by routing
+ * them through BaseLayout, not by re-installing the pixel.
+ */
+import { META_PIXEL_ID, PIXEL_REQUIRE_CONSENT } from '../../lib/analytics';
+---
+
+<script is:inline define:vars={{ pixelId: META_PIXEL_ID, requireConsent: PIXEL_REQUIRE_CONSENT }}>
+  // Meta's standard base code, with fbq always stubbed so any calls made
+  // before init (or while consent-gated) queue instead of throwing.
+  !(function (f, b, e, v, n, t, s) {
+    if (f.fbq) return;
+    n = f.fbq = function () {
+      n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+    };
+    if (!f._fbq) f._fbq = n;
+    n.push = n;
+    n.loaded = !0;
+    n.version = '2.0';
+    n.queue = [];
+    t = b.createElement(e);
+    t.async = !0;
+    t.src = v;
+    s = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s);
+  })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+  function initMetaPixel() {
+    fbq('init', pixelId);
+    fbq('track', 'PageView');
+  }
+
+  if (!requireConsent) {
+    initMetaPixel();
+  } else {
+    // Consent gate: nothing fires until this is called (e.g. from a future
+    // cookie-consent banner's "accept" handler).
+    window.getuppGrantPixelConsent = initMetaPixel;
+  }
+</script>
+
+{
+  !PIXEL_REQUIRE_CONSENT && (
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display:none"
+        src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
+      />
+    </noscript>
+  )
+}
