@@ -1,0 +1,181 @@
+---
+// redesign-spec-v1.md §4.6. Markup/copy sourced verbatim from div#7a's
+// "PRICE — v3 two-card layout" block in
+// design-ref/GET UPP Web - Beast.dc.html, minus the removed Google Play
+// badge. id="price" is the anchor target Nav.astro already links to.
+//
+// The reference sets no background on this block or its FREE card — both
+// inherit ink/bone from the #7a root wrapper they sit in, which this build
+// doesn't have (every section here sets its own background explicitly).
+// Reproduced that resolved result directly: section background ink, text
+// bone, matching spec's "Bone/ink section" header for this component.
+//
+// Two more reference colours aren't in the §3 palette: the FREE card's
+// border (#2c2c2a) and its description text (#9a978d). The border needs to
+// read against an ink background, so it's derived via color-mix() rather
+// than reusing --ink itself (invisible at 0 contrast). The description
+// reuses --ink-fade directly — same "muted secondary text" role as its
+// spec-table definition, just close rather than an exact hex match.
+//
+// Both App Store badges and the GET UPP PLUS button are real <button>s with
+// no handler yet — all three are on spec §5's list of the four CTAs that
+// open the waitlist modal in phase 4.
+---
+
+<section class="pricing" id="price">
+  <div class="pricing__inner">
+    <div class="pricing__grid">
+      <div class="plan plan--free">
+        <h2 class="plan__title plan__title--free">FREE</h2>
+        <p class="plan__desc">
+          Blocking, selfie proof, your morning timer, streaks. The whole mechanic. Not a trial.
+        </p>
+        <div class="plan__badges">
+          <button type="button" class="badge-btn">
+            <img src="/images/badges/badge-appstore.png" alt="Download on the App Store" />
+          </button>
+        </div>
+      </div>
+
+      <div class="plan plan--plus">
+        <div class="plan__head">
+          <h2 class="plan__title">PLUS</h2>
+          <span class="plan__price-tag">PAID · PRICE TBC</span>
+        </div>
+        <div class="plan__features">
+          <div class="plan__feature">Custom morning time settings</div>
+          <div class="plan__feature">Weekend rules</div>
+          <div class="plan__feature">Premium extras, coming soon</div>
+        </div>
+        <button type="button" class="plan__cta">GET UPP PLUS</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pricing {
+    background: var(--ink);
+    color: var(--bone);
+  }
+
+  .pricing__inner {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding: var(--space-5) var(--section-pad-x) var(--section-pad-y);
+  }
+
+  .pricing__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+  }
+
+  .plan {
+    border-radius: 12px;
+    padding: var(--space-10);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .plan--free {
+    border: 2px solid color-mix(in srgb, var(--bone) 12%, var(--ink));
+  }
+
+  .plan--plus {
+    background: var(--acid);
+    color: var(--ink);
+  }
+
+  .plan__title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: var(--fs-stat);
+    line-height: 1;
+  }
+
+  .plan__title--free {
+    color: var(--acid);
+  }
+
+  .plan__desc {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--ink-fade);
+  }
+
+  .plan__badges {
+    margin-top: auto;
+    display: flex;
+    gap: var(--space-3);
+  }
+
+  .badge-btn {
+    display: block;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    line-height: 0;
+  }
+
+  .badge-btn img {
+    display: block;
+    height: 54px;
+    width: auto;
+  }
+
+  .plan__head {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3);
+  }
+
+  .plan__price-tag {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    letter-spacing: var(--ls-mono);
+  }
+
+  .plan__features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    font-family: var(--font-body);
+    font-size: var(--fs-intro);
+    line-height: var(--lh-body);
+  }
+
+  .plan__feature {
+    border-top: 2px solid var(--ink);
+    padding-top: var(--space-3);
+  }
+
+  .plan__cta {
+    margin-top: auto;
+    border: none;
+    background: var(--ink);
+    color: var(--acid);
+    font-family: var(--font-display);
+    font-size: var(--fs-label);
+    line-height: var(--lh-display);
+    letter-spacing: var(--ls-display);
+    text-align: center;
+    padding: var(--space-5);
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 767px) {
+    .pricing__inner {
+      padding: var(--section-pad-y) var(--section-pad-x);
+    }
+
+    .pricing__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./tokens.css";
 
 /* ---------------------------------------------------------------------- */
 /* Brand fonts                                                             */
@@ -128,4 +129,26 @@ svg {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Legacy font pin — DELETE AT PHASE 6 CUTOVER, together with the old      */
+/* components.                                                             */
+/*                                                                          */
+/* tokens.css redefines --font-display / --font-mono per                  */
+/* redesign-spec-v1.md §3 (Anton / DM Mono for the new design). Those are  */
+/* the same custom-property names the @theme block above defines for the  */
+/* current Pangram Pangram stacks, and tokens.css is imported unlayered,   */
+/* so without this pin the pre-redesign .font-display / .font-mono         */
+/* utilities (@layer utilities) would silently pick up the new fonts.      */
+/* These two rules are also unlayered, so they win the same way and hold  */
+/* the old components on their original typefaces until they're removed.  */
+/* ---------------------------------------------------------------------- */
+
+.font-display {
+  font-family: "PP Right Grotesk Wide", "Arial Black", sans-serif;
+}
+
+.font-mono {
+  font-family: "PP Neue Montreal Mono", ui-monospace, monospace;
 }

@@ -69,9 +69,12 @@ const resolvedOgImage = ogImage ? new URL(ogImage, Astro.url).href : undefined;
     <MetaPixel />
   </head>
   <body class="flex min-h-svh flex-col bg-cream font-sans text-brown antialiased">
+    <slot name="nav" />
     <main class="flex-1">
       <slot />
     </main>
-    <Footer />
+    <slot name="footer">
+      <Footer />
+    </slot>
   </body>
 </html>

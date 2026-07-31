@@ -1,0 +1,375 @@
+---
+// redesign-spec-v1.md §4.3. Markup/copy sourced verbatim from div#7a's
+// "HOW IT WORKS — three screens" block in
+// design-ref/GET UPP Web - Beast.dc.html.
+//
+// id="how-it-works" is the anchor target Nav.astro already links to.
+//
+// Two colours in the reference (#1c1c1a card backdrop, rgba(11,11,11,.22)
+// overlay, #7d7a72 caption, #dedbd2 progress track) aren't in the §3 palette.
+// Per §3's "flag rather than invent" rule, these are derived from existing
+// tokens via color-mix() instead of adding new hex values: the near-black
+// ones collapse onto --ink, the muted caption onto --bone at reduced
+// opacity (its own table row: "Off-white. Text on dark."), and the progress
+// track onto --bone-dim (its reference value is a ~1% rounding of it).
+---
+
+<section class="three-screens" id="how-it-works">
+  <div class="three-screens__inner">
+    <div class="three-screens__head">
+      <h2 class="three-screens__headline">THREE SCREENS.<br />ONE MORNING.</h2>
+      <p class="three-screens__intro">Set it once at bedtime. After that, this is the whole app.</p>
+    </div>
+
+    <div class="three-screens__grid">
+      <article class="card">
+        <p class="card__label">1 — THE ALARM GOES</p>
+        <p class="card__desc">The apps you picked are already blocked.</p>
+        <div class="card__mock card__mock--acid">
+          <div class="mock-row">
+            <span>6.47</span><span>MON</span>
+          </div>
+          <div class="mock-stack">
+            <svg
+              class="mock-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
+              <rect x="4" y="10.5" width="16" height="10.5" rx="1.5"></rect>
+              <path d="M8 10.5 V7.5 a4 4 0 0 1 8 0 V10.5"></path>
+            </svg>
+            <p class="mock-headline">FIVE APPS,<br />SHUT.</p>
+            <p class="mock-desc">Everything interesting is asleep. So are you, technically.</p>
+          </div>
+          <div class="mock-button mock-button--acid">FINE, I'M UP</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <p class="card__label">2 — PROVE IT</p>
+        <p class="card__desc">A selfie in the room you chose. Bed doesn't count.</p>
+        <div class="card__mock card__mock--photo">
+          <div
+            class="mock-photo"
+            style="background-image: url('/images/selfie-in-bed-1.png');"
+            role="img"
+            aria-label="Mock photo: a selfie taken in bed, rejected as not out of bed"
+          >
+            <div class="mock-photo__overlay"></div>
+            <div class="mock-photo__detect"></div>
+            <p class="mock-sticker">ABSOLUTELY NOT. THAT IS A BED.</p>
+          </div>
+          <div class="mock-shutter-row">
+            <div class="mock-shutter">
+              <div class="mock-shutter__dot"></div>
+            </div>
+            <span class="mock-caption">DECIDED ON YOUR PHONE · PHOTO NEVER LEAVES IT</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <p class="card__label">3 — MORNING TIMER</p>
+        <p class="card__desc">Approved, and the clock starts. Feed stays off.</p>
+        <div class="card__mock card__mock--bone">
+          <div class="mock-row mock-row--soft">
+            <span>6.54</span><span>WINDOW OPEN</span>
+          </div>
+          <div class="mock-stack">
+            <svg
+              class="mock-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="13" r="8"></circle>
+              <path d="M12 8.5 V13 h3.4 M9 2.5 h6"></path>
+            </svg>
+            <p class="mock-timer">26:41</p>
+            <p class="mock-headline">OF MORNING<br />LEFT.</p>
+            <p class="mock-desc mock-desc--soft">No feed, no notifications, no me. Kettle's over there.</p>
+          </div>
+          <div class="mock-progress">
+            <div class="mock-progress__track">
+              <div class="mock-progress__fill"></div>
+            </div>
+            <div class="mock-row mock-row--soft">
+              <span>OUT 06.50</span><span>APPS RETURN 07.20</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .three-screens {
+    background: var(--ink);
+    color: var(--bone);
+  }
+
+  .three-screens__inner {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding: var(--section-pad-y) var(--section-pad-x);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  .three-screens__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--space-6);
+  }
+
+  .three-screens__headline {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: var(--fs-section);
+    line-height: var(--lh-display);
+    letter-spacing: var(--ls-display);
+    color: var(--acid);
+  }
+
+  .three-screens__intro {
+    margin: 0;
+    max-width: 360px;
+    font-family: var(--font-body);
+    font-size: var(--fs-intro);
+    line-height: var(--lh-body);
+    color: var(--bone-dim);
+  }
+
+  .three-screens__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-card);
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .card__label {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: var(--fs-card-title);
+    line-height: 1;
+    letter-spacing: var(--ls-display);
+  }
+
+  .card__desc {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--bone-dim);
+  }
+
+  .card__mock {
+    border-radius: 12px;
+    height: 520px;
+  }
+
+  .card__mock--acid,
+  .card__mock--bone {
+    padding: var(--space-7);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card__mock--acid {
+    background: var(--acid);
+    color: var(--ink);
+  }
+
+  .card__mock--bone {
+    background: var(--bone);
+    color: var(--ink);
+  }
+
+  .card__mock--photo {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: var(--ink);
+  }
+
+  .mock-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono-sm);
+    letter-spacing: var(--ls-mono);
+  }
+
+  .mock-row--soft {
+    color: var(--ink-soft);
+  }
+
+  .mock-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .mock-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .mock-headline {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: var(--fs-headline);
+    line-height: var(--lh-display);
+    letter-spacing: var(--ls-display);
+  }
+
+  .mock-desc {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+  }
+
+  .mock-desc--soft {
+    color: var(--ink-soft);
+  }
+
+  .mock-timer {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: var(--fs-timer);
+    line-height: var(--lh-display);
+    letter-spacing: var(--ls-display);
+  }
+
+  .mock-button {
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: var(--fs-label);
+    line-height: var(--lh-display);
+    letter-spacing: var(--ls-display);
+    padding: var(--space-4);
+    border-radius: 5px;
+  }
+
+  .mock-button--acid {
+    background: var(--ink);
+    color: var(--acid);
+  }
+
+  .mock-photo {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  .mock-photo__overlay {
+    position: absolute;
+    inset: 0;
+    background: color-mix(in srgb, var(--ink) 22%, transparent);
+  }
+
+  .mock-photo__detect {
+    position: absolute;
+    top: 44px;
+    left: 22px;
+    right: 22px;
+    bottom: 74px;
+    border: 2px dashed color-mix(in srgb, var(--acid) 70%, transparent);
+  }
+
+  .mock-sticker {
+    position: absolute;
+    bottom: var(--space-5);
+    left: var(--space-4);
+    margin: 0;
+    background: var(--acid);
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: var(--fs-label);
+    line-height: 1.1;
+    padding: var(--space-2) var(--space-3);
+    transform: rotate(-2deg);
+  }
+
+  .mock-shutter-row {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+  }
+
+  .mock-shutter {
+    width: 66px;
+    height: 66px;
+    border-radius: 33px;
+    border: 3px solid var(--acid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mock-shutter__dot {
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+    background: var(--acid);
+  }
+
+  .mock-caption {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono-sm);
+    letter-spacing: var(--ls-mono);
+    color: color-mix(in srgb, var(--bone) 65%, transparent);
+  }
+
+  .mock-progress {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .mock-progress__track {
+    height: var(--space-2);
+    background: var(--bone-dim);
+  }
+
+  .mock-progress__fill {
+    width: 11%;
+    height: 100%;
+    background: var(--ink);
+  }
+
+  @media (max-width: 767px) {
+    .three-screens__head {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-4);
+    }
+
+    .three-screens__intro {
+      max-width: none;
+    }
+
+    .three-screens__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

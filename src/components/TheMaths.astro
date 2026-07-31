@@ -1,0 +1,179 @@
+---
+// redesign-spec-v1.md §4.4. Markup/copy sourced verbatim from div#7a's
+// "WHY — one number" block in design-ref/GET UPP Web - Beast.dc.html.
+//
+// Headline, photo, and stats are three siblings placed with CSS Grid named
+// areas rather than nested the way the reference has them (headline+stats
+// bundled together, photo separate) — that's what lets the photo slot in
+// between them on mobile (spec: "headline, photo, stats" order) while still
+// sharing one column with the headline on desktop.
+//
+// The vertical hairlines between stats are the grid's own background
+// showing through a 2px gap, not a border — so switching the stats grid to
+// one column on mobile turns the same gap into horizontal rules for free.
+---
+
+<section class="the-maths">
+  <div class="the-maths__inner">
+    <div class="the-maths__grid">
+      <div class="the-maths__headline-block">
+        <h2 class="the-maths__headline">250 HOURS A YEAR,<br />WASTED<br />DOOMSCROLLING.</h2>
+        <p class="the-maths__cta-line">GET IT BACK.</p>
+      </div>
+
+      <div
+        class="the-maths__photo"
+        style="background-image: url('/images/selfie-in-bed-2.png');"
+        role="img"
+        aria-label="Photo: still in bed forty-one minutes after the alarm, phone in hand"
+      >
+        <p class="the-maths__timestamp">07.29 · ALARM WENT AT 06.48</p>
+        <p class="the-maths__sticker">FORTY-ONE MINUTES GONE.</p>
+      </div>
+
+      <div class="the-maths__stats">
+        <div class="stat">
+          <span class="stat__number">41 MIN</span>
+          <span class="stat__caption">Alarm to feet on floor, every morning</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">89%</span>
+          <span class="stat__caption">Check a screen within ten minutes of waking</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">10.4</span>
+          <span class="stat__caption">Whole days a year, in bed, awake, scrolling</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .the-maths {
+    background: var(--acid);
+    color: var(--ink);
+  }
+
+  .the-maths__inner {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding: var(--section-pad-y) var(--section-pad-x);
+  }
+
+  .the-maths__grid {
+    display: grid;
+    grid-template-columns: 1fr 520px;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "headline photo" "stats photo";
+    gap: var(--space-5) var(--space-14);
+  }
+
+  .the-maths__headline-block {
+    grid-area: headline;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .the-maths__headline {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: var(--fs-section);
+    line-height: var(--lh-display);
+    letter-spacing: var(--ls-display);
+  }
+
+  .the-maths__cta-line {
+    margin: 0;
+    align-self: flex-start;
+    background: var(--ink);
+    color: var(--acid);
+    font-family: var(--font-display);
+    font-size: var(--fs-section);
+    line-height: var(--lh-display);
+    letter-spacing: var(--ls-display);
+    padding: var(--space-1) var(--space-4);
+  }
+
+  .the-maths__stats {
+    grid-area: stats;
+    margin-top: var(--space-3);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--ink);
+  }
+
+  .stat {
+    background: var(--acid);
+    padding: var(--space-6) var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .stat__number {
+    font-family: var(--font-display);
+    font-size: var(--fs-stat);
+    line-height: 1;
+    letter-spacing: var(--ls-display);
+  }
+
+  .stat__caption {
+    font-family: var(--font-body);
+    font-size: var(--fs-small);
+    line-height: var(--lh-body);
+  }
+
+  .the-maths__photo {
+    grid-area: photo;
+    height: 520px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center 45%;
+    position: relative;
+  }
+
+  .the-maths__timestamp {
+    position: absolute;
+    top: var(--space-4);
+    left: var(--space-4);
+    margin: 0;
+    background: var(--ink);
+    color: var(--acid);
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    letter-spacing: var(--ls-mono);
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .the-maths__sticker {
+    position: absolute;
+    bottom: var(--space-5);
+    left: calc(var(--space-2) * -1);
+    margin: 0;
+    background: var(--acid);
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: var(--fs-card-title);
+    line-height: var(--lh-display);
+    letter-spacing: var(--ls-display);
+    padding: var(--space-2) var(--space-4);
+    transform: rotate(-2deg);
+  }
+
+  @media (max-width: 767px) {
+    .the-maths__grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "headline" "photo" "stats";
+      gap: var(--space-8);
+    }
+
+    .the-maths__stats {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

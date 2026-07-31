@@ -1,0 +1,102 @@
+---
+// redesign-spec-v1.md §4.7. Markup/copy sourced verbatim from div#7a's footer
+// block in design-ref/GET UPP Web - Beast.dc.html, except "iOS + ANDROID" ->
+// "iOS" per the spec's explicit change.
+---
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <svg class="footer__wordmark" viewBox="3 0 291 88" aria-label="GET UPP">
+        <text x="0" y="87" font-size="100" fill="currentColor">GET UPP</text>
+        <rect x="218.2" y="14.5" width="12.7" height="25.3" fill="currentColor"></rect>
+        <rect x="265.5" y="14.5" width="12.7" height="25.3" fill="currentColor"></rect>
+      </svg>
+      <p class="footer__tagline">GET UP. GET YOUR MORNING BACK.</p>
+    </div>
+
+    <div class="footer__links">
+      <div class="footer__col">
+        <span>PRIVACY — PHOTOS STAY ON YOUR PHONE</span>
+        <span>TERMS — DULL, BUT FAIR</span>
+        <span>SUPPORT — WE'RE UP, OBVIOUSLY</span>
+      </div>
+      <div class="footer__col">
+        <span>COOKIES: NECESSARY ONLY. <a href="#cookies">GO ON THEN</a></span>
+        <span>iOS</span>
+        <span>© GET UPP 2026</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--bone);
+    color: var(--ink-fade);
+  }
+
+  .footer__inner {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding: var(--section-pad-x);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--gap-major);
+  }
+
+  .footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .footer__wordmark {
+    display: block;
+    width: clamp(200px, 171.831px + 7.512vw, 280px);
+    height: auto;
+    color: var(--rule);
+  }
+
+  .footer__wordmark text {
+    font-family: var(--font-display);
+  }
+
+  .footer__tagline {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    letter-spacing: var(--ls-mono);
+  }
+
+  .footer__links {
+    display: flex;
+    gap: var(--space-12);
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    line-height: 2;
+    letter-spacing: var(--ls-mono);
+  }
+
+  .footer__col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer__col a {
+    color: inherit;
+  }
+
+  @media (max-width: 767px) {
+    .footer__inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .footer__links {
+      flex-direction: column;
+      gap: var(--space-6);
+    }
+  }
+</style>

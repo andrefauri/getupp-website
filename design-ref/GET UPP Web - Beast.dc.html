@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Alfa+Slab+One&family=Big+Shoulders+Display:wght@800&family=Space+Grotesk:wght@700&display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #131313; }
+  a { color: #131313; text-decoration: none; border-bottom: 1px solid currentColor; }
+  a:hover { color: #57554e; }
+  @keyframes bs-lid { 0%, 90%, 100% { transform: scaleY(0); } 94%, 96% { transform: scaleY(1); } }
+  @keyframes bs-halflid { 0%, 86%, 100% { transform: scaleY(0.42); } 91%, 94% { transform: scaleY(1); } }
+</style>
+</helmet>
+
+<section style="padding: 40px 40px 0; background: #1b1b1b; display: flex; flex-direction: column; gap: 22px;">
+  <div style="display: flex; align-items: center; gap: 14px;"><span style="font-family: 'DM Mono', monospace; font-size: 15px; color: #8d8d95; letter-spacing: 0.06em;">TURN 3 — LOGO DIRECTIONS + HALF-LID BLINK</span></div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 22px; width: 1440px;">
+
+    <div id="3a" style="width: 465px; display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: flex; align-items: center; gap: 10px;"><span style="background: #ffe100; color: #131313; font-family: 'DM Mono', monospace; font-size: 14px; padding: 3px 10px;">3a</span><span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #8d8d95;">ANTON — HOUSE</span></div>
+      <div style="background: #ffe100; padding: 40px 36px; display: flex; flex-direction: column; gap: 26px;">
+        <svg viewBox="-3 11 300 84" style="display: block; width: 340px; height: 95px;" aria-label="GET UPP">
+          <text x="0" y="87" font-family="Anton" font-size="100" fill="#131313">GET UPP</text>
+          <rect x="218.2" y="14.5" width="12.7" height="25.3" fill="#131313"></rect>
+          <rect x="265.5" y="14.5" width="12.7" height="25.3" fill="#131313"></rect>
+        </svg>
+        <div style="font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.7; color: #131313;">Tight, tabloid-loud, no air between letters.<br>Counters are small — the eyes read as pinpricks.</div>
+      </div>
+    </div>
+
+    <div id="3b" style="width: 465px; display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: flex; align-items: center; gap: 10px;"><span style="background: #ffe100; color: #131313; font-family: 'DM Mono', monospace; font-size: 14px; padding: 3px 10px;">3b</span><span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #8d8d95;">ARCHIVO BLACK</span></div>
+      <div style="background: #ffe100; padding: 40px 36px; display: flex; flex-direction: column; gap: 26px;">
+        <svg viewBox="-3 11 495 84" style="display: block; width: 393px; height: 66.7px;" aria-label="GET UPP">
+          <text x="0" y="87" font-family="Archivo Black" font-size="100" fill="#131313">GET UPP</text>
+          <rect x="371.5" y="32.2" width="20.7" height="19" fill="#131313"></rect>
+          <rect x="443.5" y="32.2" width="21" height="19" fill="#131313"></rect>
+        </svg>
+        <div style="font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.7; color: #131313;">Wide and grounded, closest to the body type.<br>Squat counters sit low — sleepy, hooded eyes.</div>
+      </div>
+    </div>
+
+    <div id="3c" style="width: 465px; display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: flex; align-items: center; gap: 10px;"><span style="background: #ffe100; color: #131313; font-family: 'DM Mono', monospace; font-size: 14px; padding: 3px 10px;">3c</span><span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #8d8d95;">BEBAS NEUE</span></div>
+      <div style="background: #ffe100; padding: 40px 36px; display: flex; flex-direction: column; gap: 26px;">
+        <svg viewBox="-3 11 251 84" style="display: block; width: 285px; height: 95.4px;" aria-label="GET UPP">
+          <text x="0" y="87" font-family="Bebas Neue" font-size="100" fill="#131313">GET UPP</text>
+          <rect x="180.8" y="24.5" width="15.3" height="26.3" fill="#131313"></rect>
+          <rect x="219.2" y="24.5" width="15.7" height="26.3" fill="#131313"></rect>
+        </svg>
+        <div style="font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.7; color: #131313;">Lighter, sportier, more gym-poster than tabloid.<br>Tall counters make the best eyelids of the set.</div>
+      </div>
+    </div>
+
+    <div id="3d" style="width: 465px; display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: flex; align-items: center; gap: 10px;"><span style="background: #ffe100; color: #131313; font-family: 'DM Mono', monospace; font-size: 14px; padding: 3px 10px;">3d</span><span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #8d8d95;">ALFA SLAB ONE</span></div>
+      <div style="background: #ffe100; padding: 40px 36px; display: flex; flex-direction: column; gap: 26px;">
+        <svg viewBox="-3 11 489 84" style="display: block; width: 393px; height: 67.5px;" aria-label="GET UPP">
+          <text x="0" y="87" font-family="Alfa Slab One" font-size="100" fill="#131313">GET UPP</text>
+          <rect x="368.2" y="23.2" width="14" height="21.3" fill="#131313"></rect>
+          <rect x="441.8" y="23.2" width="14.3" height="21.3" fill="#131313"></rect>
+        </svg>
+        <div style="font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.7; color: #131313;">Slabs give it a fairground, hand-painted swagger.<br>Warmer and funnier; less clinical than the rest.</div>
+      </div>
+    </div>
+
+    <div id="3e" style="width: 465px; display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: flex; align-items: center; gap: 10px;"><span style="background: #ffe100; color: #131313; font-family: 'DM Mono', monospace; font-size: 14px; padding: 3px 10px;">3e</span><span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #8d8d95;">BIG SHOULDERS DISPLAY 800</span></div>
+      <div style="background: #ffe100; padding: 40px 36px; display: flex; flex-direction: column; gap: 26px;">
+        <svg viewBox="-3 11 283 84" style="display: block; width: 320px; height: 95px;" aria-label="GET UPP">
+          <text x="0" y="87" font-family="Big Shoulders Display" font-weight="800" font-size="100" fill="#131313">GET UPP</text>
+          <rect x="204.2" y="16.2" width="16" height="35" fill="#131313"></rect>
+          <rect x="247.8" y="16.2" width="16" height="35" fill="#131313"></rect>
+        </svg>
+        <div style="font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.7; color: #131313;">Ultra-condensed, flat-sided, very now.<br>Long counters read as full eyes, not dots.</div>
+      </div>
+    </div>
+
+    <div id="3f" style="width: 465px; display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: flex; align-items: center; gap: 10px;"><span style="background: #ffe100; color: #131313; font-family: 'DM Mono', monospace; font-size: 14px; padding: 3px 10px;">3f</span><span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #8d8d95;">SPACE GROTESK 700</span></div>
+      <div style="background: #ffe100; padding: 40px 36px; display: flex; flex-direction: column; gap: 26px;">
+        <svg viewBox="-3 11 400 84" style="display: block; width: 393px; height: 82.5px;" aria-label="GET UPP">
+          <text x="0" y="87" font-family="Space Grotesk" font-weight="700" font-size="100" fill="#131313">GET UPP</text>
+          <rect x="285.5" y="26.5" width="35" height="25.3" fill="#131313"></rect>
+          <rect x="345.8" y="26.5" width="35" height="25.3" fill="#131313"></rect>
+        </svg>
+        <div style="font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.7; color: #131313;">Softer, techier, friendliest of the six.<br>Big round counters — the most obviously eye-like.</div>
+      </div>
+    </div>
+
+    <div id="3g" style="width: 952px; display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: flex; align-items: center; gap: 10px;"><span style="background: #ffe100; color: #131313; font-family: 'DM Mono', monospace; font-size: 14px; padding: 3px 10px;">3g</span><span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #8d8d95;">HALF-LID BLINK — DEFAULT STATE IS HALF SHUT</span></div>
+      <div style="background: #ffe100; display: flex; flex-direction: column;">
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; border-bottom: 2px solid #131313;">
+          <svg viewBox="3 0 291 88" style="display: block; width: 176px; height: 53px;" aria-label="GET UPP">
+            <text x="0" y="87" font-family="Anton" font-size="100" fill="#131313">GET UPP</text>
+            <rect x="218.2" y="14.5" width="12.7" height="25.3" fill="#131313" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite;"></rect>
+            <rect x="265.5" y="14.5" width="12.7" height="25.3" fill="#131313" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite; animation-delay: 0.09s;"></rect>
+          </svg>
+          <div style="display: flex; align-items: center; gap: 26px; font-family: 'DM Mono', monospace; font-size: 13px; color: #131313;">
+            <span>THE PROBLEM</span><span>THE DOOR</span><span>TAME IT</span><span>PRICE</span>
+            <span style="background: #131313; color: #ffe100; padding: 11px 18px; font-family: Anton, sans-serif; font-size: 16px;">GET THE APP</span>
+          </div>
+        </div>
+        <div style="padding: 44px 40px; display: flex; align-items: center; gap: 48px;">
+          <svg viewBox="-3 11 300 84" style="display: block; width: 400px; height: 112px;" aria-label="GET UPP">
+            <text x="0" y="87" font-family="Anton" font-size="100" fill="#131313">GET UPP</text>
+            <rect x="218.2" y="14.5" width="12.7" height="25.3" fill="#131313" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite;"></rect>
+            <rect x="265.5" y="14.5" width="12.7" height="25.3" fill="#131313" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite; animation-delay: 0.09s;"></rect>
+          </svg>
+          <div style="font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.8; color: #131313; max-width: 300px;">RESTING: LIDS AT 50% — HALF AWAKE, LIKE YOU AT 6:40.<br>BLINK: LIDS DROP TO 100% FOR A BEAT, THEN BACK TO HALF.<br>RIGHT EYE LAGS 90ms SO IT NEVER LOOKS MECHANICAL.</div>
+        </div>
+        <div style="background: #131313; padding: 34px 40px; display: flex; align-items: center; gap: 40px;">
+          <svg viewBox="-3 11 251 84" style="display: block; width: 230px; height: 77px;" aria-label="GET UPP">
+            <text x="0" y="87" font-family="Bebas Neue" font-size="100" fill="#ffe100">GET UPP</text>
+            <rect x="180.8" y="24.5" width="15.3" height="26.3" fill="#ffe100" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite;"></rect>
+            <rect x="219.2" y="24.5" width="15.7" height="26.3" fill="#ffe100" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite; animation-delay: 0.09s;"></rect>
+          </svg>
+          <svg viewBox="-3 11 283 84" style="display: block; width: 259px; height: 77px;" aria-label="GET UPP">
+            <text x="0" y="87" font-family="Big Shoulders Display" font-weight="800" font-size="100" fill="#ffe100">GET UPP</text>
+            <rect x="204.2" y="16.2" width="16" height="35" fill="#ffe100" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite;"></rect>
+            <rect x="247.8" y="16.2" width="16" height="35" fill="#ffe100" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite; animation-delay: 0.09s;"></rect>
+          </svg>
+          <div style="font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.8; color: #7d7a72;">THE TALLER THE COUNTER, THE MORE IT READS AS AN EYE.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div style="display: flex; align-items: flex-start; gap: 72px; padding: 40px; background: #1b1b1b;">
+
+<div id="1a" style="display: flex; flex-direction: column; gap: 14px;">
+<div style="display: flex; align-items: center; gap: 12px;"><span style="background: #ffe100; color: #131313; font-family: 'DM Mono', monospace; font-size: 15px; padding: 4px 12px;">1a</span><span style="font-family: 'DM Mono', monospace; font-size: 15px; color: #8d8d95; letter-spacing: 0.06em;">BEAST — ORIGINAL</span></div>
+<div style="width: 1440px; background: #131313; color: #f6f4ee; font-family: Archivo, sans-serif;">
+
+  <!-- nav -->
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; background: #ffe100; color: #131313; position: sticky; top: 0; z-index: 20;">
+    <svg viewBox="3 0 291 88" style="display: block; width: 176px; height: 53px;" aria-label="GET UPP">
+      <text x="0" y="87" font-family="Anton" font-size="100" fill="#131313">GET UPP</text>
+      <rect x="220" y="16.5" width="9" height="21" fill="#ffe100" style="transform-box: fill-box; transform-origin: top center; animation: bs-lid 5s ease-in-out infinite;"></rect>
+      <rect x="267" y="16.5" width="10" height="21" fill="#ffe100" style="transform-box: fill-box; transform-origin: top center; animation: bs-lid 5s ease-in-out infinite;"></rect>
+    </svg>
+    <div style="display: flex; align-items: center; gap: 26px; font-family: 'DM Mono', monospace; font-size: 13px;">
+      <span>THE PROBLEM</span><span>THE DOOR</span><span>TAME IT</span><span>PRICE</span>
+      <span style="background: #131313; color: #ffe100; padding: 11px 18px; font-family: Anton, sans-serif; font-size: 16px;">GET THE APP</span>
+    </div>
+  </div>
+
+  <!-- hero -->
+  <div style="background: #ffe100; color: #131313; padding: 60px 40px 54px; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 44px; align-items: end;">
+    <div style="display: flex; flex-direction: column; gap: 26px;">
+      <div style="font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.1em;">IT IS 6.47 AND YOUR THUMB IS ALREADY MOVING</div>
+      <div style="font-family: Anton, sans-serif; font-size: 130px; line-height: 0.9;">THE BED IS<br>NOT AN OFFICE.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 22px; line-height: 1.45; max-width: 560px; text-wrap: pretty;">Your apps stay shut until you've left the room and proved it. Then they stay shut a while longer, because the bed is eight feet away and we both know it.</div>
+      <div style="display: flex; align-items: center; gap: 18px;">
+        <div style="background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 24px; padding: 20px 30px; border-radius: 6px;">GET UPP — FREE</div>
+        <div style="font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.6;">iOS + Android<br>Two Ps because one wasn't enough to move you</div>
+      </div>
+    </div>
+    <div style="border-radius: 10px; overflow: hidden; height: 520px; background-image: url('uploads/hf_20260725_110442_f70660f4-b676-44c6-8e75-70af2d9b8400.png'); background-size: cover; background-position: center; position: relative;">
+      <div style="position: absolute; bottom: 26px; left: -8px; background: #ffe100; color: #131313; font-family: Anton, sans-serif; font-size: 42px; padding: 8px 16px; transform: rotate(-2deg);">THAT IS A DUVET</div>
+      <div style="position: absolute; top: 14px; right: 14px; font-family: 'DM Mono', monospace; font-size: 11px; color: #f6f4ee; text-shadow: 0 1px 3px rgba(0,0,0,0.6);">ATTEMPT 01 · 06.48</div>
+    </div>
+  </div>
+
+  <!-- the problem -->
+  <div style="padding: 64px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <div style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #7d7a72;">THE PROBLEM, SAID OUT LOUD</div>
+      <div style="font-family: Anton, sans-serif; font-size: 74px; line-height: 0.92; color: #ffe100;">YOU HAVE 45 MINUTES YOU'VE NEVER MET.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 21px; line-height: 1.5; color: #ded9cd; max-width: 520px;">You wake at seven. You're upright at quarter to eight. Nobody can say where it went, but the phone can: four minutes of a stranger's kitchen renovation, and about two hundred things you didn't ask for.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 21px; line-height: 1.5; color: #ded9cd; max-width: 520px;">Your feed is a slot machine that pays out in nothing. It's very good at its job. It has a thousand engineers and you have a duvet.</div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 0;">
+      <div style="display: flex; align-items: baseline; gap: 18px; border-bottom: 1px solid #2c2c2a; padding: 18px 0;"><span style="font-family: Anton, sans-serif; font-size: 62px; color: #ffe100; width: 150px;">89%</span><span style="font-family: Archivo, sans-serif; font-size: 18px; color: #9a978d;">check the phone within ten minutes of waking</span></div>
+      <div style="display: flex; align-items: baseline; gap: 18px; border-bottom: 1px solid #2c2c2a; padding: 18px 0;"><span style="font-family: Anton, sans-serif; font-size: 62px; color: #ffe100; width: 150px;">38%</span><span style="font-family: Archivo, sans-serif; font-size: 18px; color: #9a978d;">of under-30s sleep with it physically on the bed</span></div>
+      <div style="display: flex; align-items: baseline; gap: 18px; border-bottom: 1px solid #2c2c2a; padding: 18px 0;"><span style="font-family: Anton, sans-serif; font-size: 62px; color: #ffe100; width: 150px;">39%</span><span style="font-family: Archivo, sans-serif; font-size: 18px; color: #9a978d;">who tried a screen time app say it did nothing. Correct.</span></div>
+      <div style="display: flex; align-items: baseline; gap: 18px; padding: 18px 0;"><span style="font-family: Anton, sans-serif; font-size: 62px; color: #ffe100; width: 150px;">250h</span><span style="font-family: Archivo, sans-serif; font-size: 18px; color: #9a978d;">a year. Six working weeks, horizontal, on strangers.</span></div>
+    </div>
+  </div>
+
+  <!-- selfie wall -->
+  <div style="background: #ffe100; color: #131313; padding: 60px 40px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 30px;">
+      <div style="font-family: Anton, sans-serif; font-size: 78px; line-height: 0.92;">IT IS NOT<br>FOOLED BY YOU.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 20px; max-width: 460px; line-height: 1.5;">Take a selfie. It decides whether you're actually out of the bedroom, and it has opinions. Five attempts is a normal Tuesday.</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px;">
+      <div style="height: 420px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110442_f70660f4-b676-44c6-8e75-70af2d9b8400.png'); background-size: cover; background-position: center; position: relative;">
+        <div style="position: absolute; bottom: 14px; left: -6px; right: 8px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 26px; padding: 5px 10px; transform: rotate(-2deg);">THAT IS A DUVET</div>
+      </div>
+      <div style="height: 420px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110603_a2f43c80-4a91-4f9f-afb7-4cca0718c124.png'); background-size: cover; background-position: center; position: relative;">
+        <div style="position: absolute; bottom: 14px; left: -6px; right: 8px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 26px; padding: 5px 10px; transform: rotate(-2deg);">NICE CEILING</div>
+      </div>
+      <div style="height: 420px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110653_3e9b0162-8ed3-4d1e-95f6-20b2524289a7.png'); background-size: cover; background-position: center 28%; position: relative;">
+        <div style="position: absolute; bottom: 14px; left: -6px; right: 8px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 24px; padding: 5px 10px; transform: rotate(-2deg);">I SEE A WARDROBE</div>
+      </div>
+      <div style="height: 420px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110701_1852b34d-4902-499b-b26b-4948089eb411.png'); background-size: cover; background-position: center 22%; position: relative;">
+        <div style="position: absolute; bottom: 14px; left: -6px; right: 8px; background: #f6f4ee; color: #131313; font-family: Anton, sans-serif; font-size: 24px; padding: 5px 10px; transform: rotate(-2deg);">THE LANDING? CHEEKY</div>
+      </div>
+      <div style="height: 420px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110832_46798f76-ac86-40a3-9b08-1d32e4040ecf.png'); background-size: cover; background-position: center 20%; position: relative;">
+        <div style="position: absolute; bottom: 14px; left: -6px; right: 8px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 26px; padding: 5px 10px; transform: rotate(-2deg);">FINE. YOU'RE OUT.</div>
+      </div>
+    </div>
+    <div style="padding-top: 20px; font-family: 'DM Mono', monospace; font-size: 12px;">A PHOTO OF YOUR FACE AT 7AM, JUDGED BY AN APP. DATED, STREAK-MARKED, EXTREMELY SHAREABLE.</div>
+  </div>
+
+  <!-- TAME IT — interactive -->
+  <div style="padding: 64px 40px; display: flex; flex-direction: column; gap: 30px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #7d7a72;">TAME IT — DRAG THE STREAK, WATCH IT CALM DOWN</div>
+        <div style="font-family: Anton, sans-serif; font-size: 82px; line-height: 0.92; color: #ffe100;">THE REWARD<br>IS PEACE, NOT POINTS.</div>
+      </div>
+      <div style="font-family: Archivo, sans-serif; font-size: 20px; color: #ded9cd; max-width: 460px; line-height: 1.5;">Day one it's loud, sceptical and in your face. By day forty it's barely there. A product openly trying to become unnecessary — pick a day and see what it says to you.</div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 420px; gap: 40px; align-items: stretch;">
+      <div style="background: {{ tameBg }}; color: {{ tameFg }}; border-radius: 12px; padding: 40px; display: flex; flex-direction: column; justify-content: space-between; min-height: 420px;">
+        <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 13px;"><span>{{ tameDayLabel }}</span><span>SASS {{ tameSass }}</span></div>
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+          <div style="font-family: {{ tameFont }}; font-weight: 600; font-size: {{ tameSize }}; line-height: 0.95;">{{ tameLine }}</div>
+          <div style="font-family: Archivo, sans-serif; font-size: 19px; opacity: 0.75; max-width: 520px;">{{ tameSub }}</div>
+        </div>
+        <div style="display: flex; gap: 5px; align-items: flex-end; height: 52px;">
+          <div style="flex: 1; background: currentColor; opacity: 0.85; height: {{ bar1 }};"></div>
+          <div style="flex: 1; background: currentColor; opacity: 0.65; height: {{ bar2 }};"></div>
+          <div style="flex: 1; background: currentColor; opacity: 0.45; height: {{ bar3 }};"></div>
+          <div style="flex: 1; background: currentColor; opacity: 0.3; height: {{ bar4 }};"></div>
+          <div style="flex: 1; background: currentColor; opacity: 0.18; height: {{ bar5 }};"></div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div onClick="{{ setD1 }}" style="border: 2px solid #ffe100; background: {{ b1 }}; color: {{ f1 }}; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; border-radius: 8px;"><span style="font-family: Anton, sans-serif; font-size: 26px;">DAY 1</span><span style="font-family: 'DM Mono', monospace; font-size: 12px;">FULL VOLUME</span></div>
+        <div onClick="{{ setD8 }}" style="border: 2px solid #ffe100; background: {{ b2 }}; color: {{ f2 }}; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; border-radius: 8px;"><span style="font-family: Anton, sans-serif; font-size: 26px;">DAY 8</span><span style="font-family: 'DM Mono', monospace; font-size: 12px;">STILL SCEPTICAL</span></div>
+        <div onClick="{{ setD21 }}" style="border: 2px solid #ffe100; background: {{ b3 }}; color: {{ f3 }}; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; border-radius: 8px;"><span style="font-family: Anton, sans-serif; font-size: 26px;">DAY 21</span><span style="font-family: 'DM Mono', monospace; font-size: 12px;">ALMOST POLITE</span></div>
+        <div onClick="{{ setD40 }}" style="border: 2px solid #ffe100; background: {{ b4 }}; color: {{ f4 }}; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; border-radius: 8px;"><span style="font-family: Anton, sans-serif; font-size: 26px;">DAY 40</span><span style="font-family: 'DM Mono', monospace; font-size: 12px;">NEARLY REDUNDANT</span></div>
+        <div style="margin-top: auto; font-family: 'DM Mono', monospace; font-size: 12px; color: #7d7a72; line-height: 1.7;">BREAK THE STREAK AND IT WAKES BACK UP.<br>"I'VE NEARLY TAMED IT" IS A STATUS, A STREAK AND A STORY IN ONE LINE.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- the window -->
+  <div style="background: #f6f4ee; color: #131313; padding: 64px 40px; display: grid; grid-template-columns: 1fr 0.9fr; gap: 56px; align-items: center;">
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <div style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #57554e;">THE WINDOW — AND THIS IS WHERE WE SHUT UP</div>
+      <div style="font-family: Anton, sans-serif; font-size: 76px; line-height: 0.92;">THIS IS THE BIT<br>YOU CAME FOR.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 21px; line-height: 1.5; color: #3d3b36; max-width: 540px;">Once you're out, the apps stay shut for fifteen, thirty or sixty minutes. Nobody else protects this part — everyone else stops the second you're vertical. It's coffee while it's hot, daylight before a screen, and arriving somewhere already awake.</div>
+      <div style="display: flex; gap: 10px;">
+        <div style="border: 2px solid #131313; padding: 13px 20px; font-family: Anton, sans-serif; font-size: 19px;">15</div>
+        <div style="background: #131313; color: #f6f4ee; padding: 13px 20px; font-family: Anton, sans-serif; font-size: 19px;">30 MIN</div>
+        <div style="border: 2px solid #131313; padding: 13px 20px; font-family: Anton, sans-serif; font-size: 19px;">60</div>
+      </div>
+    </div>
+    <div style="border-radius: 10px; overflow: hidden; height: 480px; background-image: url('uploads/hf_20260725_110832_46798f76-ac86-40a3-9b08-1d32e4040ecf.png'); background-size: cover; background-position: center 18%; position: relative;">
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; background: #f6f4ee; padding: 14px 16px; display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 12px;"><span>OUT AT 06.50 · DAY 04</span><span>26:41 OF MORNING LEFT</span></div>
+    </div>
+  </div>
+
+  <!-- price -->
+  <div style="padding: 60px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+    <div style="border: 2px solid #2c2c2a; border-radius: 12px; padding: 34px; display: flex; flex-direction: column; gap: 14px;">
+      <div style="font-family: Anton, sans-serif; font-size: 46px; color: #ffe100;">FREE</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 19px; color: #9a978d; line-height: 1.5;">The whole mechanic. Lock, proof, window, streak, the full range of sass. Not a trial.</div>
+    </div>
+    <div style="background: #ffe100; color: #131313; border-radius: 12px; padding: 34px; display: flex; flex-direction: column; gap: 14px;">
+      <div style="display: flex; align-items: baseline; gap: 12px;"><span style="font-family: Anton, sans-serif; font-size: 46px;">£3.99</span><span style="font-family: 'DM Mono', monospace; font-size: 13px;">/MONTH · £24.99/YEAR</span></div>
+      <div style="font-family: Archivo, sans-serif; font-size: 19px; line-height: 1.5;">Several proof rooms, longer windows, weekend rules, accountability partners. One tool, one job, priced under Opal on purpose.</div>
+      <div style="background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 22px; padding: 17px; text-align: center; border-radius: 6px; margin-top: auto;">GET UPP</div>
+    </div>
+  </div>
+
+  <!-- footer — the beast is asleep -->
+  <div style="background: #f6f4ee; color: #8b8880; padding: 44px 40px; display: flex; justify-content: space-between; align-items: flex-end;">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <svg viewBox="3 0 291 88" style="display: block; width: 300px; height: 91px;" aria-label="GET UPP">
+        <text x="0" y="87" font-family="Anton" font-size="100" fill="#c4c1b8">GET UPP</text>
+        <rect x="218.2" y="14.5" width="12.7" height="25.3" fill="#c4c1b8"></rect>
+        <rect x="265.5" y="14.5" width="12.7" height="25.3" fill="#c4c1b8"></rect>
+      </svg>
+      <div style="font-family: 'DM Mono', monospace; font-size: 13px;">GET UP. GET OUT. GET YOUR MORNING BACK.</div>
+    </div>
+    <div style="display: flex; gap: 48px; font-family: 'DM Mono', monospace; font-size: 12px; line-height: 2;">
+      <div style="display: flex; flex-direction: column;"><span>PRIVACY — THE PHOTOS NEVER LEAVE YOUR PHONE</span><span>TERMS — DULL, BUT FAIR</span><span>SUPPORT — WE'RE UP, OBVIOUSLY</span></div>
+      <div style="display: flex; flex-direction: column;"><span>COOKIES: THE NECESSARY ONES ONLY. <a href="#cookies">GO ON THEN</a></span><span>404 — WRONG ROOM.</span><span>© GET UPP 2026 · EYES SHUT</span></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+<div id="2a" style="display: flex; flex-direction: column; gap: 14px;">
+<div style="display: flex; align-items: center; gap: 12px;"><span style="background: #ffe100; color: #131313; font-family: 'DM Mono', monospace; font-size: 15px; padding: 4px 12px;">2a</span><span style="font-family: 'DM Mono', monospace; font-size: 15px; color: #8d8d95; letter-spacing: 0.06em;">BEAST V2 — GET UP. GET OUT. TWO VERDICTS. THE MATHS.</span></div>
+<div style="width: 1440px; background: #131313; color: #f6f4ee; font-family: Archivo, sans-serif;">
+
+  <!-- nav -->
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; background: #ffe100; color: #131313;">
+    <svg viewBox="3 0 291 88" style="display: block; width: 176px; height: 53px;" aria-label="GET UPP">
+      <text x="0" y="87" font-family="Anton" font-size="100" fill="#131313">GET UPP</text>
+      <rect x="218.2" y="14.5" width="12.7" height="25.3" fill="#131313"></rect>
+      <rect x="265.5" y="14.5" width="12.7" height="25.3" fill="#131313"></rect>
+    </svg>
+    <div style="display: flex; align-items: center; gap: 26px; font-family: 'DM Mono', monospace; font-size: 13px;">
+      <span>THE MATHS</span><span>THE DOOR</span><span>TAME IT</span><span>PRICE</span>
+      <span style="background: #131313; color: #ffe100; padding: 11px 18px; font-family: Anton, sans-serif; font-size: 16px;">GET THE APP</span>
+    </div>
+  </div>
+
+  <!-- hero -->
+  <div style="background: #ffe100; color: #131313; padding: 56px 40px 52px; display: grid; grid-template-columns: 1fr 640px; gap: 40px; align-items: end;">
+    <div style="display: flex; flex-direction: column; gap: 24px;">
+      <div style="font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.1em;">IT IS 6.47 AND YOUR THUMB IS ALREADY MOVING</div>
+      <div style="font-family: Anton, sans-serif; font-size: 92px; line-height: 0.88;">GET UP.<br>GET OUT.<br>GET YOUR<br>MORNING BACK.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 22px; line-height: 1.45; max-width: 560px; text-wrap: pretty;">Your apps stay shut until you've left the room and proved it. Then they stay shut a while longer, because the bed is eight feet away and we both know it.</div>
+      <div style="display: flex; align-items: center; gap: 18px;">
+        <div style="background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 24px; padding: 20px 30px; border-radius: 6px;">GET UPP — FREE</div>
+        <div style="font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.6;">iOS + Android<br>Two Ps because one wasn't enough to move you</div>
+      </div>
+    </div>
+
+    <!-- two verdicts -->
+    <div style="display: flex; gap: 22px; align-items: stretch; height: 598px;">
+      <div style="width: 296px; flex: 0 0 296px; background: #2e2e30; border-radius: 46px; padding: 9px;">
+        <div style="width: 100%; height: 100%; background: #0d0d0c; border-radius: 38px; overflow: hidden; display: flex; flex-direction: column; position: relative;">
+          <div style="height: 218px; flex: 0 0 218px; background-image: url('uploads/hf_20260725_110442_f70660f4-b676-44c6-8e75-70af2d9b8400.png'); background-size: cover; background-position: center;">
+            <div style="position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 78px; height: 22px; background: #000; border-radius: 14px;"></div>
+            <div style="padding: 18px 20px; font-family: Archivo, sans-serif; font-weight: 600; font-size: 15px; color: #f6f4ee;">6:48</div>
+          </div>
+          <div style="background: #f6f4ee; color: #131313; padding: 13px 20px; display: flex; align-items: center; gap: 12px;">
+            <span style="position: relative; width: 20px; height: 20px; flex: 0 0 20px;"><span style="position: absolute; top: 8px; left: 0; width: 20px; height: 4px; background: #131313; transform: rotate(45deg);"></span><span style="position: absolute; top: 8px; left: 0; width: 20px; height: 4px; background: #131313; transform: rotate(-45deg);"></span></span>
+            <span style="font-family: Anton, sans-serif; font-size: 24px;">REJECTED</span>
+          </div>
+          <div style="padding: 20px 20px 0; flex: 1; display: flex; flex-direction: column; gap: 10px;">
+            <div style="font-family: Anton, sans-serif; font-size: 36px; line-height: 0.94; color: #ffe100;">Babe. That's a pillow.</div>
+            <div style="font-family: Archivo, sans-serif; font-size: 15px; line-height: 1.35; color: #ded9cd;">Nice angle, still horizontal. Come back when there's a kettle in frame.</div>
+            <div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #7d7a72;">ATTEMPT 03 · NOT MY FIRST RODEO</div>
+          </div>
+          <div style="margin: 18px 20px 22px; border: 2px solid #57554e; color: #ded9cd; font-family: Anton, sans-serif; font-size: 20px; padding: 14px; text-align: center; border-radius: 12px;">TRY AGAIN</div>
+        </div>
+      </div>
+      <div style="width: 296px; flex: 0 0 296px; background: #2e2e30; border-radius: 46px; padding: 9px;">
+        <div style="width: 100%; height: 100%; background: #0d0d0c; border-radius: 38px; overflow: hidden; display: flex; flex-direction: column; position: relative;">
+          <div style="height: 218px; flex: 0 0 218px; background-image: url('uploads/hf_20260725_110832_46798f76-ac86-40a3-9b08-1d32e4040ecf.png'); background-size: cover; background-position: center 22%;">
+            <div style="position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 78px; height: 22px; background: #000; border-radius: 14px;"></div>
+            <div style="padding: 18px 20px; font-family: Archivo, sans-serif; font-weight: 600; font-size: 15px; color: #f6f4ee;">6:52</div>
+          </div>
+          <div style="background: #ffe100; color: #131313; padding: 13px 20px; display: flex; align-items: center; gap: 14px;">
+            <span style="width: 22px; height: 12px; flex: 0 0 22px; border-left: 4px solid #131313; border-bottom: 4px solid #131313; transform: rotate(-45deg); margin-bottom: 5px;"></span>
+            <span style="font-family: Anton, sans-serif; font-size: 24px;">APPROVED</span>
+          </div>
+          <div style="padding: 20px 20px 0; flex: 1; display: flex; flex-direction: column; gap: 10px;">
+            <div style="font-family: Anton, sans-serif; font-size: 36px; line-height: 0.94; color: #ffe100;">Well, look at you.</div>
+            <div style="font-family: Archivo, sans-serif; font-size: 15px; line-height: 1.35; color: #ded9cd;">Vertical, in a different room, before seven. Show-off. Thirty minutes, no feed.</div>
+            <div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #7d7a72;">STREAK 04 · SASS DIALLED DOWN 6%</div>
+          </div>
+          <div style="margin: 18px 20px 22px; background: #ffe100; color: #131313; font-family: Anton, sans-serif; font-size: 20px; padding: 14px; text-align: center; border-radius: 12px;">START MY MORNING</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- the maths -->
+  <div style="padding: 64px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <div style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #7d7a72;">THE PROBLEM — LET'S DO THE MATHS</div>
+      <div style="font-family: Anton, sans-serif; font-size: 84px; line-height: 0.9; color: #ffe100;">250 HOURS A YEAR, SPENT LYING DOWN.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 21px; line-height: 1.5; color: #ded9cd; max-width: 520px;">Forty-one minutes between the alarm and standing up. Every morning, no days off. That's six working weeks a year, horizontal, watching a stranger renovate a kitchen.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 21px; line-height: 1.5; color: #ded9cd; max-width: 520px;">Your feed is a slot machine that pays out in nothing. It has a thousand engineers. You have a duvet. GET UPP is the bit that makes it a fair fight.</div>
+      <div style="display: flex; flex-direction: column; gap: 14px; padding-top: 8px;">
+        <div style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #7d7a72;">FREE. iOS + ANDROID. NO TRIAL, NO NONSENSE.</div>
+        <div style="display: flex; gap: 14px;">
+          <img src="assets/badge-appstore.png" alt="Download on the App Store" style="height: 58px; width: auto; display: block;">
+          <img src="assets/badge-googleplay.png" alt="Get it on Google Play" style="height: 58px; width: auto; display: block;">
+        </div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column;">
+      <div style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #7d7a72; padding-bottom: 10px;">YOUR YEAR, ITEMISED</div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #2c2c2a; padding: 20px 0;"><span style="font-family: Archivo, sans-serif; font-size: 18px; color: #9a978d;">Alarm to feet-on-floor, average morning</span><span style="font-family: Anton, sans-serif; font-size: 40px; color: #f6f4ee;">41 MIN</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #2c2c2a; padding: 20px 0;"><span style="font-family: Archivo, sans-serif; font-size: 18px; color: #9a978d;">× 365, because you don't take mornings off</span><span style="font-family: Anton, sans-serif; font-size: 40px; color: #f6f4ee;">250 HOURS</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #2c2c2a; padding: 20px 0;"><span style="font-family: Archivo, sans-serif; font-size: 18px; color: #9a978d;">In working weeks, if you'd been paid for it</span><span style="font-family: Anton, sans-serif; font-size: 40px; color: #f6f4ee;">6.2</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #2c2c2a; padding: 20px 0;"><span style="font-family: Archivo, sans-serif; font-size: 18px; color: #9a978d;">Whole days, gone, in a horizontal position</span><span style="font-family: Anton, sans-serif; font-size: 40px; color: #f6f4ee;">10.4</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #2c2c2a; padding: 20px 0;"><span style="font-family: Archivo, sans-serif; font-size: 18px; color: #9a978d;">Any of it remembered by 11am</span><span style="font-family: Anton, sans-serif; font-size: 40px; color: #57554e;">NONE</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid #ffe100; padding: 22px 0;"><span style="font-family: Archivo, sans-serif; font-size: 18px; color: #ded9cd;">Back in your pocket, from tomorrow</span><span style="font-family: Anton, sans-serif; font-size: 56px; color: #ffe100;">250h</span></div>
+      <div style="font-family: 'DM Mono', monospace; font-size: 12px; color: #7d7a72; padding-top: 14px; line-height: 1.7;">SOURCES: 89% CHECK WITHIN TEN MINUTES OF WAKING. 38% OF UNDER-30s SLEEP WITH IT ON THE BED. 39% WHO TRIED A SCREEN TIME APP SAY IT DID NOTHING — CORRECT.</div>
+    </div>
+  </div>
+
+  <!-- selfie wall -->
+  <div style="background: #ffe100; color: #131313; padding: 60px 40px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 30px;">
+      <div style="font-family: Anton, sans-serif; font-size: 78px; line-height: 0.92;">IT IS NOT<br>FOOLED BY YOU.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 20px; max-width: 460px; line-height: 1.5;">Take a selfie. It decides whether you're actually out of the bedroom, and it has opinions. Five attempts is a normal Tuesday.</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px;">
+      <div style="height: 420px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110442_f70660f4-b676-44c6-8e75-70af2d9b8400.png'); background-size: cover; background-position: center; position: relative;">
+        <div style="position: absolute; bottom: 14px; left: -6px; right: 8px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 24px; padding: 5px 10px; transform: rotate(-2deg);">BABE. THAT'S A PILLOW.</div>
+      </div>
+      <div style="height: 420px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110603_a2f43c80-4a91-4f9f-afb7-4cca0718c124.png'); background-size: cover; background-position: center; position: relative;">
+        <div style="position: absolute; bottom: 14px; left: -6px; right: 8px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 26px; padding: 5px 10px; transform: rotate(-2deg);">LOVELY CEILING</div>
+      </div>
+      <div style="height: 420px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110653_3e9b0162-8ed3-4d1e-95f6-20b2524289a7.png'); background-size: cover; background-position: center 28%; position: relative;">
+        <div style="position: absolute; bottom: 14px; left: -6px; right: 8px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 24px; padding: 5px 10px; transform: rotate(-2deg);">A WARDROBE. BOLD.</div>
+      </div>
+      <div style="height: 420px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110701_1852b34d-4902-499b-b26b-4948089eb411.png'); background-size: cover; background-position: center 22%; position: relative;">
+        <div style="position: absolute; bottom: 14px; left: -6px; right: 8px; background: #f6f4ee; color: #131313; font-family: Anton, sans-serif; font-size: 24px; padding: 5px 10px; transform: rotate(-2deg);">THE LANDING? CHEEKY</div>
+      </div>
+      <div style="height: 420px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110832_46798f76-ac86-40a3-9b08-1d32e4040ecf.png'); background-size: cover; background-position: center 20%; position: relative;">
+        <div style="position: absolute; bottom: 14px; left: -6px; right: 8px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 26px; padding: 5px 10px; transform: rotate(-2deg);">WELL, LOOK AT YOU.</div>
+      </div>
+    </div>
+    <div style="padding-top: 20px; font-family: 'DM Mono', monospace; font-size: 12px;">A PHOTO OF YOUR FACE AT 7AM, JUDGED BY AN APP. DATED, STREAK-MARKED, EXTREMELY SHAREABLE.</div>
+  </div>
+
+  <!-- TAME IT -->
+  <div style="padding: 64px 40px; display: flex; flex-direction: column; gap: 30px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #7d7a72;">TAME IT — PICK A DAY, WATCH IT CALM DOWN</div>
+        <div style="font-family: Anton, sans-serif; font-size: 82px; line-height: 0.92; color: #ffe100;">THE REWARD<br>IS PEACE, NOT POINTS.</div>
+      </div>
+      <div style="font-family: Archivo, sans-serif; font-size: 20px; color: #ded9cd; max-width: 460px; line-height: 1.5;">Day one it's loud, sceptical and in your face. By day forty it's barely there. A product openly trying to become unnecessary — pick a day and see what it says to you.</div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 420px; gap: 40px; align-items: stretch;">
+      <div style="background: {{ t2Bg }}; color: {{ t2Fg }}; border-radius: 12px; padding: 40px; display: flex; flex-direction: column; justify-content: space-between; min-height: 420px;">
+        <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 13px;"><span>{{ t2Label }}</span><span>SASS {{ t2Sass }}</span></div>
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+          <div style="font-family: {{ t2Font }}; font-weight: 600; font-size: {{ t2Size }}; line-height: 0.95;">{{ t2Line }}</div>
+          <div style="font-family: Archivo, sans-serif; font-size: 19px; opacity: 0.75; max-width: 520px;">{{ t2Sub }}</div>
+        </div>
+        <div style="display: flex; gap: 5px; align-items: flex-end; height: 52px;">
+          <div style="flex: 1; background: currentColor; opacity: 0.85; height: {{ t2b1 }};"></div>
+          <div style="flex: 1; background: currentColor; opacity: 0.65; height: {{ t2b2 }};"></div>
+          <div style="flex: 1; background: currentColor; opacity: 0.45; height: {{ t2b3 }};"></div>
+          <div style="flex: 1; background: currentColor; opacity: 0.3; height: {{ t2b4 }};"></div>
+          <div style="flex: 1; background: currentColor; opacity: 0.18; height: {{ t2b5 }};"></div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div onClick="{{ set2D1 }}" style="border: 2px solid #ffe100; background: {{ q1 }}; color: {{ w1 }}; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; border-radius: 8px;"><span style="font-family: Anton, sans-serif; font-size: 26px;">DAY 1</span><span style="font-family: 'DM Mono', monospace; font-size: 12px;">FULL VOLUME</span></div>
+        <div onClick="{{ set2D8 }}" style="border: 2px solid #ffe100; background: {{ q2 }}; color: {{ w2 }}; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; border-radius: 8px;"><span style="font-family: Anton, sans-serif; font-size: 26px;">DAY 8</span><span style="font-family: 'DM Mono', monospace; font-size: 12px;">STILL SCEPTICAL</span></div>
+        <div onClick="{{ set2D21 }}" style="border: 2px solid #ffe100; background: {{ q3 }}; color: {{ w3 }}; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; border-radius: 8px;"><span style="font-family: Anton, sans-serif; font-size: 26px;">DAY 21</span><span style="font-family: 'DM Mono', monospace; font-size: 12px;">ALMOST POLITE</span></div>
+        <div onClick="{{ set2D40 }}" style="border: 2px solid #ffe100; background: {{ q4 }}; color: {{ w4 }}; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; border-radius: 8px;"><span style="font-family: Anton, sans-serif; font-size: 26px;">DAY 40</span><span style="font-family: 'DM Mono', monospace; font-size: 12px;">NEARLY REDUNDANT</span></div>
+        <div style="margin-top: auto; font-family: 'DM Mono', monospace; font-size: 12px; color: #7d7a72; line-height: 1.7;">BREAK THE STREAK AND IT WAKES BACK UP.<br>"I'VE NEARLY TAMED IT" IS A STATUS, A STREAK AND A STORY IN ONE LINE.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- the window -->
+  <div style="background: #f6f4ee; color: #131313; padding: 64px 40px; display: grid; grid-template-columns: 1fr 408px; gap: 56px; align-items: center;">
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <div style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #57554e;">THE WINDOW — AND THIS IS WHERE WE SHUT UP</div>
+      <div style="font-family: Anton, sans-serif; font-size: 76px; line-height: 0.92;">THIS IS THE BIT<br>YOU CAME FOR.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 21px; line-height: 1.5; color: #3d3b36; max-width: 540px;">Once you're out, the apps stay shut for fifteen, thirty or sixty minutes. Nobody else protects this part — everyone else stops the second you're vertical. It's coffee while it's hot, daylight before a screen, and arriving somewhere already awake.</div>
+      <div style="display: flex; gap: 10px;">
+        <div style="border: 2px solid #131313; padding: 13px 20px; font-family: Anton, sans-serif; font-size: 19px;">15</div>
+        <div style="background: #131313; color: #f6f4ee; padding: 13px 20px; font-family: Anton, sans-serif; font-size: 19px;">30 MIN</div>
+        <div style="border: 2px solid #131313; padding: 13px 20px; font-family: Anton, sans-serif; font-size: 19px;">60</div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; background: #131313; padding: 12px; border-radius: 10px;">
+      <div style="width: 100%; aspect-ratio: 768 / 1360; background-image: url('uploads/hf_20260725_110832_46798f76-ac86-40a3-9b08-1d32e4040ecf.png'); background-size: cover; background-position: center top; border-radius: 4px;"></div>
+      <div style="display: flex; justify-content: space-between; padding: 14px 4px 4px; font-family: 'DM Mono', monospace; font-size: 12px; color: #f6f4ee;"><span>OUT AT 06.50 · DAY 04</span><span>26:41 OF MORNING LEFT</span></div>
+    </div>
+  </div>
+
+  <!-- price -->
+  <div style="padding: 60px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+    <div style="border: 2px solid #2c2c2a; border-radius: 12px; padding: 34px; display: flex; flex-direction: column; gap: 14px;">
+      <div style="font-family: Anton, sans-serif; font-size: 46px; color: #ffe100;">FREE</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 19px; color: #9a978d; line-height: 1.5;">The whole mechanic. Lock, proof, window, streak, the full range of sass. Not a trial.</div>
+      <div style="display: flex; gap: 12px; margin-top: auto;">
+        <img src="assets/badge-appstore.png" alt="Download on the App Store" style="height: 52px; width: auto; display: block;">
+        <img src="assets/badge-googleplay.png" alt="Get it on Google Play" style="height: 52px; width: auto; display: block;">
+      </div>
+    </div>
+    <div style="background: #ffe100; color: #131313; border-radius: 12px; padding: 34px; display: flex; flex-direction: column; gap: 14px;">
+      <div style="display: flex; align-items: baseline; gap: 12px;"><span style="font-family: Anton, sans-serif; font-size: 46px;">£3.99</span><span style="font-family: 'DM Mono', monospace; font-size: 13px;">/MONTH · £24.99/YEAR</span></div>
+      <div style="font-family: Archivo, sans-serif; font-size: 19px; line-height: 1.5;">Several proof rooms, longer windows, weekend rules, accountability partners. One tool, one job, priced under Opal on purpose.</div>
+      <div style="background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 22px; padding: 17px; text-align: center; border-radius: 6px; margin-top: auto;">GET UPP</div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div style="background: #f6f4ee; color: #8b8880; padding: 44px 40px; display: flex; justify-content: space-between; align-items: flex-end;">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <svg viewBox="3 0 291 88" style="display: block; width: 300px; height: 91px;" aria-label="GET UPP">
+        <text x="0" y="87" font-family="Anton" font-size="100" fill="#c4c1b8">GET UPP</text>
+        <rect x="218.2" y="14.5" width="12.7" height="25.3" fill="#c4c1b8"></rect>
+        <rect x="265.5" y="14.5" width="12.7" height="25.3" fill="#c4c1b8"></rect>
+      </svg>
+      <div style="font-family: 'DM Mono', monospace; font-size: 13px;">THE BED IS NOT AN OFFICE.</div>
+    </div>
+    <div style="display: flex; gap: 48px; font-family: 'DM Mono', monospace; font-size: 12px; line-height: 2;">
+      <div style="display: flex; flex-direction: column;"><span>PRIVACY — THE PHOTOS NEVER LEAVE YOUR PHONE</span><span>TERMS — DULL, BUT FAIR</span><span>SUPPORT — WE'RE UP, OBVIOUSLY</span></div>
+      <div style="display: flex; flex-direction: column;"><span>COOKIES: THE NECESSARY ONES ONLY. <a href="#cookies">GO ON THEN</a></span><span>404 — WRONG ROOM.</span><span>© GET UPP 2026 · EYES SHUT</span></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="4a" style="display: flex; flex-direction: column; gap: 14px;">
+<div style="display: flex; align-items: center; gap: 12px;"><span style="background: #ffe100; color: #131313; font-family: 'DM Mono', monospace; font-size: 15px; padding: 4px 12px;">4a</span><span style="font-family: 'DM Mono', monospace; font-size: 15px; color: #8d8d95; letter-spacing: 0.06em;">BEAST V3 — HALF-LID LOGO · SIX VERDICTS · WIN THE MORNING</span></div>
+<div style="width: 1440px; background: #131313; color: #f6f4ee; font-family: Archivo, sans-serif;">
+
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; background: #ffe100; color: #131313;">
+    <svg viewBox="3 0 291 88" style="display: block; width: 176px; height: 53px;" aria-label="GET UPP">
+      <text x="0" y="87" font-family="Anton" font-size="100" fill="#131313">GET UPP</text>
+      <rect x="218.2" y="14.5" width="12.7" height="25.3" fill="#131313" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite;"></rect>
+      <rect x="265.5" y="14.5" width="12.7" height="25.3" fill="#131313" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite; animation-delay: 0.09s;"></rect>
+    </svg>
+    <div style="display: flex; align-items: center; gap: 26px; font-family: 'DM Mono', monospace; font-size: 13px;">
+      <span>THE MATHS</span><span>THE DOOR</span><span>TAME IT</span><span>PRICE</span>
+      <span style="background: #131313; color: #ffe100; padding: 11px 18px; font-family: Anton, sans-serif; font-size: 16px;">GET THE APP</span>
+    </div>
+  </div>
+
+  <!-- hero -->
+  <div style="background: #ffe100; color: #131313; padding: 56px 40px 52px; display: grid; grid-template-columns: 1fr 640px; gap: 40px; align-items: end;">
+    <div style="display: flex; flex-direction: column; gap: 24px;">
+      <div style="font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.1em;">IT IS 6.47 AND YOUR THUMB IS ALREADY MOVING</div>
+      <div style="font-family: Anton, sans-serif; font-size: 92px; line-height: 0.88;">GET UP.<br>GET OUT.<br>GET YOUR<br>MORNING BACK.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 22px; line-height: 1.45; max-width: 560px; text-wrap: pretty;">Your apps stay shut until you've left the room and proved it. Then they stay shut a while longer, because the bed is eight feet away and we both know it.</div>
+      <div style="display: flex; align-items: center; gap: 18px;">
+        <div style="background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 24px; padding: 20px 30px; border-radius: 6px;">GET UPP — FREE</div>
+        <div style="font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.6;">iOS + Android<br>Two Ps because one wasn't enough to move you</div>
+      </div>
+    </div>
+    <div style="display: flex; gap: 22px; align-items: stretch; height: 598px;">
+      <div style="width: 296px; flex: 0 0 296px; background: #2e2e30; border-radius: 46px; padding: 9px;">
+        <div style="width: 100%; height: 100%; background: #0d0d0c; border-radius: 38px; overflow: hidden; display: flex; flex-direction: column; position: relative;">
+          <div style="height: 218px; flex: 0 0 218px; background-image: url('uploads/hf_20260725_110442_f70660f4-b676-44c6-8e75-70af2d9b8400.png'); background-size: cover; background-position: center;">
+            <div style="position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 78px; height: 22px; background: #000; border-radius: 14px;"></div>
+            <div style="padding: 18px 20px; font-family: Archivo, sans-serif; font-weight: 600; font-size: 15px; color: #f6f4ee;">6:48</div>
+          </div>
+          <div style="background: #f6f4ee; color: #131313; padding: 13px 20px; display: flex; align-items: center; gap: 12px;">
+            <span style="position: relative; width: 20px; height: 20px; flex: 0 0 20px;"><span style="position: absolute; top: 8px; left: 0; width: 20px; height: 4px; background: #131313; transform: rotate(45deg);"></span><span style="position: absolute; top: 8px; left: 0; width: 20px; height: 4px; background: #131313; transform: rotate(-45deg);"></span></span>
+            <span style="font-family: Anton, sans-serif; font-size: 24px;">REJECTED</span>
+          </div>
+          <div style="padding: 20px 20px 0; flex: 1; display: flex; flex-direction: column; gap: 10px;">
+            <div style="font-family: Anton, sans-serif; font-size: 36px; line-height: 0.94; color: #ffe100;">Babe. That's a pillow.</div>
+            <div style="font-family: Archivo, sans-serif; font-size: 15px; line-height: 1.35; color: #ded9cd;">Nice angle, still horizontal. Come back when there's a kettle in frame.</div>
+            <div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #7d7a72;">ATTEMPT 03 · NOT MY FIRST RODEO</div>
+          </div>
+          <div style="margin: 18px 20px 22px; border: 2px solid #57554e; color: #ded9cd; font-family: Anton, sans-serif; font-size: 20px; padding: 14px; text-align: center; border-radius: 12px;">TRY AGAIN</div>
+        </div>
+      </div>
+      <div style="width: 296px; flex: 0 0 296px; background: #2e2e30; border-radius: 46px; padding: 9px;">
+        <div style="width: 100%; height: 100%; background: #0d0d0c; border-radius: 38px; overflow: hidden; display: flex; flex-direction: column; position: relative;">
+          <div style="height: 218px; flex: 0 0 218px; background-image: url('uploads/hf_20260725_110832_46798f76-ac86-40a3-9b08-1d32e4040ecf.png'); background-size: cover; background-position: center 22%;">
+            <div style="position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 78px; height: 22px; background: #000; border-radius: 14px;"></div>
+            <div style="padding: 18px 20px; font-family: Archivo, sans-serif; font-weight: 600; font-size: 15px; color: #f6f4ee;">6:52</div>
+          </div>
+          <div style="background: #ffe100; color: #131313; padding: 13px 20px; display: flex; align-items: center; gap: 14px;">
+            <span style="width: 22px; height: 12px; flex: 0 0 22px; border-left: 4px solid #131313; border-bottom: 4px solid #131313; transform: rotate(-45deg); margin-bottom: 5px;"></span>
+            <span style="font-family: Anton, sans-serif; font-size: 24px;">APPROVED</span>
+          </div>
+          <div style="padding: 20px 20px 0; flex: 1; display: flex; flex-direction: column; gap: 10px;">
+            <div style="font-family: Anton, sans-serif; font-size: 36px; line-height: 0.94; color: #ffe100;">Well, look at you.</div>
+            <div style="font-family: Archivo, sans-serif; font-size: 15px; line-height: 1.35; color: #ded9cd;">Vertical, in a different room, before seven. Show-off. Thirty minutes, no feed.</div>
+            <div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #7d7a72;">STREAK 04 · SASS DIALLED DOWN 6%</div>
+          </div>
+          <div style="margin: 18px 20px 22px; background: #ffe100; color: #131313; font-family: Anton, sans-serif; font-size: 20px; padding: 14px; text-align: center; border-radius: 12px;">START MY MORNING</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- the maths -->
+  <div style="padding: 64px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <div style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #7d7a72;">THE PROBLEM — LET'S DO THE MATHS</div>
+      <div style="font-family: Anton, sans-serif; font-size: 84px; line-height: 0.9; color: #ffe100;">250 HOURS A YEAR, SPENT LYING DOWN.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 21px; line-height: 1.5; color: #ded9cd; max-width: 520px;">Forty-one minutes between the alarm and standing up. Every morning, no days off. That's six working weeks a year, horizontal, watching a stranger renovate a kitchen.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 21px; line-height: 1.5; color: #ded9cd; max-width: 520px;">Your feed is a slot machine that pays out in nothing. It has a thousand engineers. You have a duvet. GET UPP is the bit that makes it a fair fight.</div>
+      <div style="display: flex; flex-direction: column; gap: 14px; padding-top: 8px;">
+        <div style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #7d7a72;">FREE. iOS + ANDROID. NO TRIAL, NO NONSENSE.</div>
+        <div style="display: flex; gap: 14px;">
+          <img src="assets/badge-appstore.png" alt="Download on the App Store" style="height: 58px; width: auto; display: block;">
+          <img src="assets/badge-googleplay.png" alt="Get it on Google Play" style="height: 58px; width: auto; display: block;">
+        </div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column;">
+      <div style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #7d7a72; padding-bottom: 10px;">YOUR YEAR, ITEMISED</div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #2c2c2a; padding: 20px 0;"><span style="font-family: Archivo, sans-serif; font-size: 18px; color: #9a978d;">Alarm to feet-on-floor, average morning</span><span style="font-family: Anton, sans-serif; font-size: 40px; color: #f6f4ee;">41 MIN</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #2c2c2a; padding: 20px 0;"><span style="font-family: Archivo, sans-serif; font-size: 18px; color: #9a978d;">× 365, because you don't take mornings off</span><span style="font-family: Anton, sans-serif; font-size: 40px; color: #f6f4ee;">250 HOURS</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #2c2c2a; padding: 20px 0;"><span style="font-family: Archivo, sans-serif; font-size: 18px; color: #9a978d;">In working weeks, if you'd been paid for it</span><span style="font-family: Anton, sans-serif; font-size: 40px; color: #f6f4ee;">6.2</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #2c2c2a; padding: 20px 0;"><span style="font-family: Archivo, sans-serif; font-size: 18px; color: #9a978d;">Whole days, gone, in a horizontal position</span><span style="font-family: Anton, sans-serif; font-size: 40px; color: #f6f4ee;">10.4</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #2c2c2a; padding: 20px 0;"><span style="font-family: Archivo, sans-serif; font-size: 18px; color: #9a978d;">Any of it remembered by 11am</span><span style="font-family: Anton, sans-serif; font-size: 40px; color: #57554e;">NONE</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid #ffe100; padding: 22px 0;"><span style="font-family: Archivo, sans-serif; font-size: 18px; color: #ded9cd;">Back in your pocket, from tomorrow</span><span style="font-family: Anton, sans-serif; font-size: 56px; color: #ffe100;">250h</span></div>
+      <div style="font-family: 'DM Mono', monospace; font-size: 12px; color: #7d7a72; padding-top: 14px; line-height: 1.7;">SOURCES: 89% CHECK WITHIN TEN MINUTES OF WAKING. 38% OF UNDER-30s SLEEP WITH IT ON THE BED. 39% WHO TRIED A SCREEN TIME APP SAY IT DID NOTHING — CORRECT.</div>
+    </div>
+  </div>
+
+  <!-- selfie wall — six verdicts -->
+  <div style="background: #ffe100; color: #131313; padding: 60px 40px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 30px;">
+      <div style="font-family: Anton, sans-serif; font-size: 78px; line-height: 0.92;">IT IS NOT<br>FOOLED BY YOU.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 20px; max-width: 460px; line-height: 1.5;">Take a selfie. It decides whether you're actually out of the bedroom, and it has opinions. Five attempts is a normal Tuesday. The sixth one is worth it.</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px;">
+
+      <div style="height: 400px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110442_f70660f4-b676-44c6-8e75-70af2d9b8400.png'); background-size: cover; background-position: center; position: relative;">
+        <div style="position: absolute; top: 12px; left: 12px; background: #f6f4ee; color: #131313; font-family: Anton, sans-serif; font-size: 15px; letter-spacing: 0.04em; padding: 5px 9px; display: flex; align-items: center; gap: 7px;"><span style="position: relative; width: 12px; height: 12px;"><span style="position: absolute; top: 5px; left: 0; width: 12px; height: 2.5px; background: #131313; transform: rotate(45deg);"></span><span style="position: absolute; top: 5px; left: 0; width: 12px; height: 2.5px; background: #131313; transform: rotate(-45deg);"></span></span>REJECTED</div>
+        <div style="position: absolute; bottom: 14px; left: -6px; right: 8px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 23px; padding: 5px 10px; transform: rotate(-2deg);">BABE. THAT'S A PILLOW.</div>
+      </div>
+
+      <div style="height: 400px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110603_a2f43c80-4a91-4f9f-afb7-4cca0718c124.png'); background-size: cover; background-position: center; position: relative;">
+        <div style="position: absolute; top: 12px; left: 12px; background: #f6f4ee; color: #131313; font-family: Anton, sans-serif; font-size: 15px; letter-spacing: 0.04em; padding: 5px 9px; display: flex; align-items: center; gap: 7px;"><span style="position: relative; width: 12px; height: 12px;"><span style="position: absolute; top: 5px; left: 0; width: 12px; height: 2.5px; background: #131313; transform: rotate(45deg);"></span><span style="position: absolute; top: 5px; left: 0; width: 12px; height: 2.5px; background: #131313; transform: rotate(-45deg);"></span></span>REJECTED</div>
+        <div style="position: absolute; bottom: 14px; left: -6px; right: 8px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 23px; padding: 5px 10px; transform: rotate(-2deg);">LOVELY CEILING.</div>
+      </div>
+
+      <div style="height: 400px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110653_3e9b0162-8ed3-4d1e-95f6-20b2524289a7.png'); background-size: cover; background-position: center 28%; position: relative;">
+        <div style="position: absolute; top: 12px; left: 12px; background: #f6f4ee; color: #131313; font-family: Anton, sans-serif; font-size: 15px; letter-spacing: 0.04em; padding: 5px 9px; display: flex; align-items: center; gap: 7px;"><span style="position: relative; width: 12px; height: 12px;"><span style="position: absolute; top: 5px; left: 0; width: 12px; height: 2.5px; background: #131313; transform: rotate(45deg);"></span><span style="position: absolute; top: 5px; left: 0; width: 12px; height: 2.5px; background: #131313; transform: rotate(-45deg);"></span></span>REJECTED</div>
+        <div style="position: absolute; bottom: 14px; left: -6px; right: 8px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 23px; padding: 5px 10px; transform: rotate(-2deg);">A WARDROBE. BOLD.</div>
+      </div>
+
+      <div style="height: 400px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110701_1852b34d-4902-499b-b26b-4948089eb411.png'); background-size: cover; background-position: center 22%; position: relative;">
+        <div style="position: absolute; top: 12px; left: 12px; background: #ffe100; color: #131313; font-family: Anton, sans-serif; font-size: 15px; letter-spacing: 0.04em; padding: 5px 9px; display: flex; align-items: center; gap: 7px;"><span style="width: 12px; height: 12px; border: 2px solid #131313; background: linear-gradient(90deg, #131313 50%, transparent 50%);"></span>PARTIAL</div>
+        <div style="position: absolute; bottom: 14px; left: -6px; right: 8px; background: #f6f4ee; color: #131313; font-family: Anton, sans-serif; font-size: 23px; padding: 5px 10px; transform: rotate(-2deg);">THE LANDING? HALF A POINT.</div>
+      </div>
+
+      <div style="height: 400px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110832_46798f76-ac86-40a3-9b08-1d32e4040ecf.png'); background-size: cover; background-position: center 20%; position: relative;">
+        <div style="position: absolute; top: 12px; left: 12px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 15px; letter-spacing: 0.04em; padding: 5px 9px; display: flex; align-items: center; gap: 7px;"><span style="width: 13px; height: 7px; border-left: 2.5px solid #ffe100; border-bottom: 2.5px solid #ffe100; transform: rotate(-45deg); margin-bottom: 3px;"></span>APPROVED</div>
+        <div style="position: absolute; bottom: 14px; left: -6px; right: 8px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 23px; padding: 5px 10px; transform: rotate(-2deg);">WELL, LOOK AT YOU.</div>
+      </div>
+
+      <div style="height: 400px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_173017_e1eaca06-2065-4473-9511-d1fb92568e4d.png'); background-size: cover; background-position: center 30%; position: relative;">
+        <div style="position: absolute; top: 12px; left: 12px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 15px; letter-spacing: 0.04em; padding: 5px 9px; display: flex; align-items: center; gap: 7px;"><span style="width: 13px; height: 7px; border-left: 2.5px solid #ffe100; border-bottom: 2.5px solid #ffe100; transform: rotate(-45deg); margin-bottom: 3px;"></span>APPROVED</div>
+        <div style="position: absolute; bottom: 14px; left: -6px; right: 8px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 23px; padding: 5px 10px; transform: rotate(-2deg);">OK, NOW YOU'RE SHOWING OFF.</div>
+      </div>
+
+    </div>
+    <div style="padding-top: 20px; font-family: 'DM Mono', monospace; font-size: 12px;">A PHOTO OF YOUR FACE AT 7AM, JUDGED BY AN APP. DATED, STREAK-MARKED, EXTREMELY SHAREABLE.</div>
+  </div>
+
+  <!-- TAME IT -->
+  <div style="padding: 64px 40px; display: flex; flex-direction: column; gap: 30px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #7d7a72;">TAME IT — PICK A DAY, WATCH IT CALM DOWN</div>
+        <div style="font-family: Anton, sans-serif; font-size: 92px; line-height: 0.92; color: #ffe100;">HIGHER STREAK,<br>LESS SASS.</div>
+      </div>
+      <div style="font-family: Archivo, sans-serif; font-size: 20px; color: #ded9cd; max-width: 460px; line-height: 1.5;">Day one it's loud, sceptical and in your face. Every morning you win, it turns the volume down a notch. By day forty it's not nagging you — it's your bestie, already up, quietly pleased for you.</div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 420px; gap: 40px; align-items: stretch;">
+      <div style="background: {{ t3Bg }}; color: {{ t3Fg }}; border-radius: 12px; padding: 40px; display: flex; flex-direction: column; justify-content: space-between; min-height: 420px;">
+        <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 13px;"><span>{{ t3Label }}</span><span>SASS {{ t3Sass }}</span></div>
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+          <div style="font-family: {{ t3Font }}; font-weight: 600; font-size: {{ t3Size }}; line-height: 0.95;">{{ t3Line }}</div>
+          <div style="font-family: Archivo, sans-serif; font-size: 19px; opacity: 0.75; max-width: 520px;">{{ t3Sub }}</div>
+        </div>
+        <div style="display: flex; gap: 5px; align-items: flex-end; height: 52px;">
+          <div style="flex: 1; background: currentColor; opacity: 0.85; height: {{ t3b1 }};"></div>
+          <div style="flex: 1; background: currentColor; opacity: 0.65; height: {{ t3b2 }};"></div>
+          <div style="flex: 1; background: currentColor; opacity: 0.45; height: {{ t3b3 }};"></div>
+          <div style="flex: 1; background: currentColor; opacity: 0.3; height: {{ t3b4 }};"></div>
+          <div style="flex: 1; background: currentColor; opacity: 0.18; height: {{ t3b5 }};"></div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div onClick="{{ set3D1 }}" style="border: 2px solid #ffe100; background: {{ r1 }}; color: {{ v1 }}; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; border-radius: 8px;"><span style="font-family: Anton, sans-serif; font-size: 26px;">DAY 1</span><span style="font-family: 'DM Mono', monospace; font-size: 12px;">FULL VOLUME</span></div>
+        <div onClick="{{ set3D8 }}" style="border: 2px solid #ffe100; background: {{ r2 }}; color: {{ v2 }}; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; border-radius: 8px;"><span style="font-family: Anton, sans-serif; font-size: 26px;">DAY 8</span><span style="font-family: 'DM Mono', monospace; font-size: 12px;">STILL SCEPTICAL</span></div>
+        <div onClick="{{ set3D21 }}" style="border: 2px solid #ffe100; background: {{ r3 }}; color: {{ v3 }}; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; border-radius: 8px;"><span style="font-family: Anton, sans-serif; font-size: 26px;">DAY 21</span><span style="font-family: 'DM Mono', monospace; font-size: 12px;">ON YOUR SIDE</span></div>
+        <div onClick="{{ set3D40 }}" style="border: 2px solid #ffe100; background: {{ r4 }}; color: {{ v4 }}; padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; border-radius: 8px;"><span style="font-family: Anton, sans-serif; font-size: 26px;">DAY 40</span><span style="font-family: 'DM Mono', monospace; font-size: 12px;">BESTIE MODE</span></div>
+        <div style="margin-top: auto; font-family: 'DM Mono', monospace; font-size: 12px; color: #7d7a72; line-height: 1.7;">BREAK THE STREAK AND IT WAKES BACK UP.<br>"I'VE NEARLY TAMED IT" IS A STATUS, A STREAK AND A STORY IN ONE LINE.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- the window -->
+  <div style="background: #f6f4ee; color: #131313; padding: 56px 40px;">
+    <div style="display: grid; grid-template-columns: 1fr 560px; gap: 48px; align-items: center;">
+      <div style="display: flex; flex-direction: column; gap: 18px;">
+        <div style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #57554e;">THE WINDOW — THE ACTUAL POINT OF ALL THIS</div>
+        <div style="font-family: Anton, sans-serif; font-size: 82px; line-height: 0.9;">DON'T JUST GET UPP.<br>WIN THE MORNING.</div>
+        <div style="font-family: Archivo, sans-serif; font-size: 21px; line-height: 1.5; color: #3d3b36; max-width: 560px; text-wrap: pretty;">Every other app lets go the second you're vertical. We keep the feed shut for another <strong>30 minutes</strong> — undistracted time, before the day starts asking you for things. Long enough to do one thing that's actually yours.</div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="border: 2px solid #131313; padding: 12px 18px; font-family: Anton, sans-serif; font-size: 19px;">15</div>
+          <div style="background: #131313; color: #f6f4ee; padding: 12px 18px; font-family: Anton, sans-serif; font-size: 19px;">30 MIN</div>
+          <div style="border: 2px solid #131313; padding: 12px 18px; font-family: Anton, sans-serif; font-size: 19px;">60</div>
+          <span style="font-family: 'DM Mono', monospace; font-size: 12px; color: #57554e; padding-left: 8px;">YOU PICK THE LENGTH. WE HOLD THE LINE.</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding-top: 6px;">
+          <div style="border-top: 2px solid #131313; padding-top: 12px; display: flex; flex-direction: column; gap: 5px;"><span style="font-family: Anton, sans-serif; font-size: 30px;">WALK</span><span style="font-family: Archivo, sans-serif; font-size: 15px; line-height: 1.4; color: #3d3b36;">Daylight before a screen. Twenty minutes, no headphones.</span></div>
+          <div style="border-top: 2px solid #131313; padding-top: 12px; display: flex; flex-direction: column; gap: 5px;"><span style="font-family: Anton, sans-serif; font-size: 30px;">MAKE</span><span style="font-family: Archivo, sans-serif; font-size: 15px; line-height: 1.4; color: #3d3b36;">The thing you keep saying you'll start. Start it badly.</span></div>
+          <div style="border-top: 2px solid #131313; padding-top: 12px; display: flex; flex-direction: column; gap: 5px;"><span style="font-family: Anton, sans-serif; font-size: 30px;">NOTHING</span><span style="font-family: Archivo, sans-serif; font-size: 15px; line-height: 1.4; color: #3d3b36;">Coffee while it's hot. Also a perfectly good use of it.</span></div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="height: 430px; border-radius: 10px; overflow: hidden; background-image: url('uploads/hf_20260725_173017_e1eaca06-2065-4473-9511-d1fb92568e4d.png'); background-size: cover; background-position: center 38%; position: relative;">
+          <div style="position: absolute; top: 16px; left: 16px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 17px; padding: 6px 11px;">WINDOW OPEN · 26:41 LEFT</div>
+          <div style="position: absolute; bottom: 16px; left: -8px; background: #ffe100; color: #131313; font-family: Anton, sans-serif; font-size: 38px; padding: 7px 14px; transform: rotate(-2deg);">OUTSIDE, AT 06.50.</div>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 12px; color: #57554e;"><span>DAY 04 · STREAK HOLDING</span><span>PHONE: STILL IN THE POCKET</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- price -->
+  <div style="padding: 60px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+    <div style="border: 2px solid #2c2c2a; border-radius: 12px; padding: 34px; display: flex; flex-direction: column; gap: 14px;">
+      <div style="font-family: Anton, sans-serif; font-size: 46px; color: #ffe100;">FREE</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 19px; color: #9a978d; line-height: 1.5;">The whole mechanic. Lock, proof, window, streak, the full range of sass. Not a trial.</div>
+      <div style="display: flex; gap: 12px; margin-top: auto;">
+        <img src="assets/badge-appstore.png" alt="Download on the App Store" style="height: 52px; width: auto; display: block;">
+        <img src="assets/badge-googleplay.png" alt="Get it on Google Play" style="height: 52px; width: auto; display: block;">
+      </div>
+    </div>
+    <div style="background: #ffe100; color: #131313; border-radius: 12px; padding: 34px; display: flex; flex-direction: column; gap: 14px;">
+      <div style="display: flex; align-items: baseline; gap: 12px;"><span style="font-family: Anton, sans-serif; font-size: 46px;">£3.99</span><span style="font-family: 'DM Mono', monospace; font-size: 13px;">/MONTH · £24.99/YEAR</span></div>
+      <div style="font-family: Archivo, sans-serif; font-size: 19px; line-height: 1.5;">Several proof rooms, longer windows, weekend rules, accountability partners. One tool, one job, priced under Opal on purpose.</div>
+      <div style="background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 22px; padding: 17px; text-align: center; border-radius: 6px; margin-top: auto;">GET UPP</div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div style="background: #f6f4ee; color: #8b8880; padding: 44px 40px; display: flex; justify-content: space-between; align-items: flex-end;">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <svg viewBox="3 0 291 88" style="display: block; width: 300px; height: 91px;" aria-label="GET UPP">
+        <text x="0" y="87" font-family="Anton" font-size="100" fill="#c4c1b8">GET UPP</text>
+        <rect x="218.2" y="14.5" width="12.7" height="25.3" fill="#c4c1b8" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite;"></rect>
+        <rect x="265.5" y="14.5" width="12.7" height="25.3" fill="#c4c1b8" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite; animation-delay: 0.09s;"></rect>
+      </svg>
+      <div style="font-family: 'DM Mono', monospace; font-size: 13px;">GET UP. GET OUT. WIN THE MORNING.</div>
+    </div>
+    <div style="display: flex; gap: 48px; font-family: 'DM Mono', monospace; font-size: 12px; line-height: 2;">
+      <div style="display: flex; flex-direction: column;"><span>PRIVACY — THE PHOTOS NEVER LEAVE YOUR PHONE</span><span>TERMS — DULL, BUT FAIR</span><span>SUPPORT — WE'RE UP, OBVIOUSLY</span></div>
+      <div style="display: flex; flex-direction: column;"><span>COOKIES: THE NECESSARY ONES ONLY. <a href="#cookies">GO ON THEN</a></span><span>404 — WRONG ROOM.</span><span>© GET UPP 2026 · EYES HALF SHUT</span></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="5a" style="display: flex; flex-direction: column; gap: 14px;">
+<div style="display: flex; align-items: center; gap: 12px;"><span style="background: #ffe100; color: #131313; font-family: 'DM Mono', monospace; font-size: 15px; padding: 4px 12px;">5a</span><span style="font-family: 'DM Mono', monospace; font-size: 15px; color: #8d8d95; letter-spacing: 0.06em;">BEAST V4 — CLARITY PASS · MECHANISM FIRST</span></div>
+<div style="width: 1440px; background: #131313; color: #f6f4ee; font-family: Archivo, sans-serif;">
+
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; background: #ffe100; color: #131313;">
+    <svg viewBox="3 0 291 88" style="display: block; width: 176px; height: 53px;" aria-label="GET UPP">
+      <text x="0" y="87" font-family="Anton" font-size="100" fill="#131313">GET UPP</text>
+      <rect x="218.2" y="14.5" width="12.7" height="25.3" fill="#131313" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite;"></rect>
+      <rect x="265.5" y="14.5" width="12.7" height="25.3" fill="#131313" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite; animation-delay: 0.09s;"></rect>
+    </svg>
+    <div style="display: flex; align-items: center; gap: 26px; font-family: 'DM Mono', monospace; font-size: 13px;">
+      <span>HOW IT WORKS</span><span>WHY</span><span>PRICE</span>
+      <span style="background: #131313; color: #ffe100; padding: 11px 18px; font-family: Anton, sans-serif; font-size: 16px;">GET THE APP — FREE</span>
+    </div>
+  </div>
+
+  <!-- hero: claim + mechanism in one glance -->
+  <div style="background: #ffe100; color: #131313; padding: 52px 40px 0;">
+    <div style="display: grid; grid-template-columns: 1fr 340px; gap: 56px; align-items: center;">
+      <div style="display: flex; flex-direction: column; gap: 22px;">
+        <div style="font-family: Anton, sans-serif; font-size: 96px; line-height: 0.86;">GET UP. GET OUT.<br>GET YOUR<br>MORNING BACK.</div>
+        <div style="font-family: Archivo, sans-serif; font-size: 24px; line-height: 1.4; max-width: 620px;">Your feed stays locked until you take a selfie somewhere that isn't your bedroom. Then you get 30 quiet minutes to yourself.</div>
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <img src="assets/badge-appstore.png" alt="Download on the App Store" style="height: 56px; width: auto; display: block;">
+          <img src="assets/badge-googleplay.png" alt="Get it on Google Play" style="height: 56px; width: auto; display: block;">
+          <span style="font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.7;">FREE, ALL OF IT.<br>NO TRIAL, NO CARD.</span>
+        </div>
+      </div>
+      <div style="width: 300px; background: #131313; border-radius: 40px; padding: 8px;">
+        <div style="background: #ffe100; color: #131313; border-radius: 33px; padding: 24px 22px; display: flex; flex-direction: column; gap: 18px; height: 560px;">
+          <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 11px;"><span>6.47</span><span>ALARM JUST WENT</span></div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <svg viewBox="0 0 24 24" style="width: 40px; height: 40px;" fill="none" stroke="#131313" stroke-width="1.8"><rect x="4" y="10.5" width="16" height="10.5" rx="1.5"></rect><path d="M8 10.5 V7.5 a4 4 0 0 1 8 0 V10.5"></path></svg>
+            <div style="font-family: Anton, sans-serif; font-size: 54px; line-height: 0.86;">FEED'S<br>SHUT.</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px; font-family: 'DM Mono', monospace; font-size: 11px;">
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(19,19,19,0.25); padding-bottom: 5px;"><span>INSTAGRAM</span><span>LOCKED</span></div>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(19,19,19,0.25); padding-bottom: 5px;"><span>TIKTOK</span><span>LOCKED</span></div>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(19,19,19,0.25); padding-bottom: 5px;"><span>X · YOUTUBE</span><span>LOCKED</span></div>
+            <div style="display: flex; justify-content: space-between;"><span>CALLS · MAPS · MUSIC</span><span>YOURS</span></div>
+          </div>
+          <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
+            <div style="background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 22px; padding: 17px; text-align: center; border-radius: 6px;">TAKE THE SELFIE</div>
+            <div style="font-family: 'DM Mono', monospace; font-size: 10px; text-align: center;">one tap to override. streak goes to 0.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 44px; border-top: 2px solid #131313;">
+      <div style="padding: 22px 26px 26px 0; display: flex; gap: 16px; align-items: flex-start; border-right: 2px solid #131313;">
+        <svg viewBox="0 0 24 24" style="width: 34px; height: 34px; flex: 0 0 34px;" fill="none" stroke="#131313" stroke-width="1.8"><rect x="4" y="10.5" width="16" height="10.5" rx="1.5"></rect><path d="M8 10.5 V7.5 a4 4 0 0 1 8 0 V10.5"></path></svg>
+        <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: Anton, sans-serif; font-size: 30px; line-height: 1;">1 — IT'S LOCKED</span><span style="font-family: Archivo, sans-serif; font-size: 17px; line-height: 1.4;">The apps you pick are shut before you wake up.</span></div>
+      </div>
+      <div style="padding: 22px 26px 26px; display: flex; gap: 16px; align-items: flex-start; border-right: 2px solid #131313;">
+        <svg viewBox="0 0 24 24" style="width: 34px; height: 34px; flex: 0 0 34px;" fill="none" stroke="#131313" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"></rect><circle cx="12" cy="13.5" r="3.6"></circle><path d="M8.5 7 L9.8 4.5 h4.4 L15.5 7"></path></svg>
+        <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: Anton, sans-serif; font-size: 30px; line-height: 1;">2 — PROVE IT</span><span style="font-family: Archivo, sans-serif; font-size: 17px; line-height: 1.4;">A selfie in another room. It checks you're really up.</span></div>
+      </div>
+      <div style="padding: 22px 0 26px 26px; display: flex; gap: 16px; align-items: flex-start;">
+        <svg viewBox="0 0 24 24" style="width: 34px; height: 34px; flex: 0 0 34px;" fill="none" stroke="#131313" stroke-width="1.8"><circle cx="12" cy="13" r="8"></circle><path d="M12 8.5 V13 h3.4 M9 2.5 h6"></path></svg>
+        <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-family: Anton, sans-serif; font-size: 30px; line-height: 1;">3 — 30 MINUTES</span><span style="font-family: Archivo, sans-serif; font-size: 17px; line-height: 1.4;">Feed stays off. The morning is yours to use.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- how it works, in screens -->
+  <div style="padding: 60px 40px; display: flex; flex-direction: column; gap: 34px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #7d7a72;">HOW IT WORKS — FOUR SCREENS, ONE MORNING</div>
+        <div style="font-family: Anton, sans-serif; font-size: 78px; line-height: 0.9; color: #ffe100;">THE WHOLE APP,<br>IN NINETY SECONDS.</div>
+      </div>
+      <div style="font-family: Archivo, sans-serif; font-size: 19px; color: #ded9cd; max-width: 400px; line-height: 1.5;">Set it once at bedtime. Everything after that happens in the four screens below.</div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px;">
+
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="width: 40px; height: 40px; flex: 0 0 40px; background: #ffe100; color: #131313; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-family: Anton, sans-serif; font-size: 22px;">1</span>
+          <span style="font-family: Anton, sans-serif; font-size: 30px; line-height: 1;">THE ALARM GOES</span>
+        </div>
+        <div style="font-family: Archivo, sans-serif; font-size: 17px; color: #ded9cd; line-height: 1.45; min-height: 76px;">Instagram, TikTok, X, YouTube — already shut. Calls, maps and music work as normal. You didn't have to remember anything last night.</div>
+        <div style="background: #ffe100; color: #131313; border-radius: 12px; padding: 22px; height: 500px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 11px;"><span>6.47</span><span>MON</span></div>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <svg viewBox="0 0 24 24" style="width: 34px; height: 34px;" fill="none" stroke="#131313" stroke-width="1.8"><rect x="4" y="10.5" width="16" height="10.5" rx="1.5"></rect><path d="M8 10.5 V7.5 a4 4 0 0 1 8 0 V10.5"></path></svg>
+            <div style="font-family: Anton, sans-serif; font-size: 46px; line-height: 0.88;">FIVE APPS,<br>SHUT.</div>
+            <div style="font-family: Archivo, sans-serif; font-size: 16px; line-height: 1.4;">Everything interesting is asleep. So are you, technically.</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 8px; font-family: 'DM Mono', monospace; font-size: 11px;"><span>STREAK 03</span><div style="display: flex; gap: 3px;"><div style="width: 12px; height: 12px; background: #131313;"></div><div style="width: 12px; height: 12px; background: #131313;"></div><div style="width: 12px; height: 12px; background: #131313;"></div><div style="width: 12px; height: 12px; border: 1px solid #131313;"></div><div style="width: 12px; height: 12px; border: 1px solid #131313;"></div></div></div>
+            <div style="background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 21px; padding: 16px; text-align: center; border-radius: 5px;">FINE, I'M UP</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="width: 40px; height: 40px; flex: 0 0 40px; background: #ffe100; color: #131313; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-family: Anton, sans-serif; font-size: 22px;">2</span>
+          <span style="font-family: Anton, sans-serif; font-size: 30px; line-height: 1;">TAKE THE SELFIE</span>
+        </div>
+        <div style="font-family: Archivo, sans-serif; font-size: 17px; color: #ded9cd; line-height: 1.45; min-height: 76px;">One tap, front camera, get the room in frame. You choose the room when you set it up — kitchen, hallway, outside.</div>
+        <div style="border-radius: 12px; overflow: hidden; height: 500px; display: flex; flex-direction: column; background: #1c1c1a;">
+          <div style="flex: 1; background-image: url('uploads/hf_20260725_110442_f70660f4-b676-44c6-8e75-70af2d9b8400.png'); background-size: cover; background-position: center; position: relative;">
+            <div style="position: absolute; inset: 0; background: rgba(11,11,11,0.22);"></div>
+            <div style="position: absolute; top: 16px; left: 16px; right: 16px; display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 11px; color: #f6f4ee;"><span>06.48</span><span>FRONT CAMERA</span></div>
+            <div style="position: absolute; top: 44px; left: 20px; right: 20px; bottom: 74px; border: 2px dashed rgba(255,225,0,0.7);"></div>
+            <div style="position: absolute; bottom: 20px; left: 16px; background: #ffe100; color: #131313; font-family: Anton, sans-serif; font-size: 22px; padding: 5px 11px; transform: rotate(-2deg);">GET THE ROOM IN</div>
+          </div>
+          <div style="height: 128px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;">
+            <div style="width: 66px; height: 66px; border-radius: 33px; border: 3px solid #ffe100; display: flex; align-items: center; justify-content: center;"><div style="width: 52px; height: 52px; border-radius: 26px; background: #ffe100;"></div></div>
+            <span style="font-family: 'DM Mono', monospace; font-size: 11px; color: #7d7a72;">IT DECIDES IN A SECOND</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="width: 40px; height: 40px; flex: 0 0 40px; background: #ffe100; color: #131313; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-family: Anton, sans-serif; font-size: 22px;">3</span>
+          <span style="font-family: Anton, sans-serif; font-size: 30px; line-height: 1;">IT SAYS YES OR NO</span>
+        </div>
+        <div style="font-family: Archivo, sans-serif; font-size: 17px; color: #ded9cd; line-height: 1.45; min-height: 76px;">Still in bed? Rejected, try again — unlimited goes. Actually out of the room? Approved, and the timer starts.</div>
+        <div style="border-radius: 12px; overflow: hidden; height: 500px; display: flex; flex-direction: column; background: #f6f4ee; color: #131313;">
+          <div style="height: 300px; background-image: url('uploads/hf_20260725_110832_46798f76-ac86-40a3-9b08-1d32e4040ecf.png'); background-size: cover; background-position: center 20%; position: relative;">
+            <div style="position: absolute; top: 14px; left: 14px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 15px; padding: 5px 9px; display: flex; align-items: center; gap: 7px;"><span style="width: 13px; height: 7px; border-left: 2.5px solid #ffe100; border-bottom: 2.5px solid #ffe100; transform: rotate(-45deg); margin-bottom: 3px;"></span>APPROVED</div>
+            <div style="position: absolute; bottom: 16px; left: -6px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 32px; padding: 6px 12px; transform: rotate(-2deg);">WELL, LOOK AT YOU.</div>
+          </div>
+          <div style="flex: 1; padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div style="display: flex; gap: 18px; font-family: 'DM Mono', monospace; font-size: 11px; color: #57554e;">
+              <div style="display: flex; flex-direction: column; gap: 2px;"><span>OUT AT</span><span style="font-family: Anton, sans-serif; font-size: 22px; color: #131313;">06.50</span></div>
+              <div style="display: flex; flex-direction: column; gap: 2px;"><span>STREAK</span><span style="font-family: Anton, sans-serif; font-size: 22px; color: #131313;">04</span></div>
+              <div style="display: flex; flex-direction: column; gap: 2px;"><span>GOES</span><span style="font-family: Anton, sans-serif; font-size: 22px; color: #131313;">05</span></div>
+            </div>
+            <div style="background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 20px; padding: 16px; text-align: center; border-radius: 5px;">START MY 30 MINUTES</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span style="width: 40px; height: 40px; flex: 0 0 40px; background: #ffe100; color: #131313; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-family: Anton, sans-serif; font-size: 22px;">4</span>
+          <span style="font-family: Anton, sans-serif; font-size: 30px; line-height: 1;">YOUR MORNING RUNS</span>
+        </div>
+        <div style="font-family: Archivo, sans-serif; font-size: 17px; color: #ded9cd; line-height: 1.45; min-height: 76px;">The feed stays shut for the window you chose — 15, 30 or 60 minutes. No notifications, no app, no us.</div>
+        <div style="background: #f6f4ee; color: #131313; border-radius: 12px; padding: 22px; height: 500px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 11px; color: #57554e;"><span>6.54</span><span>WINDOW OPEN</span></div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <svg viewBox="0 0 24 24" style="width: 34px; height: 34px;" fill="none" stroke="#131313" stroke-width="1.8"><circle cx="12" cy="13" r="8"></circle><path d="M12 8.5 V13 h3.4 M9 2.5 h6"></path></svg>
+            <div style="font-family: Anton, sans-serif; font-size: 76px; line-height: 0.84;">26:41</div>
+            <div style="font-family: Anton, sans-serif; font-size: 28px; line-height: 0.96;">OF MORNING<br>LEFT.</div>
+            <div style="font-family: Archivo, sans-serif; font-size: 16px; color: #57554e; line-height: 1.4;">No feed, no notifications, no me. Kettle's over there.</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="height: 8px; background: #dedbd2;"><div style="width: 11%; height: 8px; background: #131313;"></div></div>
+            <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 10px; color: #57554e;"><span>OUT 06.50</span><span>APPS RETURN 07.20</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- why: one number, one line -->
+  <div style="background: #ffe100; color: #131313; padding: 54px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;">
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <div style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em;">WHY BOTHER</div>
+      <div style="font-family: Anton, sans-serif; font-size: 76px; line-height: 0.9;">250 HOURS<br>A YEAR, SPENT<br>LYING DOWN.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 22px; line-height: 1.45; max-width: 560px;">Forty-one minutes between the alarm and standing up, every morning. That's six working weeks of your year, horizontal, scrolling.</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: #131313;">
+      <div style="background: #ffe100; padding: 26px 22px; display: flex; flex-direction: column; gap: 6px;"><span style="font-family: Anton, sans-serif; font-size: 58px; line-height: 1;">41 MIN</span><span style="font-family: Archivo, sans-serif; font-size: 16px; line-height: 1.35;">Alarm to feet on floor, average morning</span></div>
+      <div style="background: #ffe100; padding: 26px 22px; display: flex; flex-direction: column; gap: 6px;"><span style="font-family: Anton, sans-serif; font-size: 58px; line-height: 1;">89%</span><span style="font-family: Archivo, sans-serif; font-size: 16px; line-height: 1.35;">Check a screen within ten minutes of waking</span></div>
+      <div style="background: #ffe100; padding: 26px 22px; display: flex; flex-direction: column; gap: 6px;"><span style="font-family: Anton, sans-serif; font-size: 58px; line-height: 1;">10.4</span><span style="font-family: Archivo, sans-serif; font-size: 16px; line-height: 1.35;">Whole days a year, gone, in bed, awake</span></div>
+      <div style="background: #131313; color: #ffe100; padding: 26px 22px; display: flex; flex-direction: column; gap: 6px;"><span style="font-family: Anton, sans-serif; font-size: 58px; line-height: 1;">30 MIN</span><span style="font-family: Archivo, sans-serif; font-size: 16px; line-height: 1.35;">Back tomorrow, every morning you show up</span></div>
+    </div>
+  </div>
+
+  <!-- proof: short, labelled -->
+  <div style="padding: 56px 40px; display: flex; flex-direction: column; gap: 26px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+      <div style="font-family: Anton, sans-serif; font-size: 72px; line-height: 0.92; color: #ffe100;">IT IS NOT<br>FOOLED BY YOU.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 19px; color: #ded9cd; max-width: 420px; line-height: 1.5;">Rejected, partial or approved — decided on your phone, in a second. The photo never leaves it.</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px;">
+
+      <div style="height: 330px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110442_f70660f4-b676-44c6-8e75-70af2d9b8400.png'); background-size: cover; background-position: center; position: relative;">
+        <div style="position: absolute; top: 12px; left: 12px; background: #f6f4ee; color: #131313; font-family: Anton, sans-serif; font-size: 14px; padding: 4px 8px;">REJECTED</div>
+        <div style="position: absolute; bottom: 12px; left: 10px; right: 10px; font-family: 'DM Mono', monospace; font-size: 12px; color: #f6f4ee; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">STILL IN BED</div>
+      </div>
+      <div style="height: 330px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110603_a2f43c80-4a91-4f9f-afb7-4cca0718c124.png'); background-size: cover; background-position: center; position: relative;">
+        <div style="position: absolute; top: 12px; left: 12px; background: #f6f4ee; color: #131313; font-family: Anton, sans-serif; font-size: 14px; padding: 4px 8px;">REJECTED</div>
+        <div style="position: absolute; bottom: 12px; left: 10px; right: 10px; font-family: 'DM Mono', monospace; font-size: 12px; color: #f6f4ee; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">CEILING ONLY</div>
+      </div>
+      <div style="height: 330px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110653_3e9b0162-8ed3-4d1e-95f6-20b2524289a7.png'); background-size: cover; background-position: center 28%; position: relative;">
+        <div style="position: absolute; top: 12px; left: 12px; background: #f6f4ee; color: #131313; font-family: Anton, sans-serif; font-size: 14px; padding: 4px 8px;">REJECTED</div>
+        <div style="position: absolute; bottom: 12px; left: 10px; right: 10px; font-family: 'DM Mono', monospace; font-size: 12px; color: #f6f4ee; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">SAME ROOM AS THE BED</div>
+      </div>
+      <div style="height: 330px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110701_1852b34d-4902-499b-b26b-4948089eb411.png'); background-size: cover; background-position: center 22%; position: relative;">
+        <div style="position: absolute; top: 12px; left: 12px; background: #ffe100; color: #131313; font-family: Anton, sans-serif; font-size: 14px; padding: 4px 8px;">PARTIAL</div>
+        <div style="position: absolute; bottom: 12px; left: 10px; right: 10px; font-family: 'DM Mono', monospace; font-size: 12px; color: #f6f4ee; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">LANDING — 15 MIN OFFERED</div>
+      </div>
+      <div style="height: 330px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110832_46798f76-ac86-40a3-9b08-1d32e4040ecf.png'); background-size: cover; background-position: center 20%; position: relative;">
+        <div style="position: absolute; top: 12px; left: 12px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 14px; padding: 4px 8px;">APPROVED</div>
+        <div style="position: absolute; bottom: 12px; left: 10px; right: 10px; font-family: 'DM Mono', monospace; font-size: 12px; color: #f6f4ee; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">DIFFERENT ROOM · 30 MIN</div>
+      </div>
+      <div style="height: 330px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_173017_e1eaca06-2065-4473-9511-d1fb92568e4d.png'); background-size: cover; background-position: center 30%; position: relative;">
+        <div style="position: absolute; top: 12px; left: 12px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 14px; padding: 4px 8px;">APPROVED</div>
+        <div style="position: absolute; bottom: 12px; left: 10px; right: 10px; font-family: 'DM Mono', monospace; font-size: 12px; color: #f6f4ee; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">OUTSIDE · SHOWING OFF</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- win the morning -->
+  <div style="background: #f6f4ee; color: #131313; padding: 52px 40px; display: grid; grid-template-columns: 1fr 520px; gap: 48px; align-items: center;">
+    <div style="display: flex; flex-direction: column; gap: 18px;">
+      <div style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #57554e;">THE POINT OF ALL THIS</div>
+      <div style="font-family: Anton, sans-serif; font-size: 80px; line-height: 0.9;">DON'T JUST GET UPP.<br>WIN THE MORNING.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 21px; line-height: 1.45; color: #3d3b36; max-width: 540px;">Other apps let go the second you're vertical. We hold the feed for another <strong>30 minutes</strong> — long enough to do one thing that's actually yours.</div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding-top: 4px;">
+        <div style="border-top: 2px solid #131313; padding-top: 12px; display: flex; flex-direction: column; gap: 5px;"><span style="font-family: Anton, sans-serif; font-size: 28px;">WALK</span><span style="font-family: Archivo, sans-serif; font-size: 15px; line-height: 1.4; color: #3d3b36;">Daylight before a screen.</span></div>
+        <div style="border-top: 2px solid #131313; padding-top: 12px; display: flex; flex-direction: column; gap: 5px;"><span style="font-family: Anton, sans-serif; font-size: 28px;">MAKE</span><span style="font-family: Archivo, sans-serif; font-size: 15px; line-height: 1.4; color: #3d3b36;">The thing you keep putting off.</span></div>
+        <div style="border-top: 2px solid #131313; padding-top: 12px; display: flex; flex-direction: column; gap: 5px;"><span style="font-family: Anton, sans-serif; font-size: 28px;">NOTHING</span><span style="font-family: Archivo, sans-serif; font-size: 15px; line-height: 1.4; color: #3d3b36;">Coffee, while it's hot.</span></div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div style="height: 400px; border-radius: 10px; overflow: hidden; background-image: url('uploads/hf_20260725_173017_e1eaca06-2065-4473-9511-d1fb92568e4d.png'); background-size: cover; background-position: center 38%; position: relative;">
+        <div style="position: absolute; top: 14px; left: 14px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 17px; padding: 6px 11px;">WINDOW OPEN · 26:41 LEFT</div>
+      </div>
+      <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 12px; color: #57554e;"><span>DAY 04 · OUT AT 06.50</span><span>PHONE: IN THE POCKET</span></div>
+    </div>
+  </div>
+
+  <!-- streak ladder: sass drops -->
+  <div style="padding: 54px 40px; display: flex; flex-direction: column; gap: 24px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+      <div style="font-family: Anton, sans-serif; font-size: 72px; line-height: 0.92; color: #ffe100;">HIGHER STREAK,<br>LESS SASS.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 19px; color: #ded9cd; max-width: 420px; line-height: 1.5;">Day one it shouts. Every morning you win, it turns the volume down. By day forty it's a bestie, not an alarm.</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;">
+      <div style="background: #ffe100; color: #131313; border-radius: 10px; padding: 24px; display: flex; flex-direction: column; gap: 12px; min-height: 200px;">
+        <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 12px;"><span>DAY 1</span><span>SASS 100%</span></div>
+        <div style="font-family: Anton, sans-serif; font-size: 38px; line-height: 0.92; margin-top: auto;">ABSOLUTELY NOT. THAT IS A BED.</div>
+      </div>
+      <div style="background: #e2cf3c; color: #131313; border-radius: 10px; padding: 24px; display: flex; flex-direction: column; gap: 12px; min-height: 200px;">
+        <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 12px;"><span>DAY 8</span><span>SASS 62%</span></div>
+        <div style="font-family: Anton, sans-serif; font-size: 34px; line-height: 0.94; margin-top: auto;">ALRIGHT, YOU'RE UP. GO ON.</div>
+      </div>
+      <div style="background: #ded9cd; color: #131313; border-radius: 10px; padding: 24px; display: flex; flex-direction: column; gap: 12px; min-height: 200px;">
+        <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 12px;"><span>DAY 21</span><span>SASS 22%</span></div>
+        <div style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 28px; line-height: 1.1; margin-top: auto;">Believable. Off you go.</div>
+      </div>
+      <div style="background: #f6f4ee; color: #57554e; border-radius: 10px; padding: 24px; display: flex; flex-direction: column; gap: 12px; min-height: 200px;">
+        <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 12px;"><span>DAY 40</span><span>SASS 0%</span></div>
+        <div style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 28px; line-height: 1.1; margin-top: auto;">Morning, you. Coffee's the good bit.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- price -->
+  <div style="background: #ffe100; color: #131313; padding: 54px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <div style="font-family: Anton, sans-serif; font-size: 78px; line-height: 0.9;">FREE. THE WHOLE<br>MECHANIC.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 21px; line-height: 1.45; max-width: 520px;">Lock, selfie, window, streak. Not a trial. Plus (£3.99/mo) adds more rooms, longer windows and weekend rules.</div>
+      <div style="display: flex; gap: 14px;">
+        <img src="assets/badge-appstore.png" alt="Download on the App Store" style="height: 58px; width: auto; display: block;">
+        <img src="assets/badge-googleplay.png" alt="Get it on Google Play" style="height: 58px; width: auto; display: block;">
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 2px; background: #131313;">
+      <div style="background: #ffe100; padding: 18px 22px; display: flex; justify-content: space-between; align-items: baseline;"><span style="font-family: Archivo, sans-serif; font-size: 18px;">Everything above</span><span style="font-family: Anton, sans-serif; font-size: 26px;">FREE</span></div>
+      <div style="background: #ffe100; padding: 18px 22px; display: flex; justify-content: space-between; align-items: baseline;"><span style="font-family: Archivo, sans-serif; font-size: 18px;">Photos leave your phone</span><span style="font-family: Anton, sans-serif; font-size: 26px;">NEVER</span></div>
+      <div style="background: #ffe100; padding: 18px 22px; display: flex; justify-content: space-between; align-items: baseline;"><span style="font-family: Archivo, sans-serif; font-size: 18px;">Setup, once, at bedtime</span><span style="font-family: Anton, sans-serif; font-size: 26px;">2 MIN</span></div>
+      <div style="background: #131313; color: #ffe100; padding: 18px 22px; display: flex; justify-content: space-between; align-items: baseline;"><span style="font-family: Archivo, sans-serif; font-size: 18px;">Plus — more rooms, longer windows</span><span style="font-family: Anton, sans-serif; font-size: 26px;">£3.99/MO</span></div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div style="background: #f6f4ee; color: #8b8880; padding: 40px; display: flex; justify-content: space-between; align-items: flex-end;">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <svg viewBox="3 0 291 88" style="display: block; width: 280px; height: 85px;" aria-label="GET UPP">
+        <text x="0" y="87" font-family="Anton" font-size="100" fill="#c4c1b8">GET UPP</text>
+        <rect x="218.2" y="14.5" width="12.7" height="25.3" fill="#c4c1b8" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite;"></rect>
+        <rect x="265.5" y="14.5" width="12.7" height="25.3" fill="#c4c1b8" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite; animation-delay: 0.09s;"></rect>
+      </svg>
+      <div style="font-family: 'DM Mono', monospace; font-size: 13px;">LOCK · SELFIE · 30 MINUTES.</div>
+    </div>
+    <div style="display: flex; gap: 48px; font-family: 'DM Mono', monospace; font-size: 12px; line-height: 2;">
+      <div style="display: flex; flex-direction: column;"><span>PRIVACY — PHOTOS STAY ON YOUR PHONE</span><span>TERMS — DULL, BUT FAIR</span><span>SUPPORT — WE'RE UP, OBVIOUSLY</span></div>
+      <div style="display: flex; flex-direction: column;"><span>COOKIES: NECESSARY ONLY. <a href="#cookies">GO ON THEN</a></span><span>iOS + ANDROID</span><span>© GET UPP 2026</span></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 34px;">
+<div style="display: flex; align-items: center; gap: 14px;"><span style="font-family: 'DM Mono', monospace; font-size: 15px; color: #8d8d95; letter-spacing: 0.06em;">TURN 6 — HERO INFOGRAPHIC VARIATIONS</span></div>
+
+<!-- 6a — TIMELINE OF ONE MORNING -->
+<div id="6a" style="display: flex; flex-direction: column; gap: 14px;">
+<div style="display: flex; align-items: center; gap: 12px;"><span style="background: #ffe100; color: #131313; font-family: 'DM Mono', monospace; font-size: 15px; padding: 4px 12px;">6a</span><span style="font-family: 'DM Mono', monospace; font-size: 15px; color: #8d8d95; letter-spacing: 0.06em;">TIMELINE — ONE MORNING, THREE MOMENTS</span></div>
+<div style="width: 1440px; background: #ffe100; color: #131313; font-family: Archivo, sans-serif;">
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; border-bottom: 2px solid #131313;">
+    <svg viewBox="3 0 291 88" style="display: block; width: 176px; height: 53px;" aria-label="GET UPP">
+      <text x="0" y="87" font-family="Anton" font-size="100" fill="#131313">GET UPP</text>
+      <rect x="218.2" y="14.5" width="12.7" height="25.3" fill="#131313" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite;"></rect>
+      <rect x="265.5" y="14.5" width="12.7" height="25.3" fill="#131313" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite; animation-delay: 0.09s;"></rect>
+    </svg>
+    <div style="display: flex; align-items: center; gap: 26px; font-family: 'DM Mono', monospace; font-size: 13px;"><span>HOW IT WORKS</span><span>WHY</span><span>PRICE</span><span style="background: #131313; color: #ffe100; padding: 11px 18px; font-family: Anton, sans-serif; font-size: 16px;">GET THE APP — FREE</span></div>
+  </div>
+
+  <div style="padding: 46px 40px 52px; display: flex; flex-direction: column; gap: 34px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 40px;">
+      <div style="font-family: Anton, sans-serif; font-size: 88px; line-height: 0.86;">GET UP. GET OUT.<br>GET YOUR MORNING BACK.</div>
+      <div style="display: flex; flex-direction: column; gap: 14px; flex: 0 0 340px;">
+        <div style="font-family: Archivo, sans-serif; font-size: 20px; line-height: 1.4;">The feed unlocks when you prove you've left the bedroom — then stays off for thirty minutes.</div>
+        <div style="display: flex; gap: 12px;">
+          <img src="assets/badge-appstore.png" alt="Download on the App Store" style="height: 50px; width: auto; display: block;">
+          <img src="assets/badge-googleplay.png" alt="Get it on Google Play" style="height: 50px; width: auto; display: block;">
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 0;">
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;">
+
+        <div style="display: flex; gap: 18px; align-items: stretch;">
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 10px; padding-top: 4px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="width: 34px; height: 34px; background: #131313; color: #ffe100; border-radius: 17px; display: flex; align-items: center; justify-content: center; font-family: Anton, sans-serif; font-size: 19px;">1</span>
+              <svg viewBox="0 0 24 24" style="width: 26px; height: 26px;" fill="none" stroke="#131313" stroke-width="1.9"><rect x="4" y="10.5" width="16" height="10.5" rx="1.5"></rect><path d="M8 10.5 V7.5 a4 4 0 0 1 8 0 V10.5"></path></svg>
+            </div>
+            <div style="font-family: Anton, sans-serif; font-size: 38px; line-height: 0.92;">ALARM GOES.<br>FEED'S SHUT.</div>
+            <div style="font-family: Archivo, sans-serif; font-size: 16px; line-height: 1.4;">Nothing to remember at bedtime — it locks itself overnight.</div>
+          </div>
+          <div style="flex: 0 0 148px; background: #131313; border-radius: 22px; padding: 6px;">
+            <div style="background: #ffe100; border-radius: 17px; height: 296px; padding: 14px 13px; display: flex; flex-direction: column; justify-content: space-between;">
+              <div style="font-family: 'DM Mono', monospace; font-size: 9px;">6.47 · MON</div>
+              <div style="font-family: Anton, sans-serif; font-size: 30px; line-height: 0.86;">FIVE APPS,<br>SHUT.</div>
+              <div style="display: flex; flex-direction: column; gap: 4px; font-family: 'DM Mono', monospace; font-size: 8px;">
+                <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(19,19,19,0.3); padding-bottom: 3px;"><span>INSTAGRAM</span><span>LOCKED</span></div>
+                <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(19,19,19,0.3); padding-bottom: 3px;"><span>TIKTOK</span><span>LOCKED</span></div>
+                <div style="display: flex; justify-content: space-between;"><span>CALLS · MAPS</span><span>YOURS</span></div>
+              </div>
+              <div style="background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 13px; padding: 9px; text-align: center; border-radius: 4px;">TAKE THE SELFIE</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 18px; align-items: stretch;">
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 10px; padding-top: 4px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="width: 34px; height: 34px; background: #131313; color: #ffe100; border-radius: 17px; display: flex; align-items: center; justify-content: center; font-family: Anton, sans-serif; font-size: 19px;">2</span>
+              <svg viewBox="0 0 24 24" style="width: 26px; height: 26px;" fill="none" stroke="#131313" stroke-width="1.9"><rect x="3" y="7" width="18" height="13" rx="2"></rect><circle cx="12" cy="13.5" r="3.6"></circle><path d="M8.5 7 L9.8 4.5 h4.4 L15.5 7"></path></svg>
+            </div>
+            <div style="font-family: Anton, sans-serif; font-size: 38px; line-height: 0.92;">SELFIE IN<br>ANOTHER ROOM.</div>
+            <div style="font-family: Archivo, sans-serif; font-size: 16px; line-height: 1.4;">One tap. It checks the room, not your face. Unlimited goes.</div>
+          </div>
+          <div style="flex: 0 0 148px; background: #131313; border-radius: 22px; padding: 6px;">
+            <div style="border-radius: 17px; height: 296px; overflow: hidden; background-image: url('uploads/hf_20260725_110442_f70660f4-b676-44c6-8e75-70af2d9b8400.png'); background-size: cover; background-position: center; position: relative;">
+              <div style="position: absolute; inset: 0; background: rgba(11,11,11,0.24);"></div>
+              <div style="position: absolute; top: 26px; left: 12px; right: 12px; bottom: 74px; border: 2px dashed rgba(255,225,0,0.75);"></div>
+              <div style="position: absolute; top: 9px; left: 11px; font-family: 'DM Mono', monospace; font-size: 8px; color: #f6f4ee;">06.48 · FRONT</div>
+              <div style="position: absolute; bottom: 60px; left: 8px; background: #ffe100; color: #131313; font-family: Anton, sans-serif; font-size: 14px; padding: 3px 7px; transform: rotate(-2deg);">GET THE ROOM IN</div>
+              <div style="position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); width: 40px; height: 40px; border-radius: 20px; border: 2px solid #ffe100; display: flex; align-items: center; justify-content: center;"><div style="width: 30px; height: 30px; border-radius: 15px; background: #ffe100;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 18px; align-items: stretch;">
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 10px; padding-top: 4px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="width: 34px; height: 34px; background: #131313; color: #ffe100; border-radius: 17px; display: flex; align-items: center; justify-content: center; font-family: Anton, sans-serif; font-size: 19px;">3</span>
+              <svg viewBox="0 0 24 24" style="width: 26px; height: 26px;" fill="none" stroke="#131313" stroke-width="1.9"><circle cx="12" cy="13" r="8"></circle><path d="M12 8.5 V13 h3.4 M9 2.5 h6"></path></svg>
+            </div>
+            <div style="font-family: Anton, sans-serif; font-size: 38px; line-height: 0.92;">THIRTY MINUTES,<br>ALL YOURS.</div>
+            <div style="font-family: Archivo, sans-serif; font-size: 16px; line-height: 1.4;">Feed stays off. Apps come back at 07.20 on their own.</div>
+          </div>
+          <div style="flex: 0 0 148px; background: #131313; border-radius: 22px; padding: 6px;">
+            <div style="background: #f6f4ee; border-radius: 17px; height: 296px; padding: 14px 13px; display: flex; flex-direction: column; justify-content: space-between;">
+              <div style="font-family: 'DM Mono', monospace; font-size: 9px; color: #57554e;">6.54 · WINDOW OPEN</div>
+              <div style="display: flex; flex-direction: column; gap: 6px;">
+                <div style="font-family: Anton, sans-serif; font-size: 46px; line-height: 0.84;">26:41</div>
+                <div style="font-family: Anton, sans-serif; font-size: 17px; line-height: 0.96;">OF MORNING LEFT.</div>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 5px;">
+                <div style="height: 6px; background: #dedbd2;"><div style="width: 11%; height: 6px; background: #131313;"></div></div>
+                <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 8px; color: #57554e;"><span>OUT 06.50</span><span>BACK 07.20</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 8px; padding-top: 28px;">
+        <div style="height: 3px; background: #131313; position: relative;">
+          <div style="position: absolute; top: -6px; left: 0; width: 15px; height: 15px; background: #131313; border-radius: 8px;"></div>
+          <div style="position: absolute; top: -6px; left: 50%; width: 15px; height: 15px; background: #131313; border-radius: 8px;"></div>
+          <div style="position: absolute; top: -6px; right: 0; width: 15px; height: 15px; background: #131313; border-radius: 8px;"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 13px;"><span>06.47 — ALARM</span><span>06.50 — YOU'RE OUT</span><span>07.20 — APPS RETURN</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 6b — LOCKED VS UNLOCKED, SIDE BY SIDE -->
+<div id="6b" style="display: flex; flex-direction: column; gap: 14px;">
+<div style="display: flex; align-items: center; gap: 12px;"><span style="background: #ffe100; color: #131313; font-family: 'DM Mono', monospace; font-size: 15px; padding: 4px 12px;">6b</span><span style="font-family: 'DM Mono', monospace; font-size: 15px; color: #8d8d95; letter-spacing: 0.06em;">SPLIT — LOCKED / UNLOCKED, WITH THE KEY IN THE MIDDLE</span></div>
+<div style="width: 1440px; background: #131313; color: #f6f4ee; font-family: Archivo, sans-serif;">
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; background: #ffe100; color: #131313;">
+    <svg viewBox="3 0 291 88" style="display: block; width: 176px; height: 53px;" aria-label="GET UPP">
+      <text x="0" y="87" font-family="Anton" font-size="100" fill="#131313">GET UPP</text>
+      <rect x="218.2" y="14.5" width="12.7" height="25.3" fill="#131313" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite;"></rect>
+      <rect x="265.5" y="14.5" width="12.7" height="25.3" fill="#131313" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite; animation-delay: 0.09s;"></rect>
+    </svg>
+    <div style="display: flex; align-items: center; gap: 26px; font-family: 'DM Mono', monospace; font-size: 13px;"><span>HOW IT WORKS</span><span>WHY</span><span>PRICE</span><span style="background: #131313; color: #ffe100; padding: 11px 18px; font-family: Anton, sans-serif; font-size: 16px;">GET THE APP — FREE</span></div>
+  </div>
+
+  <div style="padding: 46px 40px 50px; display: flex; flex-direction: column; gap: 32px;">
+    <div style="display: flex; flex-direction: column; gap: 14px; max-width: 900px;">
+      <div style="font-family: Anton, sans-serif; font-size: 88px; line-height: 0.86; color: #ffe100;">GET UP. GET OUT.<br>GET YOUR MORNING BACK.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 22px; line-height: 1.4; color: #ded9cd;">One selfie is the key. Take it in another room and the feed unlocks — for thirty minutes it stays shut anyway, because that's the good bit.</div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 220px 1fr; gap: 24px; align-items: center;">
+
+      <div style="background: #ffe100; color: #131313; border-radius: 14px; padding: 28px; display: flex; gap: 24px; align-items: center;">
+        <div style="display: flex; flex-direction: column; gap: 12px; flex: 1;">
+          <div style="display: flex; align-items: center; gap: 10px; font-family: 'DM Mono', monospace; font-size: 12px;">
+            <svg viewBox="0 0 24 24" style="width: 20px; height: 20px;" fill="none" stroke="#131313" stroke-width="2"><rect x="4" y="10.5" width="16" height="10.5" rx="1.5"></rect><path d="M8 10.5 V7.5 a4 4 0 0 1 8 0 V10.5"></path></svg>
+            <span>06.47 — BEFORE</span>
+          </div>
+          <div style="font-family: Anton, sans-serif; font-size: 54px; line-height: 0.88;">IN BED,<br>SCROLLING.</div>
+          <div style="display: flex; flex-direction: column; gap: 5px; font-family: 'DM Mono', monospace; font-size: 12px;">
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(19,19,19,0.3); padding-bottom: 4px;"><span>YOUR FIVE WORST APPS</span><span>LOCKED</span></div>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(19,19,19,0.3); padding-bottom: 4px;"><span>CALLS · MAPS · MUSIC</span><span>NORMAL</span></div>
+            <div style="display: flex; justify-content: space-between;"><span>TIME LOST SO FAR</span><span>41 MIN/DAY</span></div>
+          </div>
+        </div>
+        <div style="flex: 0 0 160px; background: #131313; border-radius: 24px; padding: 6px;">
+          <div style="background: #ffe100; border-radius: 18px; height: 330px; padding: 15px 14px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div style="font-family: 'DM Mono', monospace; font-size: 9px;">6.47</div>
+            <div style="font-family: Anton, sans-serif; font-size: 34px; line-height: 0.86;">FEED'S SHUT.</div>
+            <div style="font-family: Archivo, sans-serif; font-size: 12px; line-height: 1.35;">Everything interesting is asleep. So are you, technically.</div>
+            <div style="background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 14px; padding: 10px; text-align: center; border-radius: 4px;">TAKE THE SELFIE</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 14px;">
+        <div style="width: 132px; height: 132px; border-radius: 66px; border: 3px solid #ffe100; display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 24 24" style="width: 58px; height: 58px;" fill="none" stroke="#ffe100" stroke-width="1.6"><rect x="3" y="7" width="18" height="13" rx="2"></rect><circle cx="12" cy="13.5" r="3.6"></circle><path d="M8.5 7 L9.8 4.5 h4.4 L15.5 7"></path></svg>
+        </div>
+        <div style="font-family: Anton, sans-serif; font-size: 30px; line-height: 0.95; color: #ffe100; text-align: center;">ONE SELFIE.<br>THAT'S THE KEY.</div>
+        <div style="font-family: 'DM Mono', monospace; font-size: 11px; color: #7d7a72; text-align: center; line-height: 1.7;">TAKEN IN A ROOM<br>THAT ISN'T YOURS.<br>DECIDED ON THE PHONE.</div>
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <div style="width: 10px; height: 10px; background: #ffe100;"></div><div style="width: 34px; height: 3px; background: #ffe100;"></div>
+          <div style="width: 0; height: 0; border-left: 12px solid #ffe100; border-top: 8px solid transparent; border-bottom: 8px solid transparent;"></div>
+        </div>
+      </div>
+
+      <div style="background: #f6f4ee; color: #131313; border-radius: 14px; padding: 28px; display: flex; gap: 24px; align-items: center;">
+        <div style="flex: 0 0 160px; background: #131313; border-radius: 24px; padding: 6px;">
+          <div style="background: #f6f4ee; border-radius: 18px; height: 330px; padding: 15px 14px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div style="font-family: 'DM Mono', monospace; font-size: 9px; color: #57554e;">6.54 · WINDOW OPEN</div>
+            <div style="display: flex; flex-direction: column; gap: 7px;">
+              <div style="font-family: Anton, sans-serif; font-size: 52px; line-height: 0.84;">26:41</div>
+              <div style="font-family: Anton, sans-serif; font-size: 19px; line-height: 0.96;">OF MORNING LEFT.</div>
+              <div style="font-family: Archivo, sans-serif; font-size: 12px; color: #57554e; line-height: 1.35;">No feed, no notifications, no me.</div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 5px;">
+              <div style="height: 6px; background: #dedbd2;"><div style="width: 11%; height: 6px; background: #131313;"></div></div>
+              <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 8px; color: #57554e;"><span>OUT 06.50</span><span>BACK 07.20</span></div>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px; flex: 1;">
+          <div style="display: flex; align-items: center; gap: 10px; font-family: 'DM Mono', monospace; font-size: 12px; color: #57554e;">
+            <svg viewBox="0 0 24 24" style="width: 20px; height: 20px;" fill="none" stroke="#131313" stroke-width="2"><circle cx="12" cy="13" r="8"></circle><path d="M12 8.5 V13 h3.4 M9 2.5 h6"></path></svg>
+            <span>06.50 — AFTER</span>
+          </div>
+          <div style="font-family: Anton, sans-serif; font-size: 54px; line-height: 0.88;">OUT, AWAKE,<br>UNBOTHERED.</div>
+          <div style="display: flex; flex-direction: column; gap: 5px; font-family: 'DM Mono', monospace; font-size: 12px; color: #57554e;">
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #d5d1c6; padding-bottom: 4px;"><span>WINDOW LENGTH</span><span>15 · 30 · 60 MIN</span></div>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #d5d1c6; padding-bottom: 4px;"><span>NOTIFICATIONS</span><span>NONE</span></div>
+            <div style="display: flex; justify-content: space-between;"><span>TIME BACK PER YEAR</span><span>250 HOURS</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 18px;">
+      <img src="assets/badge-appstore.png" alt="Download on the App Store" style="height: 54px; width: auto; display: block;">
+      <img src="assets/badge-googleplay.png" alt="Get it on Google Play" style="height: 54px; width: auto; display: block;">
+      <span style="font-family: 'DM Mono', monospace; font-size: 12px; color: #7d7a72; line-height: 1.7;">FREE — THE WHOLE MECHANIC.<br>PHOTOS NEVER LEAVE YOUR PHONE.</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 6c — THE DIAL -->
+<div id="6c" style="display: flex; flex-direction: column; gap: 14px;">
+<div style="display: flex; align-items: center; gap: 12px;"><span style="background: #ffe100; color: #131313; font-family: 'DM Mono', monospace; font-size: 15px; padding: 4px 12px;">6c</span><span style="font-family: 'DM Mono', monospace; font-size: 15px; color: #8d8d95; letter-spacing: 0.06em;">THE DIAL — 41 MINUTES LOST VS 30 MINUTES WON</span></div>
+<div style="width: 1440px; background: #f6f4ee; color: #131313; font-family: Archivo, sans-serif;">
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; background: #131313;">
+    <svg viewBox="3 0 291 88" style="display: block; width: 176px; height: 53px;" aria-label="GET UPP">
+      <text x="0" y="87" font-family="Anton" font-size="100" fill="#ffe100">GET UPP</text>
+      <rect x="218.2" y="14.5" width="12.7" height="25.3" fill="#ffe100" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite;"></rect>
+      <rect x="265.5" y="14.5" width="12.7" height="25.3" fill="#ffe100" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite; animation-delay: 0.09s;"></rect>
+    </svg>
+    <div style="display: flex; align-items: center; gap: 26px; font-family: 'DM Mono', monospace; font-size: 13px; color: #ded9cd;"><span>HOW IT WORKS</span><span>WHY</span><span>PRICE</span><span style="background: #ffe100; color: #131313; padding: 11px 18px; font-family: Anton, sans-serif; font-size: 16px;">GET THE APP — FREE</span></div>
+  </div>
+
+  <div style="padding: 48px 40px 52px; display: grid; grid-template-columns: 1fr 420px; gap: 52px; align-items: center;">
+    <div style="display: flex; flex-direction: column; gap: 26px;">
+      <div style="font-family: Anton, sans-serif; font-size: 84px; line-height: 0.86;">GET UP. GET OUT.<br>GET YOUR<br>MORNING BACK.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 21px; line-height: 1.4; max-width: 560px;">You lose forty-one minutes to the feed before you stand up. GET UPP swaps them for thirty you actually choose what to do with.</div>
+
+      <div style="display: flex; align-items: center; gap: 30px;">
+        <div style="position: relative; width: 260px; height: 260px; flex: 0 0 260px; border-radius: 130px; background: conic-gradient(#131313 0deg 148deg, #ffe100 148deg 256deg, #dedbd2 256deg 360deg);">
+          <div style="position: absolute; inset: 34px; background: #f6f4ee; border-radius: 96px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;">
+            <span style="font-family: Anton, sans-serif; font-size: 46px; line-height: 0.9;">06.47</span>
+            <span style="font-family: 'DM Mono', monospace; font-size: 11px; color: #57554e;">TO 07.20</span>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; gap: 12px; align-items: flex-start;">
+            <span style="width: 16px; height: 16px; background: #131313; flex: 0 0 16px; margin-top: 5px;"></span>
+            <div style="display: flex; flex-direction: column;"><span style="font-family: Anton, sans-serif; font-size: 27px; line-height: 1;">41 MIN — LOST</span><span style="font-family: Archivo, sans-serif; font-size: 16px; color: #3d3b36;">Alarm to feet on floor, scrolling. Today: none of it.</span></div>
+          </div>
+          <div style="display: flex; gap: 12px; align-items: flex-start;">
+            <span style="width: 16px; height: 16px; background: #ffe100; border: 1px solid #131313; flex: 0 0 16px; margin-top: 5px;"></span>
+            <div style="display: flex; flex-direction: column;"><span style="font-family: Anton, sans-serif; font-size: 27px; line-height: 1;">30 MIN — WON</span><span style="font-family: Archivo, sans-serif; font-size: 16px; color: #3d3b36;">Your window. Feed shut, phone quiet, morning yours.</span></div>
+          </div>
+          <div style="display: flex; gap: 12px; align-items: flex-start;">
+            <span style="width: 16px; height: 16px; background: #dedbd2; flex: 0 0 16px; margin-top: 5px;"></span>
+            <div style="display: flex; flex-direction: column;"><span style="font-family: Anton, sans-serif; font-size: 27px; line-height: 1;">THEN NORMAL</span><span style="font-family: Archivo, sans-serif; font-size: 16px; color: #3d3b36;">Apps return at 07.20 by themselves. No willpower needed.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <img src="assets/badge-appstore.png" alt="Download on the App Store" style="height: 54px; width: auto; display: block;">
+        <img src="assets/badge-googleplay.png" alt="Get it on Google Play" style="height: 54px; width: auto; display: block;">
+        <span style="font-family: 'DM Mono', monospace; font-size: 12px; color: #57554e; line-height: 1.7;">250 HOURS A YEAR.<br>FREE, ALL OF IT.</span>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <div style="background: #131313; border-radius: 34px; padding: 8px;">
+        <div style="background: #f6f4ee; border-radius: 27px; height: 520px; padding: 22px 20px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 11px; color: #57554e;"><span>6.54</span><span>WINDOW OPEN</span></div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="font-family: Anton, sans-serif; font-size: 84px; line-height: 0.82;">26:41</div>
+            <div style="font-family: Anton, sans-serif; font-size: 30px; line-height: 0.94;">OF MORNING<br>LEFT.</div>
+            <div style="font-family: Archivo, sans-serif; font-size: 16px; color: #57554e; line-height: 1.4;">Nothing to do in here. That's the feature.</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="height: 8px; background: #dedbd2;"><div style="width: 11%; height: 8px; background: #131313;"></div></div>
+            <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 10px; color: #57554e;"><span>OUT 06.50</span><span>APPS RETURN 07.20</span></div>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 10px;">
+        <div style="flex: 1; border-top: 2px solid #131313; padding-top: 8px; font-family: 'DM Mono', monospace; font-size: 11px; line-height: 1.6;">1 — LOCKED<br>OVERNIGHT</div>
+        <div style="flex: 1; border-top: 2px solid #131313; padding-top: 8px; font-family: 'DM Mono', monospace; font-size: 11px; line-height: 1.6;">2 — SELFIE<br>ANOTHER ROOM</div>
+        <div style="flex: 1; border-top: 2px solid #ffe100; padding-top: 8px; font-family: 'DM Mono', monospace; font-size: 11px; line-height: 1.6;">3 — WINDOW<br>RUNS ITSELF</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 6d — ANNOTATED SCREEN -->
+<div id="6d" style="display: flex; flex-direction: column; gap: 14px;">
+<div style="display: flex; align-items: center; gap: 12px;"><span style="background: #ffe100; color: #131313; font-family: 'DM Mono', monospace; font-size: 15px; padding: 4px 12px;">6d</span><span style="font-family: 'DM Mono', monospace; font-size: 15px; color: #8d8d95; letter-spacing: 0.06em;">ANNOTATED — CALLOUTS POINTING AT THE REAL SCREEN</span></div>
+<div style="width: 1440px; background: #131313; color: #f6f4ee; font-family: Archivo, sans-serif;">
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; background: #ffe100; color: #131313;">
+    <svg viewBox="3 0 291 88" style="display: block; width: 176px; height: 53px;" aria-label="GET UPP">
+      <text x="0" y="87" font-family="Anton" font-size="100" fill="#131313">GET UPP</text>
+      <rect x="218.2" y="14.5" width="12.7" height="25.3" fill="#131313" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite;"></rect>
+      <rect x="265.5" y="14.5" width="12.7" height="25.3" fill="#131313" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite; animation-delay: 0.09s;"></rect>
+    </svg>
+    <div style="display: flex; align-items: center; gap: 26px; font-family: 'DM Mono', monospace; font-size: 13px;"><span>HOW IT WORKS</span><span>WHY</span><span>PRICE</span><span style="background: #131313; color: #ffe100; padding: 11px 18px; font-family: Anton, sans-serif; font-size: 16px;">GET THE APP — FREE</span></div>
+  </div>
+
+  <div style="padding: 46px 40px 52px; display: grid; grid-template-columns: 400px 1fr 400px; gap: 30px; align-items: center;">
+
+    <div style="display: flex; flex-direction: column; gap: 30px;">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="font-family: Anton, sans-serif; font-size: 62px; line-height: 0.86; color: #ffe100;">GET UP.<br>GET OUT.<br>GET YOUR<br>MORNING BACK.</div>
+        <div style="font-family: Archivo, sans-serif; font-size: 19px; line-height: 1.45; color: #ded9cd;">The lock screen you can't argue with, and the thirty quiet minutes on the other side of it.</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <img src="assets/badge-appstore.png" alt="Download on the App Store" style="height: 52px; width: auto; display: block;">
+        <img src="assets/badge-googleplay.png" alt="Get it on Google Play" style="height: 52px; width: auto; display: block;">
+        <span style="font-family: 'DM Mono', monospace; font-size: 12px; color: #7d7a72; line-height: 1.7;">FREE. iOS + ANDROID.<br>SET UP IN TWO MINUTES.</span>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+      <div style="width: 320px; background: #2e2e30; border-radius: 44px; padding: 9px;">
+        <div style="background: #ffe100; color: #131313; border-radius: 36px; height: 610px; padding: 26px 24px; display: flex; flex-direction: column; justify-content: space-between; position: relative;">
+          <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 12px;"><span>6.47</span><span>MON · ALARM</span></div>
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="font-family: Anton, sans-serif; font-size: 60px; line-height: 0.86;">ABSOLUTELY<br>NOT.</div>
+            <div style="font-family: Archivo, sans-serif; font-size: 17px; line-height: 1.4;">Everything interesting is asleep. So are you, technically.</div>
+            <div style="display: flex; flex-direction: column; gap: 6px; font-family: 'DM Mono', monospace; font-size: 11px;">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(19,19,19,0.28); padding-bottom: 5px;"><span>INSTAGRAM</span><span>LOCKED</span></div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(19,19,19,0.28); padding-bottom: 5px;"><span>TIKTOK</span><span>LOCKED</span></div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(19,19,19,0.28); padding-bottom: 5px;"><span>X · YOUTUBE · REDDIT</span><span>LOCKED</span></div>
+              <div style="display: flex; justify-content: space-between;"><span>CALLS · MAPS · MUSIC</span><span>YOURS</span></div>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="display: flex; align-items: center; gap: 8px; font-family: 'DM Mono', monospace; font-size: 11px;"><span>STREAK 03</span><div style="display: flex; gap: 3px;"><div style="width: 12px; height: 12px; background: #131313;"></div><div style="width: 12px; height: 12px; background: #131313;"></div><div style="width: 12px; height: 12px; background: #131313;"></div><div style="width: 12px; height: 12px; border: 1px solid #131313;"></div><div style="width: 12px; height: 12px; border: 1px solid #131313;"></div></div></div>
+            <div style="background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 23px; padding: 18px; text-align: center; border-radius: 6px;">TAKE THE SELFIE</div>
+            <div style="font-family: 'DM Mono', monospace; font-size: 10px; text-align: center;">or override — streak goes to 0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 22px;">
+      <div style="display: flex; gap: 14px; align-items: flex-start;">
+        <div style="display: flex; align-items: center; gap: 6px; padding-top: 12px;">
+          <div style="width: 0; height: 0; border-right: 11px solid #ffe100; border-top: 7px solid transparent; border-bottom: 7px solid transparent;"></div>
+          <div style="width: 26px; height: 2px; background: #ffe100;"></div>
+        </div>
+        <div style="border: 2px solid #ffe100; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 5px; flex: 1;">
+          <span style="font-family: Anton, sans-serif; font-size: 26px; line-height: 1; color: #ffe100;">1 · YOUR PICKS, LOCKED</span>
+          <span style="font-family: Archivo, sans-serif; font-size: 16px; line-height: 1.4; color: #ded9cd;">Chosen once at setup. Shut before you wake — nothing to remember at bedtime.</span>
+        </div>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: flex-start;">
+        <div style="display: flex; align-items: center; gap: 6px; padding-top: 12px;">
+          <div style="width: 0; height: 0; border-right: 11px solid #ffe100; border-top: 7px solid transparent; border-bottom: 7px solid transparent;"></div>
+          <div style="width: 26px; height: 2px; background: #ffe100;"></div>
+        </div>
+        <div style="border: 2px solid #ffe100; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 5px; flex: 1;">
+          <span style="font-family: Anton, sans-serif; font-size: 26px; line-height: 1; color: #ffe100;">2 · THE ONLY WAY OUT</span>
+          <span style="font-family: Archivo, sans-serif; font-size: 16px; line-height: 1.4; color: #ded9cd;">A selfie in another room. Judged on the phone in a second, unlimited goes, photo binned after.</span>
+        </div>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: flex-start;">
+        <div style="display: flex; align-items: center; gap: 6px; padding-top: 12px;">
+          <div style="width: 0; height: 0; border-right: 11px solid #ffe100; border-top: 7px solid transparent; border-bottom: 7px solid transparent;"></div>
+          <div style="width: 26px; height: 2px; background: #ffe100;"></div>
+        </div>
+        <div style="border: 2px solid #ffe100; border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 5px; flex: 1;">
+          <span style="font-family: Anton, sans-serif; font-size: 26px; line-height: 1; color: #ffe100;">3 — THEN 30 MINUTES</span>
+          <span style="font-family: Archivo, sans-serif; font-size: 16px; line-height: 1.4; color: #ded9cd;">Feed stays off after you're up. Apps return at 07.20 on their own.</span>
+        </div>
+      </div>
+      <div style="display: flex; gap: 12px; align-items: stretch;">
+        <div style="flex: 1; height: 150px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110442_f70660f4-b676-44c6-8e75-70af2d9b8400.png'); background-size: cover; background-position: center; position: relative;">
+          <div style="position: absolute; bottom: 8px; left: 8px; background: #f6f4ee; color: #131313; font-family: Anton, sans-serif; font-size: 13px; padding: 3px 7px;">REJECTED</div>
+        </div>
+        <div style="flex: 1; height: 150px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110701_1852b34d-4902-499b-b26b-4948089eb411.png'); background-size: cover; background-position: center 22%; position: relative;">
+          <div style="position: absolute; bottom: 8px; left: 8px; background: #ffe100; color: #131313; font-family: Anton, sans-serif; font-size: 13px; padding: 3px 7px;">PARTIAL</div>
+        </div>
+        <div style="flex: 1; height: 150px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_173017_e1eaca06-2065-4473-9511-d1fb92568e4d.png'); background-size: cover; background-position: center 30%; position: relative;">
+          <div style="position: absolute; bottom: 8px; left: 8px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 13px; padding: 3px 7px;">APPROVED</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 14px;">
+<div style="display: flex; align-items: center; gap: 12px;"><span style="background: #ffe100; color: #131313; font-family: 'DM Mono', monospace; font-size: 15px; padding: 4px 12px;">7a</span><span style="font-family: 'DM Mono', monospace; font-size: 15px; color: #8d8d95; letter-spacing: 0.06em;">BEAST V5 — VALUE PROP FIRST · FEWER WORDS, FEWER PARTS</span></div>
+<div id="7a" style="width: 1440px; background: #131313; color: #f6f4ee; font-family: Archivo, sans-serif;">
+
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; background: #ffe100; color: #131313;">
+    <svg viewBox="3 0 291 88" style="display: block; width: 176px; height: 53px;" aria-label="GET UPP">
+      <text x="0" y="87" font-family="Anton" font-size="100" fill="#131313">GET UPP</text>
+      <rect x="218.2" y="14.5" width="12.7" height="25.3" fill="#131313" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite;"></rect>
+      <rect x="265.5" y="14.5" width="12.7" height="25.3" fill="#131313" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite; animation-delay: 0.09s;"></rect>
+    </svg>
+    <div style="display: flex; align-items: center; gap: 26px; font-family: 'DM Mono', monospace; font-size: 13px;">
+      <span>HOW IT WORKS</span><span>PRICE</span>
+      <span style="background: #131313; color: #ffe100; padding: 11px 18px; font-family: Anton, sans-serif; font-size: 16px;">GET THE APP — FREE</span>
+    </div>
+  </div>
+
+  <!-- HERO — one claim, one sentence, one screen -->
+  <div style="background: #ffe100; color: #131313; padding: 64px 40px 0;">
+    <div style="display: grid; grid-template-columns: 1fr 320px; gap: 64px; align-items: center;">
+      <div style="display: flex; flex-direction: column; gap: 26px;">
+        <div style="font-family: Anton, sans-serif; font-size: 112px; line-height: 0.96;">GET UP.<br>GET YOUR<br>MORNING BACK.</div>
+        <div style="font-family: Archivo, sans-serif; font-size: 26px; line-height: 1.4; max-width: 620px; text-wrap: pretty;">GET UPP blocks your apps until you prove you're out of bed. Then a morning timer starts — undistracted time, back on your side.</div>
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <img src="assets/badge-appstore.png" alt="Download on the App Store" style="height: 58px; width: auto; display: block;">
+          <img src="assets/badge-googleplay.png" alt="Get it on Google Play" style="height: 58px; width: auto; display: block;">
+          <span style="font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.7;">FREE TO USE.<br>NO TRIAL, NO CARD.</span>
+        </div>
+      </div>
+      <div style="width: 320px; background: #131313; border-radius: 40px; padding: 8px;">
+        <div style="background: #ffe100; color: #131313; border-radius: 33px; padding: 26px 24px; display: flex; flex-direction: column; gap: 20px; height: 580px;">
+          <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 11px;"><span>6.47</span><span>ALARM JUST WENT</span></div>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <svg viewBox="0 0 24 24" style="width: 42px; height: 42px;" fill="none" stroke="#131313" stroke-width="1.8"><rect x="4" y="10.5" width="16" height="10.5" rx="1.5"></rect><path d="M8 10.5 V7.5 a4 4 0 0 1 8 0 V10.5"></path></svg>
+            <div style="font-family: Anton, sans-serif; font-size: 56px; line-height: 0.98;">YOUR APPS<br>ARE SHUT.</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 7px; font-family: 'DM Mono', monospace; font-size: 11px;">
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(19,19,19,0.25); padding-bottom: 6px;"><span>INSTAGRAM · TIKTOK</span><span>LOCKED</span></div>
+            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(19,19,19,0.25); padding-bottom: 6px;"><span>X · YOUTUBE</span><span>LOCKED</span></div>
+            <div style="display: flex; justify-content: space-between;"><span>CALLS · MAPS · MUSIC</span><span>YOURS</span></div>
+          </div>
+          <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
+            <div style="background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 23px; padding: 18px; text-align: center; border-radius: 6px;">PROVE YOU'RE UP</div>
+            <div style="font-family: 'DM Mono', monospace; font-size: 10px; text-align: center;">a selfie outside the bedroom. that's it.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 52px; border-top: 2px solid #131313;">
+      <div style="padding: 24px 28px 30px 0; display: flex; flex-direction: column; gap: 6px; border-right: 2px solid #131313;"><span style="font-family: Anton, sans-serif; font-size: 34px; line-height: 1;">1 — APPS BLOCKED</span><span style="font-family: Archivo, sans-serif; font-size: 18px; line-height: 1.4;">Shut before you wake. Nothing to remember.</span></div>
+      <div style="padding: 24px 28px 30px; display: flex; flex-direction: column; gap: 6px; border-right: 2px solid #131313;"><span style="font-family: Anton, sans-serif; font-size: 34px; line-height: 1;">2 — PROVE IT</span><span style="font-family: Archivo, sans-serif; font-size: 18px; line-height: 1.4;">One selfie in another room. It checks.</span></div>
+      <div style="padding: 24px 0 30px 28px; display: flex; flex-direction: column; gap: 6px;"><span style="font-family: Anton, sans-serif; font-size: 34px; line-height: 1;">3 — TIMER RUNS</span><span style="font-family: Archivo, sans-serif; font-size: 18px; line-height: 1.4;">30 minutes of morning, feed still off.</span></div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS — three screens -->
+  <div style="padding: 68px 40px; display: flex; flex-direction: column; gap: 34px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+      <div style="font-family: Anton, sans-serif; font-size: 80px; line-height: 0.96; color: #ffe100;">THREE SCREENS.<br>ONE MORNING.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 19px; color: #ded9cd; max-width: 360px; line-height: 1.5;">Set it once at bedtime. After that, this is the whole app.</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;">
+
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="font-family: Anton, sans-serif; font-size: 34px; line-height: 1;">1 — THE ALARM GOES</div>
+        <div style="font-family: Archivo, sans-serif; font-size: 18px; color: #ded9cd; line-height: 1.45;">The apps you picked are already blocked.</div>
+        <div style="background: #ffe100; color: #131313; border-radius: 12px; padding: 26px; height: 520px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 11px;"><span>6.47</span><span>MON</span></div>
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <svg viewBox="0 0 24 24" style="width: 38px; height: 38px;" fill="none" stroke="#131313" stroke-width="1.8"><rect x="4" y="10.5" width="16" height="10.5" rx="1.5"></rect><path d="M8 10.5 V7.5 a4 4 0 0 1 8 0 V10.5"></path></svg>
+            <div style="font-family: Anton, sans-serif; font-size: 54px; line-height: 0.98;">FIVE APPS,<br>SHUT.</div>
+            <div style="font-family: Archivo, sans-serif; font-size: 17px; line-height: 1.4;">Everything interesting is asleep. So are you, technically.</div>
+          </div>
+          <div style="background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 22px; padding: 17px; text-align: center; border-radius: 5px;">FINE, I'M UP</div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="font-family: Anton, sans-serif; font-size: 34px; line-height: 1;">2 — PROVE IT</div>
+        <div style="font-family: Archivo, sans-serif; font-size: 18px; color: #ded9cd; line-height: 1.45;">A selfie in the room you chose. Bed doesn't count.</div>
+        <div style="border-radius: 12px; overflow: hidden; height: 520px; display: flex; flex-direction: column; background: #1c1c1a;">
+          <div style="flex: 1; background-image: url('uploads/hf_20260725_110442_f70660f4-b676-44c6-8e75-70af2d9b8400.png'); background-size: cover; background-position: center; position: relative;">
+            <div style="position: absolute; inset: 0; background: rgba(11,11,11,0.22);"></div>
+            <div style="position: absolute; top: 44px; left: 22px; right: 22px; bottom: 74px; border: 2px dashed rgba(255,225,0,0.7);"></div>
+            <div style="position: absolute; bottom: 20px; left: 16px; background: #ffe100; color: #131313; font-family: Anton, sans-serif; font-size: 24px; padding: 6px 12px; transform: rotate(-2deg);">ABSOLUTELY NOT. THAT IS A BED.</div>
+          </div>
+          <div style="height: 120px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;">
+            <div style="width: 66px; height: 66px; border-radius: 33px; border: 3px solid #ffe100; display: flex; align-items: center; justify-content: center;"><div style="width: 52px; height: 52px; border-radius: 26px; background: #ffe100;"></div></div>
+            <span style="font-family: 'DM Mono', monospace; font-size: 11px; color: #7d7a72;">DECIDED ON YOUR PHONE · PHOTO NEVER LEAVES IT</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="font-family: Anton, sans-serif; font-size: 34px; line-height: 1;">3 — MORNING TIMER</div>
+        <div style="font-family: Archivo, sans-serif; font-size: 18px; color: #ded9cd; line-height: 1.45;">Approved, and the clock starts. Feed stays off.</div>
+        <div style="background: #f6f4ee; color: #131313; border-radius: 12px; padding: 26px; height: 520px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 11px; color: #57554e;"><span>6.54</span><span>WINDOW OPEN</span></div>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <svg viewBox="0 0 24 24" style="width: 38px; height: 38px;" fill="none" stroke="#131313" stroke-width="1.8"><circle cx="12" cy="13" r="8"></circle><path d="M12 8.5 V13 h3.4 M9 2.5 h6"></path></svg>
+            <div style="font-family: Anton, sans-serif; font-size: 92px; line-height: 0.82;">26:41</div>
+            <div style="font-family: Anton, sans-serif; font-size: 32px; line-height: 1.02;">OF MORNING<br>LEFT.</div>
+            <div style="font-family: Archivo, sans-serif; font-size: 17px; color: #57554e; line-height: 1.4;">No feed, no notifications, no me. Kettle's over there.</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="height: 8px; background: #dedbd2;"><div style="width: 11%; height: 8px; background: #131313;"></div></div>
+            <div style="display: flex; justify-content: space-between; font-family: 'DM Mono', monospace; font-size: 10px; color: #57554e;"><span>OUT 06.50</span><span>APPS RETURN 07.20</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WHY — one number -->
+  <div style="background: #ffe100; color: #131313; padding: 60px 40px; display: grid; grid-template-columns: 1fr 520px; gap: 56px; align-items: center;">
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <div style="font-family: Anton, sans-serif; font-size: 84px; line-height: 0.96;">250 HOURS A YEAR,<br>WASTED<br>DOOMSCROLLING.</div>
+      <div style="font-family: Anton, sans-serif; font-size: 84px; line-height: 0.96; background: #131313; color: #ffe100; align-self: flex-start; padding: 4px 16px;">GET IT BACK.</div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: #131313; margin-top: 10px;">
+        <div style="background: #ffe100; padding: 22px 20px; display: flex; flex-direction: column; gap: 6px;"><span style="font-family: Anton, sans-serif; font-size: 48px; line-height: 1;">41 MIN</span><span style="font-family: Archivo, sans-serif; font-size: 15px; line-height: 1.35;">Alarm to feet on floor, every morning</span></div>
+        <div style="background: #ffe100; padding: 22px 20px; display: flex; flex-direction: column; gap: 6px;"><span style="font-family: Anton, sans-serif; font-size: 48px; line-height: 1;">89%</span><span style="font-family: Archivo, sans-serif; font-size: 15px; line-height: 1.35;">Check a screen within ten minutes of waking</span></div>
+        <div style="background: #ffe100; padding: 22px 20px; display: flex; flex-direction: column; gap: 6px;"><span style="font-family: Anton, sans-serif; font-size: 48px; line-height: 1;">10.4</span><span style="font-family: Archivo, sans-serif; font-size: 15px; line-height: 1.35;">Whole days a year, in bed, awake, scrolling</span></div>
+      </div>
+    </div>
+    <div style="height: 520px; border-radius: 10px; overflow: hidden; background-image: url('uploads/hf_20260731_134638_3b12dc25-e254-4575-922f-a1df405fa0b4.png'); background-size: cover; background-position: center 45%; position: relative;">
+      <div style="position: absolute; top: 16px; left: 16px; background: #131313; color: #ffe100; font-family: 'DM Mono', monospace; font-size: 13px; padding: 7px 11px;">07.29 · ALARM WENT AT 06.48</div>
+      <div style="position: absolute; bottom: 18px; left: -8px; background: #ffe100; color: #131313; font-family: Anton, sans-serif; font-size: 40px; padding: 7px 14px; transform: rotate(-2deg);">FORTY-ONE MINUTES GONE.</div>
+    </div>
+  </div>
+
+  <!-- PROOF — four frames -->
+  <div style="padding: 60px 40px; display: flex; flex-direction: column; gap: 26px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+      <div style="font-family: Anton, sans-serif; font-size: 74px; line-height: 0.96; color: #ffe100;">IT IS NOT<br>FOOLED BY YOU.</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 19px; color: #ded9cd; max-width: 380px; line-height: 1.5;">Unlimited goes. The photo never leaves your phone.</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+
+      <div style="height: 430px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110603_a2f43c80-4a91-4f9f-afb7-4cca0718c124.png'); background-size: cover; background-position: center; position: relative;">
+        <div style="position: absolute; top: 14px; left: 14px; background: #f6f4ee; color: #131313; font-family: Anton, sans-serif; font-size: 15px; letter-spacing: 0.04em; padding: 5px 10px; display: flex; align-items: center; gap: 7px;"><span style="position: relative; width: 12px; height: 12px;"><span style="position: absolute; top: 5px; left: 0; width: 12px; height: 2.5px; background: #131313; transform: rotate(45deg);"></span><span style="position: absolute; top: 5px; left: 0; width: 12px; height: 2.5px; background: #131313; transform: rotate(-45deg);"></span></span>REJECTED</div>
+        <div style="position: absolute; bottom: 16px; left: -6px; right: 10px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 25px; line-height: 1.1; padding: 6px 11px; transform: rotate(-2deg);">LOVELY CEILING.</div>
+      </div>
+
+      <div style="height: 430px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110653_3e9b0162-8ed3-4d1e-95f6-20b2524289a7.png'); background-size: cover; background-position: center 28%; position: relative;">
+        <div style="position: absolute; top: 14px; left: 14px; background: #f6f4ee; color: #131313; font-family: Anton, sans-serif; font-size: 15px; letter-spacing: 0.04em; padding: 5px 10px; display: flex; align-items: center; gap: 7px;"><span style="position: relative; width: 12px; height: 12px;"><span style="position: absolute; top: 5px; left: 0; width: 12px; height: 2.5px; background: #131313; transform: rotate(45deg);"></span><span style="position: absolute; top: 5px; left: 0; width: 12px; height: 2.5px; background: #131313; transform: rotate(-45deg);"></span></span>REJECTED</div>
+        <div style="position: absolute; bottom: 16px; left: -6px; right: 10px; background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 25px; line-height: 1.1; padding: 6px 11px; transform: rotate(-2deg);">STILL THE BEDROOM. NICE YAWN.</div>
+      </div>
+
+      <div style="height: 430px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_110832_46798f76-ac86-40a3-9b08-1d32e4040ecf.png'); background-size: cover; background-position: center 20%; position: relative;">
+        <div style="position: absolute; top: 14px; left: 14px; background: #ffe100; color: #131313; font-family: Anton, sans-serif; font-size: 15px; letter-spacing: 0.04em; padding: 5px 10px; display: flex; align-items: center; gap: 7px;"><span style="width: 13px; height: 7px; border-left: 2.5px solid #131313; border-bottom: 2.5px solid #131313; transform: rotate(-45deg); margin-bottom: 3px;"></span>APPROVED</div>
+        <div style="position: absolute; bottom: 16px; left: -6px; right: 10px; background: #ffe100; color: #131313; font-family: Anton, sans-serif; font-size: 25px; line-height: 1.1; padding: 6px 11px; transform: rotate(-2deg);">WELL, LOOK AT YOU.</div>
+      </div>
+
+      <div style="height: 430px; border-radius: 8px; overflow: hidden; background-image: url('uploads/hf_20260725_173017_e1eaca06-2065-4473-9511-d1fb92568e4d.png'); background-size: cover; background-position: center 30%; position: relative;">
+        <div style="position: absolute; top: 14px; left: 14px; background: #ffe100; color: #131313; font-family: Anton, sans-serif; font-size: 15px; letter-spacing: 0.04em; padding: 5px 10px; display: flex; align-items: center; gap: 7px;"><span style="width: 13px; height: 7px; border-left: 2.5px solid #131313; border-bottom: 2.5px solid #131313; transform: rotate(-45deg); margin-bottom: 3px;"></span>APPROVED</div>
+        <div style="position: absolute; bottom: 16px; left: -6px; right: 10px; background: #ffe100; color: #131313; font-family: Anton, sans-serif; font-size: 25px; line-height: 1.1; padding: 6px 11px; transform: rotate(-2deg);">OK, NOW YOU'RE SHOWING OFF.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRICE — v3 two-card layout -->
+  <div style="padding: 20px 40px 68px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+    <div style="border: 2px solid #2c2c2a; border-radius: 12px; padding: 38px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="font-family: Anton, sans-serif; font-size: 52px; color: #ffe100; line-height: 1;">FREE</div>
+      <div style="font-family: Archivo, sans-serif; font-size: 20px; color: #9a978d; line-height: 1.5;">Blocking, selfie proof, your morning timer, streaks. The whole mechanic. Not a trial.</div>
+      <div style="display: flex; gap: 12px; margin-top: auto;">
+        <img src="assets/badge-appstore.png" alt="Download on the App Store" style="height: 54px; width: auto; display: block;">
+        <img src="assets/badge-googleplay.png" alt="Get it on Google Play" style="height: 54px; width: auto; display: block;">
+      </div>
+    </div>
+    <div style="background: #ffe100; color: #131313; border-radius: 12px; padding: 38px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="display: flex; align-items: baseline; gap: 12px;"><span style="font-family: Anton, sans-serif; font-size: 52px; line-height: 1;">PLUS</span><span style="font-family: 'DM Mono', monospace; font-size: 13px;">PAID · PRICE TBC</span></div>
+      <div style="display: flex; flex-direction: column; gap: 10px; font-family: Archivo, sans-serif; font-size: 19px; line-height: 1.4;">
+        <div style="border-top: 2px solid #131313; padding-top: 10px;">Custom morning time settings</div>
+        <div style="border-top: 2px solid #131313; padding-top: 10px;">Weekend rules</div>
+        <div style="border-top: 2px solid #131313; padding-top: 10px;">Premium extras, coming soon</div>
+      </div>
+      <div style="background: #131313; color: #ffe100; font-family: Anton, sans-serif; font-size: 22px; padding: 18px; text-align: center; border-radius: 6px; margin-top: auto;">GET UPP PLUS</div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div style="background: #f6f4ee; color: #8b8880; padding: 40px; display: flex; justify-content: space-between; align-items: flex-end;">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <svg viewBox="3 0 291 88" style="display: block; width: 280px; height: 85px;" aria-label="GET UPP">
+        <text x="0" y="87" font-family="Anton" font-size="100" fill="#c4c1b8">GET UPP</text>
+        <rect x="218.2" y="14.5" width="12.7" height="25.3" fill="#c4c1b8" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite;"></rect>
+        <rect x="265.5" y="14.5" width="12.7" height="25.3" fill="#c4c1b8" style="transform-box: fill-box; transform-origin: top center; animation: bs-halflid 4.4s ease-in-out infinite; animation-delay: 0.09s;"></rect>
+      </svg>
+      <div style="font-family: 'DM Mono', monospace; font-size: 13px;">GET UP. GET YOUR MORNING BACK.</div>
+    </div>
+    <div style="display: flex; gap: 48px; font-family: 'DM Mono', monospace; font-size: 12px; line-height: 2;">
+      <div style="display: flex; flex-direction: column;"><span>PRIVACY — PHOTOS STAY ON YOUR PHONE</span><span>TERMS — DULL, BUT FAIR</span><span>SUPPORT — WE'RE UP, OBVIOUSLY</span></div>
+      <div style="display: flex; flex-direction: column;"><span>COOKIES: NECESSARY ONLY. <a href="#cookies">GO ON THEN</a></span><span>iOS + ANDROID</span><span>© GET UPP 2026</span></div>
+    </div>
+  </div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440}}">
+class Component extends DCLogic {
+  state = { day: 1, day2: 1, day3: 1 };
+  days3 = {
+    1: { bg: "#ffe100", fg: "#131313", label: "DAY 1 · STREAK 01", sass: "100%", font: "Anton, sans-serif", size: "76px", line: "ABSOLUTELY NOT. THAT IS A BED.", sub: "Feet on the floor, out of the room, and send me something with a kettle in it. I'll wait. I've got nowhere to be.", bars: ["100%", "78%", "56%", "34%", "16%"] },
+    8: { bg: "#e2cf3c", fg: "#131313", label: "DAY 8 · STREAK 08", sass: "62%", font: "Anton, sans-serif", size: "56px", line: "ALRIGHT, YOU'RE UP. GO ON.", sub: "Second attempt, not bad. Twenty-eight minutes, no feed. Don't waste them on me.", bars: ["62%", "48%", "34%", "20%", "10%"] },
+    21: { bg: "#ded9cd", fg: "#131313", label: "DAY 21 · STREAK 21", sass: "22%", font: "Archivo, sans-serif", size: "34px", line: "Believable. Off you go.", sub: "First time, no argument. Thirty minutes, all yours.", bars: ["24%", "18%", "12%", "8%", "4%"] },
+    40: { bg: "#f6f4ee", fg: "#57554e", label: "DAY 40 · STREAK 40", sass: "0%", font: "Archivo, sans-serif", size: "34px", line: "Morning, you. Coffee's the good bit.", sub: "No lecture today — you were going to do it anyway. I'm just here for the walk. Same time tomorrow?", bars: ["6%", "5%", "4%", "3%", "2%"] }
+  };
+  days = {
+    1: { bg: "#ffe100", fg: "#131313", label: "DAY 1 · STREAK 01", sass: "100%", font: "Anton, sans-serif", size: "76px", line: "ABSOLUTELY NOT. THAT IS A BED.", sub: "Feet on the floor, out of the room, and send me something with a kitchen in it. I'll wait. I've got nowhere to be.", bars: ["100%", "78%", "56%", "34%", "16%"] },
+    8: { bg: "#e2cf3c", fg: "#131313", label: "DAY 8 · STREAK 08", sass: "62%", font: "Anton, sans-serif", size: "56px", line: "ALRIGHT, YOU'RE UP. GO ON.", sub: "Second attempt, not bad. Kettle's over there — you've got twenty-eight minutes and no feed.", bars: ["62%", "48%", "34%", "20%", "10%"] },
+    21: { bg: "#ded9cd", fg: "#131313", label: "DAY 21 · STREAK 21", sass: "22%", font: "Archivo, sans-serif", size: "34px", line: "Believable. Off you go.", sub: "First time, no argument. Thirty minutes, all yours.", bars: ["24%", "18%", "12%", "8%", "4%"] },
+    40: { bg: "#f6f4ee", fg: "#8b8880", label: "DAY 40 · STREAK 40", sass: "0%", font: "'DM Mono', monospace", size: "22px", line: "Morning.", sub: "That's all. The window's open — you were going to do it anyway.", bars: ["6%", "5%", "4%", "3%", "2%"] }
+  };
+  renderVals() {
+    const d = this.state.day;
+    const c = this.days[d];
+    const on = (n) => (d === n ? "#ffe100" : "transparent");
+    const onf = (n) => (d === n ? "#131313" : "#ffe100");
+    const d2 = this.state.day2;
+    const c2 = this.days[d2];
+    const on2 = (n) => (d2 === n ? "#ffe100" : "transparent");
+    const onf2 = (n) => (d2 === n ? "#131313" : "#ffe100");
+    const d3 = this.state.day3;
+    const c3 = this.days3[d3];
+    const on3 = (n) => (d3 === n ? "#ffe100" : "transparent");
+    const onf3 = (n) => (d3 === n ? "#131313" : "#ffe100");
+    return {
+      t3Bg: c3.bg, t3Fg: c3.fg, t3Label: c3.label, t3Sass: c3.sass,
+      t3Font: c3.font, t3Size: c3.size, t3Line: c3.line, t3Sub: c3.sub,
+      t3b1: c3.bars[0], t3b2: c3.bars[1], t3b3: c3.bars[2], t3b4: c3.bars[3], t3b5: c3.bars[4],
+      set3D1: () => this.setState({ day3: 1 }), set3D8: () => this.setState({ day3: 8 }),
+      set3D21: () => this.setState({ day3: 21 }), set3D40: () => this.setState({ day3: 40 }),
+      r1: on3(1), r2: on3(8), r3: on3(21), r4: on3(40),
+      v1: onf3(1), v2: onf3(8), v3: onf3(21), v4: onf3(40),
+      t2Bg: c2.bg, t2Fg: c2.fg, t2Label: c2.label, t2Sass: c2.sass,
+      t2Font: c2.font, t2Size: c2.size, t2Line: c2.line, t2Sub: c2.sub,
+      t2b1: c2.bars[0], t2b2: c2.bars[1], t2b3: c2.bars[2], t2b4: c2.bars[3], t2b5: c2.bars[4],
+      set2D1: () => this.setState({ day2: 1 }), set2D8: () => this.setState({ day2: 8 }),
+      set2D21: () => this.setState({ day2: 21 }), set2D40: () => this.setState({ day2: 40 }),
+      q1: on2(1), q2: on2(8), q3: on2(21), q4: on2(40),
+      w1: onf2(1), w2: onf2(8), w3: onf2(21), w4: onf2(40),
+      tameBg: c.bg, tameFg: c.fg, tameDayLabel: c.label, tameSass: c.sass,
+      tameFont: c.font, tameSize: c.size, tameLine: c.line, tameSub: c.sub,
+      bar1: c.bars[0], bar2: c.bars[1], bar3: c.bars[2], bar4: c.bars[3], bar5: c.bars[4],
+      setD1: () => this.setState({ day: 1 }), setD8: () => this.setState({ day: 8 }),
+      setD21: () => this.setState({ day: 21 }), setD40: () => this.setState({ day: 40 }),
+      b1: on(1), b2: on(8), b3: on(21), b4: on(40),
+      f1: onf(1), f2: onf(8), f3: onf(21), f4: onf(40)
+    };
+  }
+}
+</script>
+</body>
+</html>

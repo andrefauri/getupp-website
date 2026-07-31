@@ -1,19 +1,23 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/sections/Hero.astro';
-import Program from '../components/sections/Program.astro';
-import Research from '../components/sections/Research.astro';
-import SignupCta from '../components/sections/SignupCta.astro';
-import Faq from '../components/sections/Faq.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import ThreeScreens from '../components/ThreeScreens.astro';
+import TheMaths from '../components/TheMaths.astro';
+import NotFooled from '../components/NotFooled.astro';
+import Pricing from '../components/Pricing.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <BaseLayout
   title="Getupp — Get out of bed. Or keep scrolling forever."
   description="Getupp is an iPhone app that blocks your distracting apps every morning until you take a selfie proving you're out of bed."
 >
+  <Nav slot="nav" />
   <Hero />
-  <Program />
-  <Research />
-  <SignupCta />
-  <Faq />
+  <ThreeScreens />
+  <TheMaths />
+  <NotFooled />
+  <Pricing />
+  <Footer slot="footer" />
 </BaseLayout>

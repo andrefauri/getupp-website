@@ -1,0 +1,93 @@
+@import "./fonts.css";
+
+/* ---------------------------------------------------------------------- */
+/* Design tokens — redesign-spec-v1.md §3                                  */
+/*                                                                          */
+/* Colour, type, and spacing for the "beast" redesign. Components consume  */
+/* these; no hardcoded hex values outside this file (spec §10).            */
+/*                                                                          */
+/* NOTE — --font-display and --font-mono intentionally match Tailwind's    */
+/* @theme names in global.css (used by the pre-redesign components for the */
+/* Pangram Pangram stacks). See the "Legacy font pin" block at the bottom  */
+/* of global.css, which keeps those components rendering unchanged.        */
+/* ---------------------------------------------------------------------- */
+
+:root {
+  /* Colour ------------------------------------------------------------- */
+  --ink: #131313;
+  --acid: #ffe100;
+  --bone: #f6f4ee;
+  --bone-dim: #ded9cd;
+  --ink-soft: #57554e;
+  --ink-fade: #8b8880;
+  --rule: #c4c1b8;
+
+  /* Font stacks ---------------------------------------------------------- */
+  --font-display: Anton, sans-serif;
+  --font-body: Archivo, sans-serif;
+  --font-mono: "DM Mono", monospace;
+
+  /* Type scale — clamp(mobile floor, fluid, desktop), 375px–1440px vw range */
+  --fs-hero: clamp(44px, 20.056px + 6.385vw, 112px);
+  --fs-section: clamp(38px, 21.803px + 4.319vw, 84px);
+  --fs-headline: clamp(30px, 20.845px + 2.441vw, 56px);
+  --fs-stat: clamp(34px, 29.070px + 1.315vw, 48px);
+  --fs-card-title: clamp(28px, 23.775px + 1.127vw, 40px);
+  --fs-label: clamp(20px, 18.592px + 0.376vw, 24px);
+  --fs-body: clamp(16px, 15.648px + 0.094vw, 17px);
+  --fs-small: clamp(14px, 13.648px + 0.094vw, 15px);
+  --fs-mono: clamp(12px, 11.648px + 0.094vw, 13px);
+  --fs-mono-sm: clamp(10px, 9.648px + 0.094vw, 11px);
+
+  /* Type scale extensions — added in phase 2 for reference sizes that don't
+     land on a §3 token (Hero's 26px intro paragraph, Nav's 16px CTA label).
+     Same interpolation method as the §3 scale above. */
+  --fs-lead: clamp(19px, 16.535px + 0.657vw, 26px);
+  --fs-button: clamp(14px, 13.296px + 0.188vw, 16px);
+
+  /* Phase 3a (ThreeScreens) — the section-intro copy size (19px) recurs
+     verbatim in NotFooled's intro paragraph too, and the countdown digit
+     (92px) is a one-off far outside every existing display step. */
+  --fs-intro: clamp(16px, 14.944px + 0.282vw, 19px);
+  --fs-timer: clamp(40px, 21.690px + 4.883vw, 92px);
+
+  /* Type metrics */
+  --ls-mono: 0.04em;
+  --ls-display: 0;
+  --lh-display: 0.92;
+  --lh-body: 1.5;
+
+  /* Spacing — 4px base ramp */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* Semantic spacing (desktop; overridden below 768px) */
+  --section-pad-y: 64px;
+  --section-pad-x: 40px;
+  --gap-major: 64px;
+  --gap-card: 22px;
+
+  /* Page wrapper — spec §7: no horizontal scroll, the 1440px reference
+     canvas must not survive into the build */
+  --page-max: 1440px;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --section-pad-y: 40px;
+    --section-pad-x: 20px;
+    --gap-major: 32px;
+    --gap-card: 16px;
+  }
+}
