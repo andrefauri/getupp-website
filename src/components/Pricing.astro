@@ -17,9 +17,9 @@
 // reuses --ink-fade directly — same "muted secondary text" role as its
 // spec-table definition, just close rather than an exact hex match.
 //
-// Both App Store badges and the GET UPP PLUS button are real <button>s with
-// no handler yet — all three are on spec §5's list of the four CTAs that
-// open the waitlist modal in phase 4.
+// This card's App Store badge (data-waitlist-trigger="pricing_free") and the
+// GET UPP PLUS button (data-waitlist-trigger="pricing_plus") both open
+// WaitlistModal.astro — two of spec §5's four CTAs (wired in phase 4).
 ---
 
 <section class="pricing" id="price">
@@ -31,7 +31,7 @@
           Blocking, selfie proof, your morning timer, streaks. The whole mechanic. Not a trial.
         </p>
         <div class="plan__badges">
-          <button type="button" class="badge-btn">
+          <button type="button" class="badge-btn" data-waitlist-trigger="pricing_free">
             <img src="/images/badges/badge-appstore.png" alt="Download on the App Store" />
           </button>
         </div>
@@ -47,7 +47,9 @@
           <div class="plan__feature">Weekend rules</div>
           <div class="plan__feature">Premium extras, coming soon</div>
         </div>
-        <button type="button" class="plan__cta">GET UPP PLUS</button>
+        <button type="button" class="plan__cta" data-waitlist-trigger="pricing_plus">
+          GET UPP PLUS
+        </button>
       </div>
     </div>
   </div>

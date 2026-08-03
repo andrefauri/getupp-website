@@ -1,7 +1,8 @@
 # getupp-website
 
 Marketing/waitlist site for Getupp, built with Astro (static output) + Tailwind. Deployed on
-Vercel. Waitlist signups POST directly to Supabase (see `src/components/ui/SignupForm.astro`).
+Vercel. Waitlist signups POST directly to Supabase via `src/lib/waitlist.ts`, called from the
+waitlist modal (`src/components/WaitlistModal.astro`), which every CTA on the page opens.
 
 ## Analytics (Meta Pixel)
 

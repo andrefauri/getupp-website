@@ -54,3 +54,13 @@ export function trackLead(params?: { source?: string }): string {
 
   return eventId;
 }
+
+/**
+ * Fires the "WaitlistOpen" custom event when any of the four modal-opening
+ * CTAs is clicked (redesign-spec-v1.md §6). Deliberately trackCustom, not
+ * track — standard events carry optimisation semantics that must stay
+ * exclusive to "Lead", which remains the only event campaigns optimise for.
+ */
+export function trackWaitlistOpen(source: string): void {
+  window.fbq?.('trackCustom', 'WaitlistOpen', { source });
+}

@@ -3,8 +3,8 @@
 // block in design-ref/GET UPP Web - Beast.dc.html, minus the removed Google
 // Play badge and the removed 3-step strip (see spec's "REMOVED" notes).
 //
-// The App Store badge is a <button> with no click handler for now — the
-// waitlist modal that it opens is built in phase 4.
+// The App Store badge is a <button data-waitlist-trigger="hero"> — clicking
+// it opens WaitlistModal.astro (wired in phase 4, see that component).
 ---
 
 <section class="hero">
@@ -17,10 +17,10 @@
           starts — undistracted time, back on your side.
         </p>
         <div class="hero__badge-row">
-          <button type="button" class="hero__badge-btn">
+          <button type="button" class="hero__badge-btn" data-waitlist-trigger="hero">
             <img src="/images/badges/badge-appstore.png" alt="Download on the App Store" />
           </button>
-          <p class="hero__microcopy">FREE TO USE.<br />NO TRIAL, NO CARD.</p>
+          <p class="hero__microcopy">FREE TRIAL</p>
         </div>
       </div>
 

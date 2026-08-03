@@ -1,0 +1,385 @@
+---
+// redesign-spec-v1.md §5. No reference markup exists for this component —
+// block 7a has no modal, so this visual structure is new design within
+// spec's stated constraints (acid background, ink text, hard edges), built
+// from the existing token system rather than sourced from the reference.
+//
+// Rendered via BaseLayout's "modal" slot (a sibling of <main>, not nested
+// inside it) specifically so the background-inert lock below can target
+// <main> cleanly without also inerting the modal itself.
+//
+// The close mark is hand-built from rotated bars, same technique already
+// used for NotFooled's ✕/✓ marks — the Unicode ✕ isn't in any Anton/
+// Archivo/DM Mono subset.
+---
+
+<div class="waitlist-modal" data-waitlist-modal hidden>
+  <div class="waitlist-modal__backdrop" data-waitlist-backdrop></div>
+
+  <div
+    class="waitlist-modal__panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="waitlist-modal-headline"
+    aria-describedby="waitlist-modal-body"
+    data-waitlist-panel
+  >
+    <button type="button" class="waitlist-modal__close" data-waitlist-close aria-label="Close">
+      <span class="x-mark" aria-hidden="true"><span></span><span></span></span>
+    </button>
+
+    <h2 id="waitlist-modal-headline" class="waitlist-modal__headline" data-waitlist-headline>
+      NOT OUT YET.
+    </h2>
+    <p id="waitlist-modal-body" class="waitlist-modal__body" data-waitlist-body>
+      We're letting people in in batches. Leave your email and you're in the queue for the next
+      one.
+    </p>
+
+    <form class="waitlist-modal__form" data-waitlist-form novalidate>
+      <div class="waitlist-modal__field-row">
+        <input
+          type="email"
+          name="email"
+          class="waitlist-modal__input"
+          data-waitlist-email
+          required
+          autocomplete="email"
+          aria-label="Email address"
+          placeholder="name@email.com"
+        />
+        <button type="submit" class="waitlist-modal__submit" data-waitlist-submit>
+          GET IN THE QUEUE
+        </button>
+      </div>
+      <p class="waitlist-modal__error" data-waitlist-field-error hidden>That's not an email.</p>
+      <p class="waitlist-modal__error" data-waitlist-submit-error hidden>
+        Something broke. Try again?
+      </p>
+    </form>
+  </div>
+</div>
+
+<style>
+  .waitlist-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--section-pad-x);
+  }
+
+  .waitlist-modal[hidden] {
+    display: none;
+  }
+
+  .waitlist-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: color-mix(in srgb, var(--ink) 70%, transparent);
+  }
+
+  .waitlist-modal__panel {
+    position: relative;
+    width: min(480px, 100%);
+    max-height: 100%;
+    overflow-y: auto;
+    background: var(--acid);
+    color: var(--ink);
+    border-radius: 0;
+    padding: var(--space-10);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .waitlist-modal__close {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--ink);
+  }
+
+  .x-mark {
+    display: block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+  }
+
+  .x-mark span {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 16px;
+    height: 2px;
+    background: currentColor;
+  }
+
+  .x-mark span:first-child {
+    transform: rotate(45deg);
+  }
+
+  .x-mark span:last-child {
+    transform: rotate(-45deg);
+  }
+
+  .waitlist-modal__headline {
+    margin: 0;
+    padding-right: var(--space-10);
+    font-family: var(--font-display);
+    font-size: var(--fs-headline);
+    line-height: var(--lh-display);
+    letter-spacing: var(--ls-display);
+  }
+
+  .waitlist-modal__body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+  }
+
+  .waitlist-modal__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .waitlist-modal__field-row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .waitlist-modal__input {
+    width: 100%;
+    border: 2px solid var(--ink);
+    border-radius: 0;
+    background: transparent;
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    padding: var(--space-4);
+  }
+
+  .waitlist-modal__input::placeholder {
+    color: color-mix(in srgb, var(--ink) 50%, transparent);
+  }
+
+  .waitlist-modal__input:disabled {
+    opacity: 0.6;
+  }
+
+  .waitlist-modal__submit {
+    border: none;
+    border-radius: 0;
+    background: var(--ink);
+    color: var(--acid);
+    font-family: var(--font-display);
+    font-size: var(--fs-label);
+    line-height: var(--lh-display);
+    letter-spacing: var(--ls-display);
+    text-align: center;
+    padding: var(--space-4);
+    cursor: pointer;
+  }
+
+  .waitlist-modal__submit:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+  .waitlist-modal__error {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--fs-small);
+    line-height: var(--lh-body);
+  }
+</style>
+
+<script>
+  import { submitToWaitlist, hasJoinedWaitlist, markWaitlistJoined } from '../lib/waitlist';
+  import { trackLead, trackWaitlistOpen } from '../lib/tracking';
+
+  const modal = document.querySelector<HTMLElement>('[data-waitlist-modal]');
+  const backdrop = document.querySelector<HTMLElement>('[data-waitlist-backdrop]');
+  const closeBtn = document.querySelector<HTMLButtonElement>('[data-waitlist-close]');
+  const headlineEl = document.querySelector<HTMLElement>('[data-waitlist-headline]');
+  const bodyEl = document.querySelector<HTMLElement>('[data-waitlist-body]');
+  const form = document.querySelector<HTMLFormElement>('[data-waitlist-form]');
+  const emailInput = document.querySelector<HTMLInputElement>('[data-waitlist-email]');
+  const submitBtn = document.querySelector<HTMLButtonElement>('[data-waitlist-submit]');
+  const fieldError = document.querySelector<HTMLElement>('[data-waitlist-field-error]');
+  const submitError = document.querySelector<HTMLElement>('[data-waitlist-submit-error]');
+
+  if (modal && backdrop && closeBtn && headlineEl && bodyEl && form && emailInput && submitBtn && fieldError && submitError) {
+    const COPY = {
+      default: {
+        headline: 'NOT OUT YET.',
+        body: "We're letting people in in batches. Leave your email and you're in the queue for the next one.",
+      },
+      success: {
+        headline: "YOU'RE IN.",
+        body: "We'll email you when the next batch opens. Go get up in the meantime.",
+      },
+    };
+
+    let lastTrigger: HTMLElement | null = null;
+    const inertedEls: Element[] = [];
+
+    function showDefault() {
+      headlineEl!.textContent = COPY.default.headline;
+      bodyEl!.textContent = COPY.default.body;
+      form!.hidden = false;
+      fieldError!.hidden = true;
+      submitError!.hidden = true;
+      emailInput!.value = '';
+      emailInput!.disabled = false;
+      submitBtn!.disabled = false;
+      submitBtn!.textContent = 'GET IN THE QUEUE';
+    }
+
+    function showSuccess() {
+      headlineEl!.textContent = COPY.success.headline;
+      bodyEl!.textContent = COPY.success.body;
+      form!.hidden = true;
+    }
+
+    function getFocusable(): HTMLElement[] {
+      const list: HTMLElement[] = [closeBtn!];
+      if (!form!.hidden) {
+        if (!emailInput!.disabled) list.push(emailInput!);
+        if (!submitBtn!.disabled) list.push(submitBtn!);
+      }
+      return list;
+    }
+
+    function focusInitial() {
+      if (!form!.hidden) {
+        emailInput!.focus();
+      } else {
+        closeBtn!.focus();
+      }
+    }
+
+    function trapKeydown(event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        closeModal();
+        return;
+      }
+      if (event.key !== 'Tab') return;
+
+      const focusable = getFocusable();
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+
+    function openModal(source: string, trigger: HTMLElement) {
+      lastTrigger = trigger;
+      trackWaitlistOpen(source);
+
+      if (hasJoinedWaitlist()) {
+        showSuccess();
+      } else {
+        showDefault();
+      }
+
+      modal!.hidden = false;
+      document.body.style.overflow = 'hidden';
+
+      // Lock the rest of the page out of the tab/AT order while open — the
+      // modal is a sibling of <main>/nav/footer (via BaseLayout's "modal"
+      // slot), so this can't accidentally inert the modal itself.
+      for (const el of Array.from(document.body.children)) {
+        if (el !== modal && !('inert' in el && (el as HTMLElement).inert)) {
+          (el as HTMLElement).inert = true;
+          inertedEls.push(el);
+        }
+      }
+
+      document.addEventListener('keydown', trapKeydown);
+      focusInitial();
+    }
+
+    function closeModal() {
+      modal!.hidden = true;
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', trapKeydown);
+
+      for (const el of inertedEls) {
+        (el as HTMLElement).inert = false;
+      }
+      inertedEls.length = 0;
+
+      lastTrigger?.focus();
+    }
+
+    backdrop.addEventListener('click', closeModal);
+    closeBtn.addEventListener('click', closeModal);
+
+    document.querySelectorAll<HTMLElement>('[data-waitlist-trigger]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const source = btn.dataset.waitlistTrigger ?? 'unknown';
+        openModal(source, btn);
+      });
+    });
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      fieldError!.hidden = true;
+      submitError!.hidden = true;
+
+      if (!emailInput!.checkValidity()) {
+        fieldError!.hidden = false;
+        emailInput!.focus();
+        return;
+      }
+
+      const email = emailInput!.value.trim().toLowerCase();
+      const source = lastTrigger?.dataset.waitlistTrigger ?? 'unknown';
+
+      emailInput!.disabled = true;
+      submitBtn!.disabled = true;
+      submitBtn!.textContent = 'SENDING...';
+
+      try {
+        await submitToWaitlist(email, source);
+        // Fire the Lead conversion only now that the insert has actually
+        // resolved (not on click) — same call shape as the pre-redesign
+        // SignupForm, so campaign learning carries over untouched.
+        trackLead({ source });
+        markWaitlistJoined();
+        showSuccess();
+        focusInitial();
+      } catch (error) {
+        console.error('Waitlist signup failed:', error);
+        submitError!.hidden = false;
+        emailInput!.disabled = false;
+        submitBtn!.disabled = false;
+        submitBtn!.textContent = 'GET IN THE QUEUE';
+      }
+    });
+  }
+</script>
