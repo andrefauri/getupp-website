@@ -1,0 +1,32 @@
+# Pings the waitlist Supabase project on a schedule so it never sits idle
+# long enough to hit the free-tier auto-pause (~7 days). When it pauses, the
+# project's API subdomain stops resolving entirely and every waitlist
+# signup on getupp.co fails with "Something broke" (see incident 2026-08-03).
+#
+# This does not touch app config: no new env var names, nothing added to
+# .env.local, astro.config.mjs untouched (redesign-spec-v1.md §2). Secrets
+# live only in this repo's Actions settings.
+name: Supabase keepalive
+
+on:
+  schedule:
+    # Every 3 days — comfortably inside the ~7-day idle-pause window.
+    - cron: '0 9 */3 * *'
+  workflow_dispatch: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping waitlist table
+        run: |
+          # A SELECT against the insert-only RLS policy returns 200 with an
+          # empty array — enough to touch Postgres and reset the idle timer,
+          # without the anon key ever reading real email data.
+          curl --fail-with-body --silent --show-error \
+            "${SUPABASE_URL}/rest/v1/waitlist?select=id&limit=1" \
+            -H "apikey: ${SUPABASE_ANON_KEY}" \
+            -H "Authorization: Bearer ${SUPABASE_ANON_KEY}"
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
