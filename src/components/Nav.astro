@@ -1,8 +1,6 @@
 ---
-// redesign-spec-v1.md §4.1. Markup/copy sourced verbatim from div#7a in
+// redesign-spec-v1.md §4.1. Markup/copy sourced from div#7a in
 // design-ref/GET UPP Web - Beast.dc.html (the nav bar at the top of that block).
-// Anchor targets (#how-it-works, #price) are inert until phase 3 adds
-// matching ids to ThreeScreens.astro and Pricing.astro.
 ---
 
 <header class="nav">
@@ -13,14 +11,8 @@
       <rect x="265.5" y="14.5" width="12.7" height="25.3" fill="currentColor"></rect>
     </svg>
 
-    <nav class="nav__links" aria-label="Primary">
-      <a href="#how-it-works">HOW IT WORKS</a>
-      <a href="#price">PRICE</a>
-    </nav>
-
     <button type="button" class="nav__cta" data-waitlist-trigger="nav">
-      <span class="nav__cta-full">GET THE APP — FREE</span>
-      <span class="nav__cta-short">GET THE APP</span>
+      GET THE APP
     </button>
   </div>
 </header>
@@ -52,20 +44,6 @@
     font-family: var(--font-display);
   }
 
-  .nav__links {
-    display: flex;
-    align-items: center;
-    gap: var(--space-7);
-    font-family: var(--font-mono);
-    font-size: var(--fs-mono);
-    letter-spacing: var(--ls-mono);
-  }
-
-  .nav__links a {
-    color: inherit;
-    text-decoration: none;
-  }
-
   .nav__cta {
     display: inline-flex;
     align-items: center;
@@ -80,23 +58,5 @@
     padding: var(--space-4) var(--space-5);
     cursor: pointer;
     flex-shrink: 0;
-  }
-
-  .nav__cta-short {
-    display: none;
-  }
-
-  @media (max-width: 767px) {
-    .nav__links {
-      display: none;
-    }
-
-    .nav__cta-full {
-      display: none;
-    }
-
-    .nav__cta-short {
-      display: inline;
-    }
   }
 </style>

@@ -28,13 +28,15 @@
       <span class="x-mark" aria-hidden="true"><span></span><span></span></span>
     </button>
 
-    <h2 id="waitlist-modal-headline" class="waitlist-modal__headline" data-waitlist-headline>
-      NOT OUT YET.
-    </h2>
-    <p id="waitlist-modal-body" class="waitlist-modal__body" data-waitlist-body>
-      We're letting people in in batches. Leave your email and you're in the queue for the next
-      one.
-    </p>
+    <div class="waitlist-modal__live" aria-live="polite">
+      <h2 id="waitlist-modal-headline" class="waitlist-modal__headline" data-waitlist-headline>
+        PROVE YOU'RE SERIOUS.
+      </h2>
+      <p id="waitlist-modal-body" class="waitlist-modal__body" data-waitlist-body>
+        Anyone can tap a button. Leave your email and we'll see if you're still around when your
+        batch opens.
+      </p>
+    </div>
 
     <form class="waitlist-modal__form" data-waitlist-form novalidate>
       <div class="waitlist-modal__field-row">
@@ -46,14 +48,30 @@
           required
           autocomplete="email"
           aria-label="Email address"
+          aria-describedby="waitlist-field-error"
           placeholder="name@email.com"
         />
+        <p
+          id="waitlist-field-error"
+          class="waitlist-modal__error"
+          data-waitlist-field-error
+          role="status"
+          aria-live="polite"
+          hidden
+        >
+          That's not an email.
+        </p>
         <button type="submit" class="waitlist-modal__submit" data-waitlist-submit>
-          GET IN THE QUEUE
+          I'M SERIOUS
         </button>
       </div>
-      <p class="waitlist-modal__error" data-waitlist-field-error hidden>That's not an email.</p>
-      <p class="waitlist-modal__error" data-waitlist-submit-error hidden>
+      <p
+        class="waitlist-modal__error"
+        data-waitlist-submit-error
+        role="status"
+        aria-live="polite"
+        hidden
+      >
         Something broke. Try again?
       </p>
     </form>
@@ -135,6 +153,12 @@
     transform: rotate(-45deg);
   }
 
+  .waitlist-modal__live {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
   .waitlist-modal__headline {
     margin: 0;
     padding-right: var(--space-10);
@@ -178,7 +202,8 @@
     color: color-mix(in srgb, var(--ink) 50%, transparent);
   }
 
-  .waitlist-modal__input:disabled {
+  .waitlist-modal__input:disabled,
+  .waitlist-modal__input:read-only {
     opacity: 0.6;
   }
 
@@ -227,8 +252,8 @@
   if (modal && backdrop && closeBtn && headlineEl && bodyEl && form && emailInput && submitBtn && fieldError && submitError) {
     const COPY = {
       default: {
-        headline: 'NOT OUT YET.',
-        body: "We're letting people in in batches. Leave your email and you're in the queue for the next one.",
+        headline: "PROVE YOU'RE SERIOUS.",
+        body: "Anyone can tap a button. Leave your email and we'll see if you're still around when your batch opens.",
       },
       success: {
         headline: "YOU'RE IN.",
@@ -246,9 +271,10 @@
       fieldError!.hidden = true;
       submitError!.hidden = true;
       emailInput!.value = '';
-      emailInput!.disabled = false;
+      emailInput!.readOnly = false;
+      emailInput!.removeAttribute('aria-invalid');
       submitBtn!.disabled = false;
-      submitBtn!.textContent = 'GET IN THE QUEUE';
+      submitBtn!.textContent = "I'M SERIOUS";
     }
 
     function showSuccess() {
@@ -350,9 +376,11 @@
       event.preventDefault();
       fieldError!.hidden = true;
       submitError!.hidden = true;
+      emailInput!.removeAttribute('aria-invalid');
 
       if (!emailInput!.checkValidity()) {
         fieldError!.hidden = false;
+        emailInput!.setAttribute('aria-invalid', 'true');
         emailInput!.focus();
         return;
       }
@@ -360,9 +388,18 @@
       const email = emailInput!.value.trim().toLowerCase();
       const source = lastTrigger?.dataset.waitlistTrigger ?? 'unknown';
 
-      emailInput!.disabled = true;
+      // readOnly (not disabled) so the field stays focusable/tabbable while
+      // sending — disabling it here would drop focus to <body> if it (or the
+      // submit button, below) currently holds it, breaking the focus trap.
+      emailInput!.readOnly = true;
       submitBtn!.disabled = true;
       submitBtn!.textContent = 'SENDING...';
+      // Disabling the submit button blurs it synchronously if it held focus
+      // (the common case — clicking it usually focuses it first). Recover
+      // focus into the still-open panel rather than let it fall to <body>.
+      if (document.activeElement === document.body) {
+        closeBtn!.focus();
+      }
 
       try {
         await submitToWaitlist(email, source);
@@ -376,9 +413,9 @@
       } catch (error) {
         console.error('Waitlist signup failed:', error);
         submitError!.hidden = false;
-        emailInput!.disabled = false;
+        emailInput!.readOnly = false;
         submitBtn!.disabled = false;
-        submitBtn!.textContent = 'GET IN THE QUEUE';
+        submitBtn!.textContent = "I'M SERIOUS";
       }
     });
   }
